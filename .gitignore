@@ -1,6 +1,8 @@
-/.idea
-/.git
+.*
+!/.gitignore
+
 /out
+/target
 
 *.class
 *.jar
