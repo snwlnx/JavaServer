@@ -1,6 +1,0 @@
-<class type="resource.FightResource">
-	<healthMax>125</healthMax>
-	<fireballDamage>10</fireballDamage>
-    <playerWidth>23</playerWidth>
-    <playerHeight>34</playerHeight>
-</class>
