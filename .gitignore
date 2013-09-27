@@ -1,0 +1,8 @@
+/.idea
+/.git
+/out
+
+*.class
+*.jar
+*.war
+*.ear
