@@ -29,8 +29,8 @@ public class GameServiceImpl implements GameService {
         resourceSystem = resources;
 
         MapResource mResource = (MapResource)resourceSystem.getResource(MapResource.class);
-        mapHeight = mResource.height;
-        mapWidth  = mResource.width;
+        mapHeight = 500;//mResource.height;
+        mapWidth  = 900;//mResource.width;
 
 
 

@@ -1,17 +1,10 @@
-package frontend;
-
 import base.LongId;
-import junit.framework.Assert;
+import frontend.Page;
 import user.UserSession;
+import org.junit.Test;
+import org.junit.Assert;
 
-/**
- * Created with IntelliJ IDEA.
- * User: Alex
- * Date: 29.03.13
- * Time: 2:40
- * To change this template use File | Settings | File Templates.
- */
-public class PageTest {
+public class PageTest extends Assert {
 
     LongId<UserSession> sessionId = new LongId<UserSession>(1);
     String userName = "Alex";
@@ -25,15 +18,15 @@ public class PageTest {
             "<input type=\"hidden\" name=\"session\" value=\"1\" /></form></body>";
 
 
-    @org.junit.Test
+    @Test
     public void testStart() throws Exception {
         page.Start(sessionId);
-        Assert.assertEquals(page.Start(sessionId),pageStart);
+        assertEquals(page.Start(sessionId),pageStart);
     }
-
-    @org.junit.Test
-    public void testWaitForAuthorization() throws Exception {
-       Assert.assertEquals(pageWait,page.WaitForAuthorization(sessionId, userName));
-
-    }
+//
+//    @org.junit.Test
+//    public void testWaitForAuthorization() throws Exception {
+//       Assert.assertEquals(pageWait,page.WaitForAuthorization(sessionId, userName));
+//
+//    }
 }
