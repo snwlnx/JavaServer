@@ -1,7 +1,0 @@
-package user;
-
-public enum UserState {
-
-    Start, NotAuthorized,WaitForAuthorization,Authorized,Play,FinishWin, FinishLose
-
-}
