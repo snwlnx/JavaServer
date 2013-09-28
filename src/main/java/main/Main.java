@@ -15,12 +15,8 @@ public class Main {
     public static void main(String[] args) throws Exception {
         MessageSystem msgSystem = new MessageSystemImpl();
 
-        // todo ресурсная система
-
-
         ResourceSystem resourceSystem = new ResourceSystemImpl();
         resourceSystem.globalInit();
-
 
         FrontendImpl    frontend       = new FrontendImpl(msgSystem);
         GameService     gameService       = new GameServiceImpl(msgSystem,resourceSystem);
