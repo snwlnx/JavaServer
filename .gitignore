@@ -1,0 +1,10 @@
+.*
+!/.gitignore
+
+/out
+/target
+
+*.class
+*.jar
+*.war
+*.ear
