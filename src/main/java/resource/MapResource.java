@@ -4,8 +4,7 @@ import base.Resource;
 
 public class MapResource implements Resource {
 
-    public int width,
-               height;
+    public int    width, height;
     public String name;
 
 }
