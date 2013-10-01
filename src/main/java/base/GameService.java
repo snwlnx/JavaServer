@@ -5,7 +5,7 @@ import game.GameSession;
 import user.User;
 
 public interface GameService extends Abonent,Runnable {
-    public void startGame                    ( LongId < User > userToGame );
+    public LongId<GameSession> startGame                    ( LongId < User > userToGame );
     public void joinToGame                   ( LongId < User > userToGameSession, LongId < GameSession > gameSessionId );
     public void doGameStep                   ( LongId < User > userId);
     public void doGameAction                 ( LongId < User > userId, String textForChatMsg );
