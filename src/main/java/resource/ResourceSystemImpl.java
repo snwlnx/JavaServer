@@ -10,9 +10,9 @@ import java.util.Map;
 
 public class ResourceSystemImpl implements ResourceSystem {
 
-    private static  final String resourcePath  = "src/main/resources";
-    private VFS  vfs             =  new VFS();
-    private HashSet<base.Resource> gameResource          = new HashSet<base.Resource>();
+    private static  final String   resourcePath   = "src/main/resources";
+    private HashSet<base.Resource> gameResource   =  new HashSet<base.Resource>();
+    private VFS  vfs  =  new VFS();
 
     private Map<Class<?>, Resource> resources = new HashMap<Class<?>, Resource>();
 
@@ -31,29 +31,17 @@ public class ResourceSystemImpl implements ResourceSystem {
             SaxEmptyHandler   handler    =  new SaxEmptyHandler();
             Iterator          iterator   =  vfs.getIterator(resourcePath);
 
-
-            String filePath;
-
-
-            while ((filePath = iterator.getFile())!= null){
-                System.out.println(filePath);
-                saxParser.parse( filePath,handler );
+            while (iterator.hasNext()) {
+                saxParser.parse( iterator.getFile(),handler );
                 Object obj = handler.getObject();
+
                 if(obj instanceof Resource){
                     gameResource.add((Resource)obj);
                     resources.put(obj.getClass(), (Resource)obj);
                 }
-
-                iterator.moveToNextFile();
             }
-            String file;
-            int i = 0;
-            i++;
-            System.out.println(i);
-
-        }  catch (Exception ex){
-            ex.printStackTrace();
-
+        } catch (Exception ex){
+             ex.printStackTrace();
         }
     }
 
@@ -66,10 +54,7 @@ public class ResourceSystemImpl implements ResourceSystem {
         if(fResource != null){
             Player.setHealthMax(fResource.healthMax);
             Player.setSize(fResource.playerWidth, fResource.playerHeight);
-
             Fireball.setDamage(fResource.fireballDamage);
         }
-
-
     }
 }

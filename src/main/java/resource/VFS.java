@@ -31,8 +31,6 @@ public class VFS {
                 stringBuff.append(str+"\r\n");
             }
 
-
-
         }catch (FileNotFoundException ex){
             ex.printStackTrace();
         }catch (IOException ex){
