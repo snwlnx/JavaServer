@@ -3,19 +3,18 @@ package resource;
 import java.io.File;
 import java.util.Stack;
 
-public class Iterator {
+public class Iterator implements java.util.Iterator<String> {
 
-	private File currentFile;
-	private boolean fileFound;
+	private File        currentFile;
+	private boolean     fileFound;
 	private Stack<File> prevDirectories = new Stack<File>();
 
 
 	public Iterator(String path) {
 		this.currentFile = null;
-		fileFound = false;
+		fileFound        = false;
 		File rootFile = new File(path);
-
-		if (rootFile.isFile()) {
+        if (rootFile.isFile()) {
 			currentFile = rootFile;
 		}
 		else if (rootFile.isDirectory()) {
@@ -29,13 +28,15 @@ public class Iterator {
 
 	public String getFile() {
 		if (currentFile != null) {
-			return currentFile.getPath();
+            String currFile = currentFile.getPath();
+			moveToNextFile();
+            return currFile;
 		}
 		return null;
 	}
 
 
-	public void moveToNextFile() {
+	private void moveToNextFile() {
 		if (currentFile == null) {
 			return;
 		}
@@ -119,4 +120,18 @@ public class Iterator {
 	}
 
 
+    @Override
+    public boolean hasNext() {
+        return currentFile == null?false:true;
+    }
+
+    @Override
+    public String next() {
+        return getFile();
+    }
+
+    @Override
+    public void remove() {
+        // This method don't support
+    }
 }
