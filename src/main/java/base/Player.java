@@ -9,7 +9,10 @@ public class Player implements Movable, Cloneable {
                 helthCurrent;
 
     public Player() {
-
+		setPosition(0, 0);
+	    this.velocityX = 0;
+	    this.velocityX = 0;
+	    helthCurrent = healthMax;
     }
     public Player(int x, int y) {
         setPosition(x, y);
