@@ -29,8 +29,8 @@ public class GameServiceImpl implements GameService {
         resourceSystem = resources;
 
         MapResource mResource = (MapResource)resourceSystem.getResource(MapResource.class);
-        mapHeight = 500;//mResource.height;
-        mapWidth  = 900;//mResource.width;
+        mapHeight = mResource.height;
+        mapWidth  = mResource.width;
 
 
 
@@ -249,13 +249,15 @@ public class GameServiceImpl implements GameService {
     }
 
 
-    public void startGame(LongId<User> userToGameSession) {
+	public LongId<GameSession> startGame(LongId<User> userToGameSession) {
 
         if (!userIdToGameSessionId.containsKey(userToGameSession)) {
             LongId<GameSession> gameSessionId = addNewGameSession(userToGameSession);
             userIdToGameSessionId.put(userToGameSession, gameSessionId);
             replicateStartGameToFrontend(userToGameSession, gameSessionId);
+	        return gameSessionId;
         }
+		return null;
     }
 
 
