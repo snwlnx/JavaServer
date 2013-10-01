@@ -280,14 +280,15 @@ public class GameServiceImpl implements GameService {
         messageSystem.sendMessage(message);
     }
 
-    public void joinToGame(LongId<User> userToGameSession, LongId<GameSession> gameSessionId) {
-        userIdToGameSessionId.put(userToGameSession, gameSessionId);
+    public boolean joinToGame(LongId<User> userToGameSession, LongId<GameSession> gameSessionId) {
         GameSession game = gameIdToGameSession.get(gameSessionId);
         if (game != null) {
+	        userIdToGameSessionId.put(userToGameSession, gameSessionId);
             game.addIndexLastMsg(userToGameSession);
             game.addNewPlayer(userToGameSession);
         }
         replicateJoinGameToFrontend(userToGameSession);
+	    return game != null;
     }
 
     private void replicateJoinGameToFrontend(LongId<User> userToGameSession) {
