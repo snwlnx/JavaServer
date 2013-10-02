@@ -22,7 +22,7 @@ public class ResourceSystemImplTest extends Assert {
         resourceSystem  =  new ResourceSystemImpl();
     }
     @Test
-    public void testFightResource() {
+    public void testLoadFightResource() {
         HashSet resourceSet = resourceSystem.getGameResource();
         assertFalse(resourceSet.isEmpty());
         java.util.Iterator resourceIterator =  resourceSet.iterator();
@@ -41,8 +41,9 @@ public class ResourceSystemImplTest extends Assert {
         assertNotEquals(fightResource.playerHeight,  0);
         assertNotEquals(fightResource.playerWidth,   0);
     }
+
     @Test
-    public void testMapResource() {
+    public void testLoadMapResource() {
         HashSet resourceSet = resourceSystem.getGameResource();
         assertFalse(resourceSet.isEmpty());
         java.util.Iterator resourceIterator =  resourceSet.iterator();

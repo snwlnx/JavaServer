@@ -1,7 +1,5 @@
 package game;
 
-import java.text.SimpleDateFormat;
-import java.util.Date;
 import base.LongId;
 import user.User;
 
@@ -12,7 +10,7 @@ public class ChatMessage {
     private String  text;
 
 
-    ChatMessage(LongId<User> userId, String text){
+    public ChatMessage(LongId<User> userId, String text){
         this.userId      = userId;
         this.text        = text;
         this.messageDate = setDateTime();

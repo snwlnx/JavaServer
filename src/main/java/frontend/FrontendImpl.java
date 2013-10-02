@@ -30,6 +30,17 @@ public class FrontendImpl extends AbstractHandler implements Frontend {
     private Address address;
     private long lastTime = System.currentTimeMillis();
 
+    public void addUserSession(LongId<UserSession> sessionId, String userName) {
+        UserSession userSession = new UserSession(userName);
+        sessions.put(sessionId, userSession);
+    }
+
+    public void addUserIdToSession(LongId<User> userId, LongId<UserSession> sessionId) {
+        userIdToSessionId.put(userId,sessionId);
+
+    }
+
+
     private LongId<UserSession> getSessionIdFromCookie(HttpServletRequest request) {
         Cookie cookie = null;
         Cookie[] cookies = request.getCookies();
@@ -112,7 +123,7 @@ public class FrontendImpl extends AbstractHandler implements Frontend {
         return false;
     }
 
-    //deprecated
+/*  deprecated
     private boolean chatExit(HttpServletRequest request, LongId<UserSession> sessionId) {
         String checkButton = request.getParameter("Exit");
         if (checkButton != null) {
@@ -122,7 +133,7 @@ public class FrontendImpl extends AbstractHandler implements Frontend {
             }
         }
         return false;
-    }
+    }*/
 
 
     private void addMessageToGame(String chatMessage, LongId<UserSession> sessionId) {
@@ -264,12 +275,11 @@ public class FrontendImpl extends AbstractHandler implements Frontend {
         response.setContentType("application/json");
 
         JSONArray responseJson = new JSONArray(),
-                balls = new JSONArray(),
-                enems = new JSONArray();
+                  balls        = new JSONArray(),
+                  enems        = new JSONArray();
 
         balls.addAll(user.getFireballs());
         enems.addAll(user.getEnemies());
-
         responseJson.add(balls);
         responseJson.add(enems);
         responseJson.add(user.getPlayer());
@@ -314,7 +324,11 @@ public class FrontendImpl extends AbstractHandler implements Frontend {
         baseRequest.setHandled(true);
     }
 
-    public void handle(String target, Request baseRequest, HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
+    public void handle(String target, Request baseRequest,
+                       HttpServletRequest  request,
+                       HttpServletResponse response )
+                                    throws IOException, ServletException {
+
         if (ignoreFavicon(request))
             return;
         setResponseSettings(baseRequest, response);
@@ -348,7 +362,6 @@ public class FrontendImpl extends AbstractHandler implements Frontend {
     public FrontendImpl(MessageSystem msgSystem) {
         this.messageSystem = msgSystem;
         address = new Address();
-
         msgSystem.addService(Frontend.class, this);
     }
 
@@ -415,11 +428,11 @@ public class FrontendImpl extends AbstractHandler implements Frontend {
         LongId<UserSession> sessionId = userIdToSessionId.get(userIdToGameSession);
         sessions.get(sessionId).updateUserState(new StatePlay());
     }
-
+/*  deprecated
     public void joinToGame(LongId<User> userIdToGameSession) {
         //TODO добавить юзера к чату
         System.out.println(" join userIdToGameSession" + userIdToGameSession);
-    }
+    }*/
 
     public void updateGameStep(LongId<User> userId, ChatMessage[] lastMessages) {
         LongId<UserSession> sessionId = userIdToSessionId.get(userId);
@@ -427,11 +440,11 @@ public class FrontendImpl extends AbstractHandler implements Frontend {
     }
 
 
-    public void updateAvalibleGameSessionForUser(LongId<User> userIdToGameSession,
-                                                 Set<LongId<GameSession>> avalibleGameSessionsId) {
+    public void updateAvailableGameSessionForUser(LongId<User> userIdToGameSession,
+                                                  Set<LongId<GameSession>> availableGameSessionsId) {
         sessions.
                 get(userIdToSessionId.get(userIdToGameSession)).
-                setAvailableGameSessions(avalibleGameSessionsId);
+                setAvailableGameSessions(availableGameSessionsId);
     }
 
 
