@@ -25,7 +25,7 @@ public interface Frontend extends Abonent,Runnable {
     public void updateUserId                    ( LongId < UserSession > sessionId,
                                                   LongId < User >        userId );
     public void updateGameStep                  ( LongId < User >        userId, ChatMessage[] lastMessages );
-    //public void joinToGame                      ( LongId < User >        userToGameSession );
+    public void joinToGame                      ( LongId < User >        userToGameSession );
     public void startGame                       ( LongId < User >        userToGameSession,
                                                   LongId < GameSession > gameSessionId );
     public void updateAvailableGameSessionForUser(LongId<User> userToGameSession,
