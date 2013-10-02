@@ -25,11 +25,11 @@ public interface Frontend extends Abonent,Runnable {
     public void updateUserId                    ( LongId < UserSession > sessionId,
                                                   LongId < User >        userId );
     public void updateGameStep                  ( LongId < User >        userId, ChatMessage[] lastMessages );
-    public void joinToGame                      ( LongId < User >        userToGameSession );
+    //public void joinToGame                      ( LongId < User >        userToGameSession );
     public void startGame                       ( LongId < User >        userToGameSession,
                                                   LongId < GameSession > gameSessionId );
-    public void updateAvalibleGameSessionForUser( LongId < User >        userToGameSession,
-                                                  Set< LongId < GameSession > > avalibleGameSessionsId );
+    public void updateAvailableGameSessionForUser(LongId<User> userToGameSession,
+                                                  Set<LongId<GameSession>> avalibleGameSessionsId);
     public void finishGame                      ( LongId < User >        userToGameSession, boolean win);
 
     public void refreshPosition (LongId<User> userId,  LinkedList<Player> players);

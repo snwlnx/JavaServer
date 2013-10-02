@@ -7,10 +7,12 @@ import java.util.Queue;
 import java.util.concurrent.ConcurrentLinkedQueue;
 
 public class MessageSystemImpl implements MessageSystem {
+
+
     private Map<Address, ConcurrentLinkedQueue<Message>> messages = new HashMap<Address, ConcurrentLinkedQueue<Message>>();
     private AddressService addressService = new AddressServiceImpl();
 
-    public Address getAddress(Class<?> abonentType){
+    public Address getAddress(Class<?> abonentType) {
         return addressService.getAddress(abonentType);
     }
 
