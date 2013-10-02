@@ -8,6 +8,15 @@
     <artifactId>TpJavaServer</artifactId>
     <version>0.1.1</version>
 
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>com.atlassian.maven.plugins</groupId>
+                <artifactId>maven-clover2-plugin</artifactId>
+            </plugin>
+        </plugins>
+    </build>
+
     <dependencies>
         <dependency>
             <groupId>javax.servlet</groupId>
