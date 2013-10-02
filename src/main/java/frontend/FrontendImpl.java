@@ -428,11 +428,10 @@ public class FrontendImpl extends AbstractHandler implements Frontend {
         LongId<UserSession> sessionId = userIdToSessionId.get(userIdToGameSession);
         sessions.get(sessionId).updateUserState(new StatePlay());
     }
-/*  deprecated
     public void joinToGame(LongId<User> userIdToGameSession) {
         //TODO добавить юзера к чату
         System.out.println(" join userIdToGameSession" + userIdToGameSession);
-    }*/
+    }
 
     public void updateGameStep(LongId<User> userId, ChatMessage[] lastMessages) {
         LongId<UserSession> sessionId = userIdToSessionId.get(userId);
