@@ -29,7 +29,7 @@ public class MessageUpdateAvalibleGameSession extends MessageToFrontend {
         }
 
         public void exec(Frontend frontend){
-            frontend.updateAvalibleGameSessionForUser(userToGameSession, avalibleGameSessionsId);
+            frontend.updateAvailableGameSessionForUser(userToGameSession, avalibleGameSessionsId);
         }
 
 }

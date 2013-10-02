@@ -12,14 +12,14 @@ import resource.ResourceSystemImpl;
 
 public class Main {
     public static void main(String[] args) throws Exception {
-        MessageSystem msgSystem = new MessageSystemImpl();
 
-        ResourceSystem resourceSystem = new ResourceSystemImpl();
+        MessageSystem msgSystem        = new MessageSystemImpl();
+        ResourceSystem resourceSystem  = new ResourceSystemImpl();
         resourceSystem.globalInit();
 
         FrontendImpl    frontend       = new FrontendImpl(msgSystem);
-        GameService     gameService       = new GameServiceImpl(msgSystem,resourceSystem);
-        DbServiceImpl dbService        = new DbServiceImpl(msgSystem);
+        GameService     gameService    = new GameServiceImpl(msgSystem,resourceSystem);
+        DbServiceImpl   dbService      = new DbServiceImpl(msgSystem);
        // DbService  dbService            = new DatabaseServiceImpl(msgSystem);
 
         (new Thread(dbService)).start();
