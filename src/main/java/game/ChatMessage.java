@@ -25,7 +25,7 @@ public class ChatMessage {
     }
 
     public String getStringMessage(){
-        return messageDate+"   "+text;
+        return messageDate + " " + text;
 
     }
 

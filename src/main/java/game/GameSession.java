@@ -79,10 +79,10 @@ public class GameSession {
             Player pl = new Player(100, 100);
             userIdToPlayer.put(userId, pl);
 
-            System.out.println("IN GAME: " + userIdToPlayer.size());
+            //System.out.println("IN GAME: " + userIdToPlayer.size());
             return pl;
         }
-        System.out.println("ERROR GameSession.addNewPlayer( " + userId + " s)");
+        //System.out.println("ERROR GameSession.addNewPlayer( " + userId + " s)");
         return null;
     }
 
