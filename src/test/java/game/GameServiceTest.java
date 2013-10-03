@@ -1,6 +1,7 @@
 package game;
 
 import base.Fireball;
+import base.Frontend;
 import base.LongId;
 import base.ResourceSystem;
 import frontend.FrontendImpl;
@@ -19,14 +20,16 @@ import java.util.Random;
 public class GameServiceTest extends Assert {
 
 	private static GameServiceImpl gameService;
+	private static Frontend frontend;
+	private static  MessageSystemImpl messageSystem;
 	private static LongId<User> userId, victimId;
 	private static LongId<GameSession> gameId;
 
 
 	@BeforeClass
 	public static void initGameService() {
-		MessageSystemImpl messageSystem = new MessageSystemImpl();
-		FrontendImpl frontend = new FrontendImpl(messageSystem);
+		messageSystem = new MessageSystemImpl();
+		frontend = new FrontendMock(messageSystem);
 
 		userId = new LongId<User>(111);
 		victimId = new LongId<User>(999);
@@ -38,6 +41,8 @@ public class GameServiceTest extends Assert {
 	public void aStartGameTest() {
 		gameId = gameService.startGame(userId);
 		assertNotNull(gameId);
+
+		messageSystem.execForAbonent(frontend);
 	}
 
 	@Test
@@ -49,6 +54,5 @@ public class GameServiceTest extends Assert {
 	public void cAddFireballTest() {
 		gameService.addFireball(userId, new Fireball(0,0,1,1));
 	}
-
 
 }
