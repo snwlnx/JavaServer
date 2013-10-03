@@ -1,6 +1,4 @@
 package resource;
-import java.io.*;
-
 /**
  * Created with IntelliJ IDEA.
  * User: Alex
@@ -9,6 +7,7 @@ import java.io.*;
  * To change this template use File | Settings | File Templates.
  */
 public class VFS {
+/*
 
     public boolean   isExist(String path){
         return new File(path).exists();
@@ -71,6 +70,7 @@ public class VFS {
         }
         return stringBuilder.toString();
     }
+*/
 
 
     public Iterator  getIterator(String startDir){

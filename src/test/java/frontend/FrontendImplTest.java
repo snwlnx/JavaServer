@@ -1,14 +1,15 @@
 package frontend;
 
+import base.Fireball;
 import base.LongId;
 import game.ChatMessage;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
-import user.StatePlay;
-import user.User;
-import user.UserSession;
-import user.UserState;
+import user.*;
+
+import javax.servlet.http.HttpServletRequest;
+import java.util.LinkedList;
 
 /**
  * Created with IntelliJ IDEA.
@@ -19,12 +20,12 @@ import user.UserState;
  */
 public class FrontendImplTest extends Assert {
 
-    FrontendImpl frontend;
-
+    FrontendImpl         frontend;
+    HttpServletRequest   request;
     LongId<User>         user_game_number    =  new LongId<User>(1);
     LongId<UserSession>  user_session_number =  new LongId<UserSession>(1);
     String               user_session_name   =  "user_name";
-
+    Integer              user_health         =  100;
 
     @Before
     public void setUp() throws Exception {
@@ -45,13 +46,42 @@ public class FrontendImplTest extends Assert {
         assertTrue(currentState instanceof StatePlay);
     }
 
-
     @Test
     public void testUpdateGameStep() {
         frontend.updateGameStep(user_game_number, new ChatMessage[]  {new ChatMessage(user_game_number,"some_text")});
         ChatMessage[] currMessages = frontend.getUserSession(user_game_number).getNewMessage();
         assertNotNull(currMessages[0]);
-
     }
+
+    @Test
+    public void testFinishGame () {
+        frontend.finishGame(user_game_number,new Boolean(true));
+        UserState currentState = frontend.getUserSession(user_game_number).getUserState();
+        assertTrue(currentState instanceof StateFinishWin);
+    }
+
+    @Test
+    public void  testUpdateUserId () {
+        frontend.updateUserId(user_session_number,user_game_number);
+        UserState currentState = frontend.getUserSession(user_game_number).getUserState();
+        assertTrue(currentState instanceof StateAuthorized);
+    }
+
+    @Test
+    public void testUpdateHealth () {
+        frontend.updateHealth(user_game_number,user_health);
+        assertTrue(frontend.getUserSession(user_game_number).getPlayer().getHealthMax() == user_health);
+    }
+
+    @Test
+    public void testUpdateFireBalls () {
+        Fireball fireball = new Fireball(1,1,1,1);
+        LinkedList<Fireball> listFireballs = new LinkedList<Fireball>();
+        listFireballs.push(fireball);
+        frontend.updateFireballs(user_game_number, listFireballs);
+        assertTrue(frontend.getUserSession(user_game_number).getFireballs().contains(listFireballs));
+    }
+
+
 
 }
