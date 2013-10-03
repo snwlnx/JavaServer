@@ -28,6 +28,11 @@ public class Player implements Movable, Cloneable {
         helthCurrent = healthMax;
     }
 
+
+    public int getHealthMax() {
+        return healthMax;
+    }
+
     public static void setHealthMax(int healthMax) {
         Player.healthMax = healthMax;
     }

@@ -5,7 +5,7 @@ public class Fireball implements Movable, Cloneable {
 
     private float x, y;
     private float velocityX, velocityY;
-    private int moveCounter = 0;
+    private int   moveCounter = 0;
 
     public Fireball(float x, float y, float vX, float vY) {
         this.x = x;
