@@ -11,7 +11,7 @@ public class MessageStartGameToFrontend extends MessageToFrontend{
     final private   LongId<User>        userToGameSession;
     final private   LongId<GameSession> gameSessionId;
 
-    MessageStartGameToFrontend(Address from, Address to, LongId<User> userToGameSession,
+    public MessageStartGameToFrontend(Address from, Address to, LongId<User> userToGameSession,
                                                          LongId<GameSession> gameSessionId){
         super(from,to);
         this.userToGameSession = userToGameSession;
