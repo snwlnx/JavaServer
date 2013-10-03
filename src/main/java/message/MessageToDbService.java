@@ -10,10 +10,12 @@ public abstract class MessageToDbService extends Message
 		super(from, to);
 	}
 	
-	public void exec(Abonent abonent) {
+	public boolean exec(Abonent abonent) {
 		if( abonent instanceof DbService) {
 			exec((DbService)abonent);
+			return true;
 		}
+		return false;
 	}
 	
 	public abstract void exec(DbService accountService);
