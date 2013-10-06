@@ -12,7 +12,10 @@ import org.junit.runners.MethodSorters;
 import resource.ResourceSystemImpl;
 import user.User;
 
+import java.util.HashSet;
+import java.util.LinkedHashSet;
 import java.util.Random;
+import java.util.Set;
 
 @FixMethodOrder(MethodSorters.NAME_ASCENDING)
 public class GameServiceTest extends Assert {
@@ -82,6 +85,16 @@ public class GameServiceTest extends Assert {
 	@Test
 	public void cAddFireballTest() {
 		gameService.addFireball(userId, new Fireball(0,0,1,1));
+	}
+
+	@Test
+	public void updateAvalibleGameSessionTest() {
+		Set<LongId<GameSession>> set = new HashSet<LongId<GameSession>>();
+		set.add(new LongId<GameSession>(100));
+		set.add(new LongId<GameSession>(500));
+		MessageUpdateAvalibleGameSession msg = new MessageUpdateAvalibleGameSession(gameService.getAddress(), frontend.getAddress(), userId, set);
+
+		assertTrue(msg.exec((Abonent)frontend));
 	}
 
 }

@@ -156,58 +156,6 @@ public class Page {
     }
 
 
-    public static String PlayWithNewMessages(LongId<UserSession> sessionId, String userName, ChatMessage[] chatMessages) {
-        StringBuilder str = new StringBuilder("");
-
-        str.append("<body>");
-
-        str.append("<p>sessionId ").append(sessionId.get()).append("</p>");
-        str.append("<p>userName ").append(userName).append("</p>");
-
-        for (int i = 0; i < chatMessages.length; i++) {
-            str.append("<p>userName ").append(chatMessages[i].getStringMessage()).append("</p>");
-        }
-
-        str.append("<form id=\"MainForm\" method=\"POST\">");
-        str.append("<p>Введите сообщение<Br>");
-        // str.append("<input type=\"hidden\" name=\"gameSessionId\" value=\"").append(gameSessionId.get()).append("\" />");
-        str.append("<textarea name='message' cols='40' rows='3'></textarea></p>");
-        str.append("<p><input type='submit'  value ='Отправить'>");
-        str.append("<input type=\"submit\" name=\"Exit\" value=\"Exit\" />");
-
-        str.append("</form>");
-        str.append("</body>");
-
-        return str.toString();
-
-
-    }
-
-
-    public static String PlayWithNewGameSession(LongId<UserSession> sessionId, String userName,
-                                                Set<LongId<GameSession>> avalibleGameSessionsId) {
-        StringBuilder str = new StringBuilder("");
-
-        str.append("<body>");
-
-        str.append("<p>sessionId ").append(sessionId.get()).append("</p>");
-        str.append("<p>userName ").append(userName).append("</p>");
-
-        Iterator<LongId<GameSession>> iter = avalibleGameSessionsId.iterator();
-        while (iter.hasNext())
-            str.append("<input type=\"submit\" name=\'").append(iter.next().get()).append("\'").append("value=\"game\" />");
-
-        str.append("<form id=\"MainForm\" method=\"POST\">");
-        str.append("<input type=\"submit\" name=\"New\" value=\"New\" />");
-        str.append("</form>");
-        str.append("</body>");
-
-        return str.toString();
-
-
-    }
-
-
     public static String NotAuthorized(LongId<UserSession> sessionId, String userName) {
         StringBuilder str = new StringBuilder("");
 
@@ -224,13 +172,4 @@ public class Page {
 
         return str.toString();
     }
-
-    private static String FormUpdater() {
-        return " setInterval(function () {" + funcUpdater() + "}, 1000); ";
-    }
-
-    private static String funcUpdater() {
-        return " $.get(\"/\",\"\",function(data,status){$(\"#message\").append($(\"<div></div>\").html(data))}) ";
-    }
-
 }

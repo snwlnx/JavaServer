@@ -69,11 +69,19 @@ public class GameSessionTest extends Assert {
 
 	@Test
 	public void addFireballTest() {
-
 		LinkedList<Fireball> list = new LinkedList<Fireball>();
 		list.add(new Fireball(0,0, 10, 10));
 
 		gameSession.setFireballs(list);
-		assertTrue(gameSession.getFireballs().equals(list));
+		gameSession.addFireball(new Fireball(0,0,0,0));
+		assertEquals(2, gameSession.getFireballs().size());
+	}
+
+
+	@Test
+	public void enemiesTest() {
+		gameSession.addNewPlayer(userId);
+		gameSession.addNewPlayer(victimId);
+		assertEquals(1, gameSession.getEnemiesArray(userId).size());
 	}
 }
