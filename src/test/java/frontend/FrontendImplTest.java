@@ -54,4 +54,32 @@ public class FrontendImplTest extends Assert {
 
     }
 
+    @Test
+    public void testFinishGame () {
+//        frontend.finishGame(user_game_number,new Boolean(true));
+//        UserState currentState = frontend.getUserSession(user_game_number).getUserState();
+//        assertTrue(currentState instanceof StateFinishWin);
+    }
+
+    @Test
+    public void  testUpdateUserId () {
+//        frontend.updateUserId(user_session_number,user_game_number);
+//        UserState currentState = frontend.getUserSession(user_game_number).getUserState();
+//        assertTrue(currentState instanceof StateAuthorized);
+    }
+
+    @Test
+    public void testUpdateHealth () {
+//        frontend.updateHealth(user_game_number,user_health);
+//        assertTrue(frontend.getUserSession(user_game_number).getPlayer().getHealthMax() == user_health);
+    }
+
+    @Test
+    public void testUpdateFireBalls () {
+//        Fireball fireball = new Fireball(1,1,1,1);
+//        LinkedList<Fireball> listFireballs = new LinkedList<Fireball>();
+//        listFireballs.push(fireball);
+//        frontend.updateFireballs(user_game_number, listFireballs);
+//        assertTrue(frontend.getUserSession(user_game_number).getFireballs().contains(listFireballs));
+    }
 }

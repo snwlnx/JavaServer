@@ -32,9 +32,8 @@ public class Page {
 
         str.append("<p>sessionId ").append(sessionId.get()).append("</p>");
         str.append("<h1>Ты проиграл, но главное - не расстраивайся!</h1>");
-
+	    refreshForm(str);
         str.append("</body>");
-        refreshForm(str);
         return str.toString();
     }
 
