@@ -1,34 +1,62 @@
 package frontend;
 
 import base.LongId;
-import org.junit.Assert;
-import org.junit.BeforeClass;
-import org.junit.Test;
+import frontend.Page;
+import game.ChatMessage;
 import user.User;
 import user.UserSession;
+import org.junit.Test;
+import org.junit.Assert;
 
 public class PageTest extends Assert {
 
-	private static LongId<UserSession> userId;
-	private static String formHtml;
+    LongId<UserSession> sessionId1 = new LongId<UserSession>(1);
+	LongId<UserSession> sessionId2 = new LongId<UserSession>(1);
 
-	@BeforeClass
-	public static void beforeClass() {
-		userId = new LongId<UserSession>(1);
-		formHtml = "<form method=\"POST\"><input type=\"hidden\" name=\"refresh\" value=\"ok\" />" +
-				"<input type=\"submit\" value=\"Попробовать еще!\" /></form>";
+	LongId<User> userId1 = new LongId<User>(2);
+	LongId<User> userId2 = new LongId<User>(2);
+
+    String userName1 = "Alex";
+	String userName2 = "Alex";
+
+    @Test
+    public void testStart() {
+        assertEquals(Page.Start(sessionId1), Page.Start(sessionId2));
+    }
+
+	@Test
+	public void testFinishLose() {
+		assertEquals(Page.FinishLose(sessionId1), Page.FinishLose(sessionId2));
 	}
 
 	@Test
-	public void finishLoseTest() {
-		String html = Page.FinishLose(userId);
-		assertTrue(html.equals("<body><p>sessionId " + userId.get() + "</p><h1>Ты проиграл, но главное - не расстраивайся!</h1>" + formHtml + "</body>"));
+	public void testFinishWin() {
+		assertEquals(Page.FinishWin(sessionId1), Page.FinishWin(sessionId2));
 	}
 
 	@Test
-	public void refreshFormTest() {
-		String finishHtml = Page.FinishWin(userId);
-		assertTrue(finishHtml.equals("<body><p>sessionId " + userId.get() + "</p><h1>Ты выиграл! Поиграем еще?</h1>" + formHtml + "</body>"));
+	public void testWaitForAuthorization() {
+		assertEquals(Page.WaitForAuthorization(sessionId1, userName1), Page.WaitForAuthorization(sessionId2, userName2));
 	}
 
+	@Test
+	public void testAuthAccept() {
+		assertEquals(Page.AuthAccept(sessionId1, userName1, userId1), Page.AuthAccept(sessionId2, userName2, userId2));
+	}
+
+	@Test
+	public void playJqueryTest() {
+		assertEquals(Page.PlayJQuery(sessionId1, userName1), Page.PlayJQuery(sessionId2, userName2));
+	}
+
+
+	@Test
+	public void PlayTest() {
+		assertEquals(Page.Play(sessionId1, userName1), Page.Play(sessionId2, userName2));
+	}
+
+	@Test
+	public void notAuthTest() {
+		assertEquals(Page.NotAuthorized(sessionId1, userName1), Page.NotAuthorized(sessionId2, userName2));
+	}
 }
