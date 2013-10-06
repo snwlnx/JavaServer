@@ -26,14 +26,15 @@ public class MessageSystemImpl implements MessageSystem {
         messageQueue.add(message);
     }
 
-    public void execForAbonent(Abonent abonent) {
+    public boolean execForAbonent(Abonent abonent) {
         Queue<Message> messageQueue = messages.get(abonent.getAddress());
         if (messageQueue == null) {
-            return;
+            return false;
         }
         while (!messageQueue.isEmpty()) {
             messageQueue.poll().exec(abonent);
         }
+	    return true;
     }
 
     public AddressService getAddressService() {
