@@ -1,10 +1,8 @@
 package game;
 
-import base.Fireball;
-import base.Frontend;
-import base.LongId;
-import base.ResourceSystem;
+import base.*;
 import frontend.FrontendImpl;
+import frontend.MessageRefreshPosition;
 import message.MessageSystemImpl;
 import org.junit.Assert;
 import org.junit.BeforeClass;
@@ -14,7 +12,10 @@ import org.junit.runners.MethodSorters;
 import resource.ResourceSystemImpl;
 import user.User;
 
+import java.util.HashSet;
+import java.util.LinkedHashSet;
 import java.util.Random;
+import java.util.Set;
 
 @FixMethodOrder(MethodSorters.NAME_ASCENDING)
 public class GameServiceTest extends Assert {
@@ -38,21 +39,62 @@ public class GameServiceTest extends Assert {
 	}
 
 	@Test
+	public void joinToEmtyGame() {
+//		boolean joined = gameService.joinToGame(new LongId<User>(1), new LongId<GameSession>(9999));
+//		assertFalse(joined);
+	}
+
+	@Test
+	public void runTest() {
+		Thread gm = new Thread(gameService);
+		gm.start();
+		gm.interrupt();
+	}
+
+	@Test
+	public void failStartGameTest() {
+		LongId<User> userId = new LongId<User>(100500);
+		LongId<GameSession> gameNullId = gameService.startGame(userId);
+		assertNotNull(gameNullId);
+		gameNullId = gameService.startGame(userId);
+		assertNull(gameNullId);
+	}
+
+	@Test
 	public void aStartGameTest() {
 		gameId = gameService.startGame(userId);
 		assertNotNull(gameId);
-
-		messageSystem.execForAbonent(frontend);
+		assertTrue(messageSystem.execForAbonent(frontend));
 	}
 
 	@Test
 	public void bJoinToGameTest() {
 		assertTrue(gameService.joinToGame(victimId, gameId));
+		int posValue = 100500;
+
+		gameService.refreshPosition(victimId, posValue, posValue, posValue, posValue);
+		Thread thr = new Thread(gameService);
+		thr.start();
+
+		TimeHelper.sleep(100);
+		thr.interrupt();
+
+		assertNotNull(gameService.startGame(victimId));
 	}
 
 	@Test
 	public void cAddFireballTest() {
 		gameService.addFireball(userId, new Fireball(0,0,1,1));
+	}
+
+	@Test
+	public void updateAvalibleGameSessionTest() {
+		Set<LongId<GameSession>> set = new HashSet<LongId<GameSession>>();
+		set.add(new LongId<GameSession>(100));
+		set.add(new LongId<GameSession>(500));
+		MessageUpdateAvalibleGameSession msg = new MessageUpdateAvalibleGameSession(gameService.getAddress(), frontend.getAddress(), userId, set);
+
+		assertTrue(msg.exec((Abonent)frontend));
 	}
 
 }

@@ -14,6 +14,11 @@ public class PlayerTest extends Assert {
 	}
 
 	@Test
+	public void healthMaxTest() {
+		assertEquals(100, new Player().getHealthMax());
+	}
+
+	@Test
 	public void constructorDefaultTest() {
 		Player player1 = new Player(0, 0);
 		Player player2 = new Player(-10, 20);

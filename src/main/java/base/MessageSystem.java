@@ -7,7 +7,7 @@ public interface MessageSystem {
 
     public void sendMessage(Message message);
 
-    public void execForAbonent(Abonent abonent);
+    public boolean execForAbonent(Abonent abonent);
 
     public AddressService getAddressService();
 
