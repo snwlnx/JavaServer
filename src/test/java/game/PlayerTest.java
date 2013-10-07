@@ -14,6 +14,11 @@ public class PlayerTest extends Assert {
 	}
 
 	@Test
+	public void healthMaxTest() {
+		assertEquals(100, new Player().getHealthMax());
+	}
+
+	@Test
 	public void constructorDefaultTest() {
 		Player player1 = new Player(0, 0);
 		Player player2 = new Player(-10, 20);
@@ -45,6 +50,11 @@ public class PlayerTest extends Assert {
 
 		assertEquals(30, player.getPositionX());
 		assertEquals(-20, player.getPositionY());
+
+		player.setVelocity(0, 0);
+		player.move();
+		assertEquals(30, player.getPositionX());
+		assertEquals(-20, player.getPositionY());
 	}
 
 	@Test
@@ -61,6 +71,10 @@ public class PlayerTest extends Assert {
 		assertFalse(player.collision(-1, 20));
 		assertFalse(player.collision(20, -1));
 		assertFalse(player.collision(100, 100));
+
+		assertFalse(player.collision(15, 5));
+		assertFalse(player.collision(15, 37));
+
 	}
 
 	@Test
@@ -75,6 +89,9 @@ public class PlayerTest extends Assert {
 		player = new Player();
 		player.hurt(101);
 		assertFalse(player.isAlive());
+
+		player.setHealth(125);
+		assertEquals(125, player.hurt(0));
 	}
 
 	@Test
@@ -82,5 +99,28 @@ public class PlayerTest extends Assert {
 		Player player = new Player(10, 134, 7, -45);
 		player.hurt(15);
 		assertEquals(player.toString(), "[" + 10 + "," + 134 + "," + 7 + "," + -45 + "," + 85 + ",\"Player\"]");
+	}
+
+	@Test
+	public void setPositionTest() {
+		Player player = new Player();
+		Player playerPosited = new Player(26, 27);
+
+		player.setPosition(10, 20);
+		assertEquals(10, player.getPositionX());
+		assertEquals(20, player.getPositionY());
+
+		player.setPosition(playerPosited);
+		assertEquals(26, player.getPositionX());
+		assertEquals(27, player.getPositionY());
+	}
+
+	@Test
+	public void cloneTest() {
+		Player player = new Player(10, 20, 30, 40);
+		Player playerC = player.clone();
+
+		assertTrue(player != playerC);
+		assertTrue(player.toString().equals(playerC.toString()));
 	}
 }

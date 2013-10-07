@@ -9,10 +9,12 @@ public abstract class MessageToGameService extends Message{
         super(from, to);
     }
 
-    public void exec(Abonent abonent) {
+    public boolean exec(Abonent abonent) {
         if(abonent instanceof GameService) {
             exec((GameService) abonent);
+	        return true;
         }
+	    return false;
     }
 
     public abstract void exec(GameService gameService);

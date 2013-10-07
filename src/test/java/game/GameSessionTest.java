@@ -1,5 +1,6 @@
 package game;
 
+import base.Fireball;
 import base.LongId;
 import base.Player;
 import org.junit.Assert;
@@ -8,6 +9,8 @@ import org.junit.FixMethodOrder;
 import org.junit.Test;
 import org.junit.runners.MethodSorters;
 import user.User;
+
+import java.util.LinkedList;
 
 @FixMethodOrder(MethodSorters.NAME_ASCENDING)
 public class GameSessionTest extends Assert {
@@ -47,11 +50,38 @@ public class GameSessionTest extends Assert {
 		gameSession.addMessageToChat(userId, message);
 		ChatMessage[] msgs = gameSession.getMessagesForUser(userId);
 		assertEquals(1, msgs.length);
+
+		gameSession.addMessageToChat(victimId, message);
+		msgs = gameSession.getMessagesForUser(userId);
+		assertEquals(1, msgs.length);
 	}
 
 
 	@Test
 	public void eChatMessageEmptyTest() {
 		assertNull(gameSession.getMessagesForUser(victimId));
+	}
+
+	@Test
+	public void doubleAddToGameTest() {
+		assertNull(gameSession.addNewPlayer(userId));
+	}
+
+	@Test
+	public void addFireballTest() {
+		LinkedList<Fireball> list = new LinkedList<Fireball>();
+		list.add(new Fireball(0,0, 10, 10));
+
+		gameSession.setFireballs(list);
+		gameSession.addFireball(new Fireball(0,0,0,0));
+		assertEquals(2, gameSession.getFireballs().size());
+	}
+
+
+	@Test
+	public void enemiesTest() {
+		gameSession.addNewPlayer(userId);
+		gameSession.addNewPlayer(victimId);
+		assertEquals(1, gameSession.getEnemiesArray(userId).size());
 	}
 }
