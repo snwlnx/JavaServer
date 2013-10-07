@@ -8,7 +8,6 @@ import org.junit.Before;
 import org.junit.Test;
 import user.*;
 
-import javax.servlet.http.HttpServletRequest;
 import java.util.LinkedList;
 
 /**
@@ -21,7 +20,6 @@ import java.util.LinkedList;
 public class FrontendImplTest extends Assert {
 
     FrontendImpl         frontend;
-    HttpServletRequest   request;
     LongId<User>         user_game_number    =  new LongId<User>(1);
     LongId<UserSession>  user_session_number =  new LongId<UserSession>(1);
     String               user_session_name   =  "user_name";
