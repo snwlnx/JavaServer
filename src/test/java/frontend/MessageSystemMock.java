@@ -27,9 +27,9 @@ public class MessageSystemMock  extends Assert implements MessageSystem{
     }
 
     @Override
-    public void execForAbonent(Abonent abonent) {
+    public boolean execForAbonent(Abonent abonent) {
         assertNotNull(abonent);
-
+	    return true;
     }
 
     @Override
