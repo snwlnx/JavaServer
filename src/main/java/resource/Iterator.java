@@ -19,7 +19,7 @@ public class Iterator implements java.util.Iterator<String> {
 		}
 		else if (rootFile.isDirectory()) {
 			if (!dirIsEmpty(rootFile.getPath())) {
-				prevDirectories.push(rootFile);
+				//prevDirectories.push(rootFile);
 				moveToBottomLevel(path);
 			}
 		}
