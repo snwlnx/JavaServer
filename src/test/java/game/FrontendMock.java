@@ -1,3 +1,4 @@
+/*
 package game;
 
 import base.Abonent;
@@ -24,3 +25,4 @@ public class FrontendMock extends FrontendImpl implements Frontend, Abonent {
 		this.addUserIdToSession(new LongId<User>(999), user2);
 	}
 }
+*/

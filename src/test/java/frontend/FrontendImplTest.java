@@ -1,14 +1,20 @@
 package frontend;
 
-import base.Fireball;
+import base.Abonent;
 import base.LongId;
+import base.MessageSystem;
 import game.ChatMessage;
+import message.Message;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
-import user.*;
+import user.StatePlay;
+import user.User;
+import user.UserSession;
+import user.UserState;
 
-import java.util.LinkedList;
+import static org.mockito.Mockito.*;
+
 
 /**
  * Created with IntelliJ IDEA.
@@ -27,7 +33,21 @@ public class FrontendImplTest extends Assert {
 
     @Before
     public void setUp() throws Exception {
-        frontend = new FrontendImpl(new MessageSystemMock());
+
+        MessageSystem msgSystemMock = mock(MessageSystem.class);
+
+        when(msgSystemMock.execForAbonent(frontend)).thenReturn(true);
+        when(msgSystemMock.getAddressService()).thenReturn(null);
+        when(msgSystemMock.getAddress((Class<?>) any())).thenReturn(null);
+
+        when(msgSystemMock.execForAbonent((Abonent)any())).thenReturn(true);
+        doNothing().when(msgSystemMock).sendMessage((Message)any());
+        doNothing().when(msgSystemMock).addService((Class<?>)any(),(Abonent)any());
+
+
+
+
+        frontend = new FrontendImpl(msgSystemMock);
         frontend.addUserSession(user_session_number,user_session_name);
         frontend.addUserIdToSession(user_game_number,user_session_number);
     }

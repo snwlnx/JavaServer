@@ -1,3 +1,4 @@
+/*
 package frontend;
 
 import base.Abonent;
@@ -7,13 +8,15 @@ import base.MessageSystem;
 import message.Message;
 import org.junit.Assert;
 
+*/
 /**
  * Created with IntelliJ IDEA.
  * User: korolkov
  * Date: 10/2/13
  * Time: 8:57 PM
  * To change this template use File | Settings | File Templates.
- */
+ *//*
+
 public class MessageSystemMock  extends Assert implements MessageSystem{
     @Override
     public void addService(Class<?> abonentType, Abonent abonent) {
@@ -42,3 +45,4 @@ public class MessageSystemMock  extends Assert implements MessageSystem{
         return null;
     }
 }
+*/
