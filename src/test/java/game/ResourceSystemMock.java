@@ -1,3 +1,4 @@
+/*
 package game;
 
 import base.Resource;
@@ -8,10 +9,8 @@ public class ResourceSystemMock implements ResourceSystem{
 
 	public Resource getResource(Class<?> className) {
 		if (className.equals(MapResource.class)) {
-			MapResource map = new MapResource();
-			map.height = 500;
-			map.width = 900;
-			map.name = "Map1";
+			MapResource map = new MapResource(500,900,"Map1");
+
 			return map;
 		}
 		return null;
@@ -21,3 +20,4 @@ public class ResourceSystemMock implements ResourceSystem{
 
 	}
 }
+*/

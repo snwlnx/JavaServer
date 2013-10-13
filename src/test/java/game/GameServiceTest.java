@@ -1,21 +1,21 @@
 package game;
 
 import base.*;
-import frontend.FrontendImpl;
-import frontend.MessageRefreshPosition;
 import message.MessageSystemImpl;
 import org.junit.Assert;
 import org.junit.BeforeClass;
 import org.junit.FixMethodOrder;
 import org.junit.Test;
 import org.junit.runners.MethodSorters;
-import resource.ResourceSystemImpl;
+import resource.MapResource;
 import user.User;
 
 import java.util.HashSet;
-import java.util.LinkedHashSet;
-import java.util.Random;
 import java.util.Set;
+
+import static org.mockito.Mockito.doNothing;
+import static org.mockito.Mockito.mock;
+import static org.mockito.Mockito.when;
 
 @FixMethodOrder(MethodSorters.NAME_ASCENDING)
 public class GameServiceTest extends Assert {
@@ -30,12 +30,18 @@ public class GameServiceTest extends Assert {
 	@BeforeClass
 	public static void initGameService() {
 		messageSystem = new MessageSystemImpl();
-		frontend = new FrontendMock(messageSystem);
 
-		userId = new LongId<User>(111);
+		frontend =  mock(Frontend.class);
+        when(frontend.getAddress()).thenReturn(new Address());
+
+		//frontend = new FrontendMock(messageSystem);
+
+		userId   = new LongId<User>(111);
 		victimId = new LongId<User>(999);
-
-		gameService = new GameServiceImpl(messageSystem, new ResourceSystemMock());
+        ResourceSystem resourceSystem = mock(ResourceSystem.class);
+        when(resourceSystem.getResource(MapResource.class)).thenReturn(new MapResource(100,100,"Map1"));
+        doNothing().when(resourceSystem).globalInit();
+		gameService = new GameServiceImpl(messageSystem, resourceSystem);
 	}
 
 	@Test
