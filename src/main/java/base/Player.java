@@ -1,7 +1,7 @@
 package base;
 
 public class Player implements Movable, Cloneable {
-    static private int healthMax;
+    static private int healthMax = 100;
     static private int width, height;
 
     private int x, y,
