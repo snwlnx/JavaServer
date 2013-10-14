@@ -1,8 +1,5 @@
 package game;
 
-import java.util.*;
-import java.util.concurrent.atomic.AtomicLong;
-
 import base.*;
 import frontend.MessageFireballsToFrontend;
 import frontend.MessageHealthToFrontend;
@@ -10,6 +7,9 @@ import frontend.MessageRefreshPositionToFrontend;
 import message.Message;
 import resource.MapResource;
 import user.User;
+
+import java.util.*;
+import java.util.concurrent.atomic.AtomicLong;
 
 
 public class GameServiceImpl implements GameService {
@@ -250,14 +250,13 @@ public class GameServiceImpl implements GameService {
 
 
 	public LongId<GameSession> startGame(LongId<User> userToGameSession) {
-
+        LongId<GameSession> gameSessionId = null;
         if (!userIdToGameSessionId.containsKey(userToGameSession)) {
-            LongId<GameSession> gameSessionId = addNewGameSession(userToGameSession);
+            gameSessionId = addNewGameSession(userToGameSession);
             userIdToGameSessionId.put(userToGameSession, gameSessionId);
             replicateStartGameToFrontend(userToGameSession, gameSessionId);
-	        return gameSessionId;
         }
-		return null;
+		return gameSessionId;
     }
 
 

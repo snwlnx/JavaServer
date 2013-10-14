@@ -34,14 +34,16 @@ public class GameServiceTest extends Assert {
 		frontend =  mock(Frontend.class);
         when(frontend.getAddress()).thenReturn(new Address());
 
+        messageSystem.addService(Frontend.class,frontend);
 		//frontend = new FrontendMock(messageSystem);
-
 		userId   = new LongId<User>(111);
 		victimId = new LongId<User>(999);
+
         ResourceSystem resourceSystem = mock(ResourceSystem.class);
         when(resourceSystem.getResource(MapResource.class)).thenReturn(new MapResource(100,100,"Map1"));
         doNothing().when(resourceSystem).globalInit();
-		gameService = new GameServiceImpl(messageSystem, resourceSystem);
+
+        gameService = new GameServiceImpl(messageSystem, resourceSystem);
 	}
 
 	@Test
