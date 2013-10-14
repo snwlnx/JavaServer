@@ -44,7 +44,7 @@ public class FrontendImpl extends AbstractHandler implements Frontend {
     private LongId<UserSession> getSessionIdFromCookie(HttpServletRequest request) {
         Cookie cookie = null;
         Cookie[] cookies = request.getCookies();
-        if (cookies.length != 0)
+        if (cookies != null && cookies.length != 0)
             for (Cookie cook : cookies)
                 if (cook.getName().equals("sessionId")) {
                     cookie = cook;
@@ -54,8 +54,8 @@ public class FrontendImpl extends AbstractHandler implements Frontend {
 
     }
 
-    private boolean ignoreFavicon(HttpServletRequest request) {
-        if (request.getRequestURI().equals("/favicon.ico")) {
+    private boolean favIcon(HttpServletRequest request) {
+        if (request.getRequestURI().equals("/favIcon.ico")) {
             return true;
         }
         return false;
@@ -324,12 +324,13 @@ public class FrontendImpl extends AbstractHandler implements Frontend {
         baseRequest.setHandled(true);
     }
 
-    public void handle(String target, Request baseRequest,
-                       HttpServletRequest  request,
-                       HttpServletResponse response )
-                                    throws IOException, ServletException {
+    public void handle(String               target,
+                       Request              baseRequest,
+                       HttpServletRequest   request,
+                       HttpServletResponse  response)
+            throws IOException, ServletException {
 
-        if (ignoreFavicon(request))
+        if (favIcon(request))
             return;
         setResponseSettings(baseRequest, response);
 
