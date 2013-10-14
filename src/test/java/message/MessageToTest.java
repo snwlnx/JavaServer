@@ -1,25 +1,39 @@
 package message;
 
 
-import base.Frontend;
-import base.GameService;
-import base.MessageSystem;
+import base.*;
+import game.GameServiceImpl;
+import game.GameSession;
+import game.MessageStartGameToFrontend;
 import org.junit.Assert;
+import org.junit.Before;
+import org.junit.Test;
+import org.junit.runner.RunWith;
+import org.mockito.Mock;
+import org.mockito.runners.MockitoJUnitRunner;
+import resource.MapResource;
+import user.User;
 
+import static org.mockito.Mockito.when;
+
+@RunWith(MockitoJUnitRunner.class)
 public class MessageToTest extends Assert {
 
-	private static       Frontend frontend;
-	private static       MessageSystem messageSystem;
-	private static       GameService gameService;
-/*
-	@BeforeClass
-	public static void beforeClass() {
-		messageSystem = new MessageSystemImpl();
-		frontend = new FrontendMock(messageSystem);
-		gameService = new GameServiceImpl(messageSystem, new ResourceSystemMock());
+	@Mock  private     Frontend       frontend;
+    @Mock  private     ResourceSystem resourceSystem;
+	       private     MessageSystem  messageSystem;
+	       private     GameService    gameService;
 
-	}*/
-/*
+
+    @Before
+    public  void setUp() throws Exception {
+        messageSystem = new MessageSystemImpl();
+        when(resourceSystem.getResource(MapResource.class)).thenReturn(new MapResource(100,100,"Map1"));
+        gameService = new GameServiceImpl(messageSystem, resourceSystem);
+
+
+    }
+
 	@Test
 	public void getFromTest() {
 		MessageStartGameToFrontend msg = new MessageStartGameToFrontend(frontend.getAddress(), null, new LongId<User>(111), new LongId<GameSession>(11111));
@@ -31,5 +45,5 @@ public class MessageToTest extends Assert {
 		MessageStartGameToFrontend msg = new MessageStartGameToFrontend(null, null, new LongId<User>(111), new LongId<GameSession>(11111));
 		assertTrue(msg.exec((Abonent)frontend));
 		assertFalse(msg.exec((Abonent)gameService));
-	}*/
+	}
 }

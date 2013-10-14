@@ -197,6 +197,7 @@ public class FrontendImpl extends AbstractHandler implements Frontend {
         return false;
     }
 
+/*
     private String getLinkForAvailableGames(LongId<UserSession> sessionId) {
 
         JSONArray jsonArray = new JSONArray();
@@ -206,6 +207,7 @@ public class FrontendImpl extends AbstractHandler implements Frontend {
             jsonArray.add(iter.next().get());
         return jsonArray.toString();
     }
+*/
 
     public void removeSession(LongId<UserSession> sessionId){
         if(sessionId != null){
@@ -382,7 +384,7 @@ public class FrontendImpl extends AbstractHandler implements Frontend {
         }
     }
 
-    private void clearSessionsByTimeout() {
+/*    private void clearSessionsByTimeout() {
         // todo убрать константы из кода
 
         long curTime = System.currentTimeMillis();
@@ -401,7 +403,7 @@ public class FrontendImpl extends AbstractHandler implements Frontend {
                 }
             }
         }
-    }
+    }*/
 
     public void updateUserId(LongId<UserSession> sessionId, LongId<User> userId) {
         UserSession session = sessions.get(sessionId);
@@ -469,12 +471,14 @@ public class FrontendImpl extends AbstractHandler implements Frontend {
     public UserSession getUserSessionBySessionId(LongId<UserSession> sessionId){
         return sessions.get(sessionId);
     }
+
     public UserSession getUserSession(LongId<User> userId) {
         LongId<UserSession> sessionId = userIdToSessionId.get(userId);
-        if (sessionId != null) {
+/*        if (sessionId != null) {
             return sessions.get(sessionId);
         }
-        return null;
+        return null;*/
+        return (sessionId != null)?sessions.get(sessionId):null;
     }
 
     public Address getAddress() {

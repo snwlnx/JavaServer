@@ -50,6 +50,7 @@ public class FrontendImplTest extends Assert {
         //request
         when(request.getRequestURI()).thenReturn("request");
         when(request.getCookies()).thenReturn(new Cookie[0]);
+        when(request.getParameter((anyString()))).thenReturn("0");
 
         //response
         when(response.getWriter()).thenReturn(printWriter);
@@ -108,7 +109,6 @@ public class FrontendImplTest extends Assert {
 
     @Test
     public void testUpdateFireBalls () {
-
         Fireball fireball = new Fireball(1,1,1,1);
         LinkedList<Fireball> listFireballs = new LinkedList<Fireball>();
         listFireballs.push(fireball);
@@ -116,6 +116,12 @@ public class FrontendImplTest extends Assert {
         assertTrue(frontend.getUserSession(userGameNumber).getFireballs().contains(fireball));
     }
 
+
+
+    @Test
+    public void testProcessAction(){
+        assertNotNull(frontend.processAction("position",request,response,frontend.getUserSession(userGameNumber)));
+    }
 
     @Test
     public void testHandle() throws IOException, ServletException {
