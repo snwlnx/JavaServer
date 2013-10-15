@@ -51,6 +51,7 @@ public class FrontendImplTest extends Assert {
         when(request.getRequestURI()).thenReturn("request");
         when(request.getCookies()).thenReturn(new Cookie[0]);
         when(request.getParameter((anyString()))).thenReturn("0");
+        when(request.getParameter("showChats")).thenReturn("yes");
 
         //response
         when(response.getWriter()).thenReturn(printWriter);
@@ -127,4 +128,14 @@ public class FrontendImplTest extends Assert {
     public void testHandle() throws IOException, ServletException {
         frontend.handle("target",baseRequest,request,response);
     }
+
+    @Test
+    public void testAvailableGames(){
+        assertFalse(frontend.availableGames(request,userSessionNumber));
+    }
+    @Test
+    public void testRemoveSession(){
+        frontend.removeSession(userSessionNumber);
+    }
+
 }

@@ -171,30 +171,31 @@ public class FrontendImpl extends AbstractHandler implements Frontend {
     private boolean existAvailableGames(LongId<UserSession> sessionId) {
         Set<LongId<GameSession>> gamesId = sessions.get(sessionId).getAvailableGameSessions();
 
-        if (gamesId != null)
+        return (gamesId == null)?false:((gamesId.size() !=0 )?true:false);
+/*        if (gamesId != null)
             if (gamesId.size() != 0)
                 return true;
-        return false;
+        return false;*/
 
     }
 
     public boolean availableGames(HttpServletRequest request, LongId<UserSession> sessionId) {
         LongId<User> userId = sessions.get(sessionId).getUserId();
-        Message message = new MessageGetAvalibleGameSession(
+        Message message = new MessageGetAvailableGameSession(
                 this.getAddress(),
                 messageSystem.getAddress(GameService.class),
                 userId);
         messageSystem.sendMessage(message);
-
-
         String key = request.getParameter("showChats");
-        if (key == null)
+
+        return (key == null)?false:((key.equals("yes") && existAvailableGames(sessionId))?true:false);
+/*        if (key == null)
             return false;
         if (key.equals("yes")) {
             if (existAvailableGames(sessionId))
                 return true;
         }
-        return false;
+        return false;*/
     }
 
 /*

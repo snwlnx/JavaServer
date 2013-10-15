@@ -13,12 +13,12 @@ import user.User;
  * Time: 13:47
  * To change this template use File | Settings | File Templates.
  */
-public class MessageGetAvalibleGameSession extends MessageToGameService {
+public class MessageGetAvailableGameSession extends MessageToGameService {
 
     final private LongId<User>        userToGameSession;
 
 
-    public MessageGetAvalibleGameSession(Address from, Address to,LongId<User> userToGameSession){
+    public MessageGetAvailableGameSession(Address from, Address to, LongId<User> userToGameSession){
         super(from, to);
         this.userToGameSession = userToGameSession;
     }

@@ -9,7 +9,7 @@ public abstract class Message {
 
     public Message(Address from, Address to) {
         this.from = from;
-        this.to = to;
+        this.to   = to;
     }
 
     public Address getFrom() {

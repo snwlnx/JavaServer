@@ -36,7 +36,8 @@ public class StateAuthorized implements UserState {
 
 
 
-    public void processUserState( Frontend frontend, LongId<UserSession> sessionId, HttpServletRequest request, HttpServletResponse response) throws IOException {
+    public void processUserState( Frontend frontend, LongId<UserSession> sessionId,
+                                  HttpServletRequest request, HttpServletResponse response) throws IOException {
 
         PrintWriter writer      = response.getWriter();
         UserSession userSession = frontend.getUserSessionBySessionId(sessionId);
