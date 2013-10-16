@@ -25,16 +25,19 @@ public class IteratorTest extends Assert {
     }
     @Test
     public void iteratorGetStartFile() {
-        String startFile = iterator.getFile();
-        assertNotNull(startFile);
+        assertNotNull(iterator.getFile());
     }
 
     @Test
     public void iteratorTraverseAllFiles() {
-
-        while (iterator.hasNext()) {
+        while (iterator.hasNext())
             assertNotNull(iterator.getFile());
-        }
+
+    }
+
+    @Test
+    public void next(){
+        assertNull(iterator.next());
     }
 
 }
