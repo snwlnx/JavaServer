@@ -40,7 +40,7 @@ public class DbServiceImpl implements DbService {
         return address;
     }
 
-    private LongId<User> getUserId(String name) {
+    public LongId<User> getUserId(String name) {
         return this.userNameToUserId.get(name);
     }
 

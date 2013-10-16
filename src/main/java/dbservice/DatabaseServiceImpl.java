@@ -1,45 +1,40 @@
 package dbservice;
 
-import base.*;
-import com.mysql.jdbc.Connection;
-import frontend.MessageUserIdUpdate;
+import base.Address;
+import base.DbService;
+import base.LongId;
+import base.MessageSystem;
+import org.hibernate.ObjectNotFoundException;
 import org.hibernate.SessionFactory;
-import org.hibernate.Transaction;
 import org.hibernate.cfg.Configuration;
 import org.hibernate.service.ServiceRegistry;
 import org.hibernate.service.ServiceRegistryBuilder;
 import user.User;
 import user.UserSession;
 
-import java.sql.*;
-
-import org.hibernate.Session;
-import org.hibernate.ObjectNotFoundException;
-
 public class DatabaseServiceImpl implements DbService {
-    private Address address;
-    private MessageSystem msgSystem;
-    private SessionFactory sessionFactory;  //
+    private Address                address;
+    private MessageSystem          msgSystem;
+    private SessionFactory         sessionFactory;
+    private  static ServiceRegistryBuilder builder;
 
     public void run() {
-        while (true) {
+/*        while (true) {
             msgSystem.execForAbonent(this);
             TimeHelper.sleep(20);
-        }
+        }*/
     }
 
-    public DatabaseServiceImpl(MessageSystem msgSystem) {
+    public DatabaseServiceImpl(MessageSystem msgSystem, Configuration configuration,ServiceRegistryBuilder builder) {
         this.msgSystem = msgSystem;
         this.address = new Address();
+        DatabaseServiceImpl.builder = builder;
         msgSystem.addService(DbService.class, this);
-
-        Configuration configuration = new Configuration();
         configuration.addAnnotatedClass(UserDataSet.class);
-
         sessionFactory = createSessionFactory(configuration);
     }
 
-    public static SessionFactory createSessionFactory(Configuration configuration) {
+    private static SessionFactory createSessionFactory(Configuration configuration) {
         configuration.setProperty("hibernate.dialect", "org.hibernate.dialect.MySQLDialect");
         configuration.setProperty("hibernate.connection.driver_class.", "com.mysql.jdbc.Driver");
         configuration.setProperty("hibernate.connection.url", "jdbc:mysql://192.168.56.101:3306/game");
@@ -48,7 +43,6 @@ public class DatabaseServiceImpl implements DbService {
         configuration.setProperty("hibernate.show_sql", "true");
         configuration.setProperty("hibernate.hbm2ddl.auto", "update");
 
-        ServiceRegistryBuilder builder = new ServiceRegistryBuilder();
         builder.applySettings(configuration.getProperties());
         ServiceRegistry serviceRegistry = builder.buildServiceRegistry();
         return configuration.buildSessionFactory(serviceRegistry);
@@ -74,12 +68,12 @@ public class DatabaseServiceImpl implements DbService {
     }
 
     public void getUserIdAndAnswer(LongId<UserSession> sessionId, String userName) {
-        msgSystem.sendMessage(
+/*        msgSystem.sendMessage(
                 new MessageUserIdUpdate(
                         this.getAddress(),
                         msgSystem.getAddress(Frontend.class),
                         sessionId,
-                        getUserId(userName)));
+                        getUserId(userName)));*/
 
     }
 
