@@ -37,7 +37,7 @@ public class IteratorTest extends Assert {
 
     @Test
     public void next(){
-        assertNull(iterator.next());
+        assertNotNull(iterator.next());
     }
 
 }
