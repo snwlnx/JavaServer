@@ -21,13 +21,13 @@ import java.util.concurrent.ConcurrentHashMap;
 
 public class FrontendImpl extends AbstractHandler implements Frontend {
 
-    public static Map<LongId<UserSession>, UserSession> sessions
+    public static Map<LongId<UserSession>, UserSession>  sessions
             = new ConcurrentHashMap<LongId<UserSession>, UserSession>();
     public static Map<LongId<User>, LongId<UserSession>> userIdToSessionId
             = new ConcurrentHashMap<LongId<User>, LongId<UserSession>>();
 
     private MessageSystem messageSystem;
-    private Address address;
+    private Address       address;
     private long lastTime = System.currentTimeMillis();
 
     public void addUserSession(LongId<UserSession> sessionId, String userName) {
@@ -37,7 +37,6 @@ public class FrontendImpl extends AbstractHandler implements Frontend {
 
     public void addUserIdToSession(LongId<User> userId, LongId<UserSession> sessionId) {
         userIdToSessionId.put(userId,sessionId);
-
     }
 
 
@@ -55,10 +54,7 @@ public class FrontendImpl extends AbstractHandler implements Frontend {
     }
 
     private boolean favIcon(HttpServletRequest request) {
-        if (request.getRequestURI().equals("/favIcon.ico")) {
-            return true;
-        }
-        return false;
+        return  (request.getRequestURI().equals("/favIcon.ico"))?true:false;
     }
 
 
@@ -67,8 +63,7 @@ public class FrontendImpl extends AbstractHandler implements Frontend {
         LongId<UserSession> sessionId;
         do {
             sessionId = new LongId<UserSession>(rand.nextLong());
-        }
-        while (sessions.containsKey(sessionId));
+        } while (sessions.containsKey(sessionId));
         Cookie cookie = new Cookie("sessionId", sessionId.toString());
         //cookie.setMaxAge(1000);
         response.addCookie(cookie);
@@ -76,8 +71,10 @@ public class FrontendImpl extends AbstractHandler implements Frontend {
     }
 
 
-    private void createNewUserSessionAndSendMessageR(LongId<UserSession> sessionId, String userName, HttpServletResponse response)
-                                                                                                                throws IOException {
+    private void createNewUserSessionAndSendMessageR(LongId<UserSession> sessionId,
+                                                     String              userName,
+                                                     HttpServletResponse response)
+                                                                            throws IOException {
         UserSession userSession = new UserSession(userName);
         sessions.put(sessionId, userSession);
 
@@ -104,12 +101,11 @@ public class FrontendImpl extends AbstractHandler implements Frontend {
 
     public boolean chatSelected(HttpServletRequest request, LongId<UserSession> sessionId) {
         String checkButton = request.getParameter("New");
-        if (checkButton != null) {
-            if (checkButton.equals("New")) {
-                updateUserState(sessionId,new StatePlay());
-                startGame(sessionId);
-                return true;
-            }
+
+        if (checkButton != null && checkButton.equals("New")) {
+            updateUserState(sessionId,new StatePlay());
+            startGameSM(sessionId);
+            return true;
         }
 
         checkButton = request.getParameter("selectedChat");
@@ -157,7 +153,7 @@ public class FrontendImpl extends AbstractHandler implements Frontend {
     }
 
 
-    public void startGame(LongId<UserSession> sessionId) {
+    public void startGameSM(LongId<UserSession> sessionId) {
 
         LongId<User> userId = sessions.get(sessionId).getUserId();
         MessageToGameService message = new MessageStartGame(
@@ -216,17 +212,17 @@ public class FrontendImpl extends AbstractHandler implements Frontend {
         }
     }
 
-    public String processAction(String action, HttpServletRequest request,
-                                HttpServletResponse response,UserSession userSession ){
+    public String processAction(String              action,
+                                HttpServletRequest  request,
+                                HttpServletResponse response,
+                                UserSession         userSession){
         if (action != null) {
             if (action.equals("position")) {
                 positionFromClient(request, userSession);
             } else if (action.equals("fireball")) {
                 fireballFromClient(request, userSession);
             } else if (action.equals("get")) {
-
                 return infoFromClient(response, userSession);
-
             }
         }
         return "";
@@ -432,9 +428,11 @@ public class FrontendImpl extends AbstractHandler implements Frontend {
         LongId<UserSession> sessionId = userIdToSessionId.get(userIdToGameSession);
         sessions.get(sessionId).updateUserState(new StatePlay());
     }
+
+
     public void joinToGame(LongId<User> userIdToGameSession) {
         //TODO добавить юзера к чату
-        System.out.println(" join userIdToGameSession" + userIdToGameSession);
+        //System.out.println(" join userIdToGameSession" + userIdToGameSession);
     }
 
     public void updateGameStep(LongId<User> userId, ChatMessage[] lastMessages) {
@@ -457,7 +455,6 @@ public class FrontendImpl extends AbstractHandler implements Frontend {
             // todo вообще надо бы занулять!!!
             session.setEnemies(new LinkedList<Player>());
             session.setFireballs(new LinkedList<Fireball>());
-
             session.updateUserState(win ?  new StateFinishWin() : new StateFinishLose());
         }
     }
