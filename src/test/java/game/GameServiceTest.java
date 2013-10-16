@@ -27,8 +27,13 @@ public class GameServiceTest extends Assert {
 	private static LongId<GameSession> gameId;
 
 
+
+
 	@BeforeClass
 	public static void initGameService() {
+
+		Player.setSize(100, 100);
+
 		messageSystem = new MessageSystemImpl();
 
 		frontend =  mock(Frontend.class);
@@ -44,6 +49,7 @@ public class GameServiceTest extends Assert {
         doNothing().when(resourceSystem).globalInit();
 
         gameService = new GameServiceImpl(messageSystem, resourceSystem);
+
 	}
 
 	@Test
@@ -92,6 +98,10 @@ public class GameServiceTest extends Assert {
 
 	@Test
 	public void cAddFireballTest() {
+
+		gameService.addFireball(userId, new Fireball(0,0,1,1));
+
+		gameService.addNewGameSession(userId);
 		gameService.addFireball(userId, new Fireball(0,0,1,1));
 	}
 
@@ -103,6 +113,36 @@ public class GameServiceTest extends Assert {
 		MessageUpdateAvalibleGameSession msg = new MessageUpdateAvalibleGameSession(gameService.getAddress(), frontend.getAddress(), userId, set);
 
 		assertTrue(msg.exec((Abonent)frontend));
+	}
+
+	@Test
+	public void calcFireballsTest() {
+		GameSession gameSession =  new GameSession(new LongId<User>(1));
+		gameSession.addFireball(new Fireball(10, 10, 10, 10));
+		gameService.calculateFireballs(gameSession);
+
+		gameSession.addFireball(new Fireball(-10, 10, 10, 10));
+		gameService.calculateFireballs(gameSession);
+
+		gameSession.addFireball(new Fireball(1000, 10, 10, 10));
+		gameService.calculateFireballs(gameSession);
+
+		gameSession.addFireball(new Fireball(10, -10, 10, 10));
+		gameService.calculateFireballs(gameSession);
+
+		gameSession.addFireball(new Fireball(10, 1000, 10, 10));
+		gameService.calculateFireballs(gameSession);
+
+		gameSession.addNewPlayer(new LongId<User>(1));
+		gameSession.addFireball(new Fireball(105, 105, 0, 0));
+		gameService.calculateFireballs(gameSession);
+	}
+
+	@Test
+	public void gameStep() {
+		LongId<User> userLongId = new LongId<User>(1);
+		gameService.addNewGameSession(userLongId);
+//		gameService.doGameStep(userLongId);
 	}
 
 }
