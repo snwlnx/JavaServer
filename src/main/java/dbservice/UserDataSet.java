@@ -43,24 +43,21 @@ public class UserDataSet implements Serializable {
     @Column(name="banned_end_time")
     private String banEndTime;
 
-    public UserDataSet() {
-        Integer test = new Integer(0);
-        ++test;
-    }
+
 
     public UserDataSet(long id, String name ) {
         this.setId(id);
         this.setName(name);
     }
 
-    public UserDataSet(String name ) {
-        this.setId(-1);
-        this.setName(name);
-    }
 
     public void setName(String name) {
         this.name = name;
     }
+    public String getName() {
+        return this.name;
+    }
+
 
     public LongId<User> getId() {
         LongId<User> userId = new LongId<User>(id);
