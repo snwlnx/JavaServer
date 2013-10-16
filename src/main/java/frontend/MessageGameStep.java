@@ -13,7 +13,7 @@ public class MessageGameStep extends MessageToGameService {
     final private LongId<User>        userId;
 
 
-    MessageGameStep(Address from, Address to,LongId<User> userId){
+    public MessageGameStep(Address from, Address to,LongId<User> userId){
         super(from,to);
         this.userId           = userId;
 
