@@ -5,8 +5,10 @@ import base.LongId;
 import base.MessageSystem;
 import base.Player;
 import frontend.FrontendImpl;
+import game.GameSession;
 import message.Message;
 import org.eclipse.jetty.server.Request;
+import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -18,6 +20,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.HashSet;
+import java.util.Set;
 
 import static org.mockito.Matchers.any;
 import static org.mockito.Matchers.anyString;
@@ -41,14 +45,22 @@ public class StateTest {
     @Mock Request              baseRequest;
     @Mock PrintWriter          printWriter;
     @Mock MessageSystem        msgSystem;
+	@Mock UserSession           session;
 
     LongId<User>         userGameNumber    =  new LongId<User>(1);
     LongId<UserSession>  userSessionNumber =  new LongId<UserSession>(1);
     String               userSessionName   =  "user_name";
     Integer              userHealth        =  100;
 
+
     @Before
     public void setUp() throws Exception {
+//	    Set<LongId<GameSession>> gamIdSet = new HashSet<LongId<GameSession>>();
+//	    gamIdSet.add(new LongId<GameSession>(1));
+//
+//
+//	    when(session.getAvailableGameSessions()).thenReturn(gamIdSet);
+//	    when(frontend.getUserSession(userGameNumber)).thenReturn(session);
 
         //request
         when(request.getRequestURI()).thenReturn("request");
@@ -56,7 +68,7 @@ public class StateTest {
         when(request.getParameter((anyString()))).thenReturn("0");
         when(request.getParameter("showChats")).thenReturn("yes");
         when(request.getParameter("Exit")).thenReturn("Exit");
-        when(request.getMethod()).thenReturn("POST").thenReturn("POST");
+        when(request.getMethod()).thenReturn("POST");//.thenReturn("POST");
 
         //response
         when(response.getWriter()).thenReturn(printWriter);
@@ -79,20 +91,41 @@ public class StateTest {
 
     @Test
     public void authorized() throws IOException {
-        new StateAuthorized().processUserState(frontend,userSessionNumber,request,response);
+	    StateAuthorized stateAuthorized = new StateAuthorized();
+	    stateAuthorized.processUserState(frontend,userSessionNumber,request,response);
+
+	    //System.out.println(stateAuthorized.getLinkForAvailableGames(frontend, userSessionNumber));
     }
     @Test
     public void finishLose() throws IOException {
-        new StateFinishLose().processUserState(frontend,userSessionNumber,request,response);
+	    StateFinishLose stateFinishLose = new StateFinishLose();
+	    stateFinishLose.processUserState(frontend,userSessionNumber,request,response);
+
+	    when(request.getParameter("game")).thenReturn(null);
+	    stateFinishLose.processUserState(frontend,userSessionNumber,request,response);
+
+	    when(request.getParameter("refresh")).thenReturn("fail");
+	    stateFinishLose.processUserState(frontend,userSessionNumber,request,response);
     }
     @Test
     public void finishWin() throws IOException {
-        new StateFinishWin().processUserState(frontend,userSessionNumber,request,response);
+	    StateFinishWin stateFinishWin = new StateFinishWin();
+	    stateFinishWin.processUserState(frontend,userSessionNumber,request,response);
+
+	    when(request.getParameter("game")).thenReturn(null);
+	    stateFinishWin.processUserState(frontend,userSessionNumber,request,response);
+
+	    when(request.getParameter("refresh")).thenReturn("fail");
+	    stateFinishWin.processUserState(frontend,userSessionNumber,request,response);
+
+//	    when(request.getParameter("refresh")).thenReturn("ok");
+	    //new StateFinishWin().processUserState(frontend,userSessionNumber,request,response);
     }
 
     @Test
     public void play() throws IOException {
-        new StatePlay().processUserState(frontend,userSessionNumber,request,response);
+	    StatePlay statePlay =  new StatePlay();
+	    statePlay.processUserState(frontend, userSessionNumber, request, response);
     }
     @Test
     public void notAuth() throws IOException {
@@ -102,5 +135,23 @@ public class StateTest {
     public void statеWait() throws IOException {
         new StateWaitForAuth().processUserState(frontend,userSessionNumber,request,response);
     }
+
+	@Test
+	public void chatExit() throws IOException {
+		boolean retVal;
+		StatePlay state = new StatePlay();
+
+		retVal = state.chatExit(frontend, request, userSessionNumber);
+		Assert.assertTrue(retVal);
+
+		when(request.getParameter("Exit")).thenReturn(null);
+		retVal = state.chatExit(frontend, request, userSessionNumber);
+		Assert.assertFalse(retVal);
+
+		when(request.getParameter("Exit")).thenReturn("FAIL");
+		retVal = state.chatExit(frontend, request, userSessionNumber);
+		Assert.assertFalse(retVal);
+
+	}
 
 }
