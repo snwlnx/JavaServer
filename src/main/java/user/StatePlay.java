@@ -20,7 +20,7 @@ public class StatePlay implements UserState{
 
 
 
-    private  boolean chatExit(Frontend frontend, HttpServletRequest request, LongId<UserSession> sessionId) {
+    public  boolean chatExit(Frontend frontend, HttpServletRequest request, LongId<UserSession> sessionId) {
         String checkButton = request.getParameter("Exit");
         if (checkButton != null) {
             if (checkButton.equals("Exit")) {

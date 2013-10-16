@@ -106,7 +106,7 @@ public class GameServiceImpl implements GameService {
         }
     }
 
-    private void calculateFireballs(GameSession game) {
+    public void calculateFireballs(GameSession game) {
         LinkedList<Fireball> fballs = new LinkedList<Fireball>();
         LinkedList<Fireball> bls = game.getFireballs();
 
@@ -260,7 +260,7 @@ public class GameServiceImpl implements GameService {
     }
 
 
-    private LongId<GameSession> addNewGameSession(LongId<User> userToGameSession) {
+    public LongId<GameSession> addNewGameSession(LongId<User> userToGameSession) {
         GameSession gameSession = new GameSession(userToGameSession);
 
         gameSession.addNewPlayer(userToGameSession);

@@ -24,7 +24,7 @@ import java.util.Set;
  */
 public class StateAuthorized implements UserState {
 
-    private String getLinkForAvailableGames(Frontend frontend,LongId<UserSession> sessionId) {
+    public String getLinkForAvailableGames(Frontend frontend,LongId<UserSession> sessionId) {
 
         JSONArray jsonArray = new JSONArray();
         Set<LongId<GameSession>> gamesId = frontend.getUserSessionBySessionId(sessionId).getAvailableGameSessions();
