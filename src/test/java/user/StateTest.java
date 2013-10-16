@@ -55,6 +55,7 @@ public class StateTest {
         when(request.getCookies()).thenReturn(new Cookie[0]);
         when(request.getParameter((anyString()))).thenReturn("0");
         when(request.getParameter("showChats")).thenReturn("yes");
+        when(request.getParameter("Exit")).thenReturn("Exit");
         when(request.getMethod()).thenReturn("POST").thenReturn("POST");
 
         //response
@@ -77,28 +78,28 @@ public class StateTest {
 
 
     @Test
-    public void testStateAuthorized() throws IOException {
+    public void authorized() throws IOException {
         new StateAuthorized().processUserState(frontend,userSessionNumber,request,response);
     }
     @Test
-    public void testStatеFinishLose() throws IOException {
-        new StateFinishWin().processUserState(frontend,userSessionNumber,request,response);
+    public void finishLose() throws IOException {
+        new StateFinishLose().processUserState(frontend,userSessionNumber,request,response);
     }
     @Test
-    public void testStatеFinishWin() throws IOException {
+    public void finishWin() throws IOException {
         new StateFinishWin().processUserState(frontend,userSessionNumber,request,response);
     }
 
     @Test
-    public void testStatеPlay() throws IOException {
+    public void play() throws IOException {
         new StatePlay().processUserState(frontend,userSessionNumber,request,response);
     }
     @Test
-    public void testStatеNotAuth() throws IOException {
+    public void notAuth() throws IOException {
         new StateNotAuthorized().processUserState(frontend,userSessionNumber,request,response);
     }
     @Test
-    public void testStatеWait() throws IOException {
+    public void statеWait() throws IOException {
         new StateWaitForAuth().processUserState(frontend,userSessionNumber,request,response);
     }
 
