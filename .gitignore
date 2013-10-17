@@ -2,9 +2,6 @@
 !/.gitignore
 
 /out
-/target
-
-!/target/site
 
 *.class
 *.jar
