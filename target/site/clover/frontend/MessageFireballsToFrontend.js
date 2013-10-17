@@ -1,0 +1,10 @@
+var clover = new Object();
+
+// JSON: {classes : [{name, id, sl, el,  methods : [{sl, el}, ...]}, ...]}
+clover.pageData = {"classes":[{"el":26,"id":466,"methods":[{"el":21,"sc":5,"sl":17},{"el":25,"sc":5,"sl":23}],"name":"MessageFireballsToFrontend","sl":12}]}
+
+// JSON: {test_ID : {"methods": [ID1, ID2, ID3...], "name" : "testXXX() void"}, ...};
+clover.testTargets = {"test_1":{"methods":[{"sl":17}],"name":"runTest","pass":true,"statements":[{"sl":18},{"sl":19},{"sl":20}]},"test_20":{"methods":[{"sl":17}],"name":"eChatMessageEmptyTest","pass":true,"statements":[{"sl":18},{"sl":19},{"sl":20}]},"test_31":{"methods":[{"sl":17}],"name":"finishWin","pass":true,"statements":[{"sl":18},{"sl":19},{"sl":20}]},"test_34":{"methods":[{"sl":17}],"name":"hasStateTest","pass":true,"statements":[{"sl":18},{"sl":19},{"sl":20}]},"test_37":{"methods":[{"sl":17}],"name":"toFrontendTest","pass":true,"statements":[{"sl":18},{"sl":19},{"sl":20}]},"test_40":{"methods":[{"sl":17}],"name":"play","pass":true,"statements":[{"sl":18},{"sl":19},{"sl":20}]},"test_47":{"methods":[{"sl":17}],"name":"stateTest","pass":true,"statements":[{"sl":18},{"sl":19},{"sl":20}]},"test_54":{"methods":[{"sl":17}],"name":"chatExit","pass":true,"statements":[{"sl":18},{"sl":19},{"sl":20}]},"test_55":{"methods":[{"sl":17}],"name":"constructorDefaultTest","pass":true,"statements":[{"sl":18},{"sl":19},{"sl":20}]},"test_8":{"methods":[{"sl":17}],"name":"aGameSessionConstruct","pass":true,"statements":[{"sl":18},{"sl":19},{"sl":20}]},"test_81":{"methods":[{"sl":17}],"name":"calcFireballsTest","pass":true,"statements":[{"sl":18},{"sl":19},{"sl":20}]},"test_87":{"methods":[{"sl":17}],"name":"next","pass":true,"statements":[{"sl":18},{"sl":19},{"sl":20}]}}
+
+// JSON: { lines : [{tests : [testid1, testid2, testid3, ...]}, ...]};
+clover.srcFileLines = [[], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [34, 20, 40, 54, 31, 8, 1, 55, 81, 87, 37, 47], [34, 20, 40, 54, 31, 8, 1, 55, 81, 87, 37, 47], [34, 20, 40, 54, 31, 8, 1, 55, 81, 87, 37, 47], [34, 20, 40, 54, 31, 8, 1, 55, 81, 87, 37, 47], [], [], [], [], [], []]

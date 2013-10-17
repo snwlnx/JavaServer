@@ -1,0 +1,2342 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1381965786665" clover="3.1.12.1">
+   <project timestamp="1381965770059" name="TpJavaServer 0.1.1">
+      <metrics conditionals="236" methods="253" classes="68" files="68" packages="8" coveredstatements="729" complexity="389" loc="3307" ncloc="2336" coveredmethods="202" coveredconditionals="151" statements="902" coveredelements="1082" elements="1391"/>
+      <package name="message">
+         <metrics classes="6" methods="16" conditionals="12" files="6" ncloc="128" coveredstatements="28" coveredmethods="13" complexity="22" coveredconditionals="6" statements="38" loc="162" coveredelements="47" elements="66"/>
+         <file name="AddressServiceImpl.java" path="C:\Users\arusakov\IdeaProjects\TpJavaServer\src\main\java\message\AddressServiceImpl.java">
+            <metrics classes="1" methods="2" conditionals="2" ncloc="24" coveredstatements="7" coveredmethods="2" complexity="3" coveredconditionals="1" statements="7" loc="30" coveredelements="10" elements="11"/>
+            <class name="AddressServiceImpl">
+               <metrics methods="2" conditionals="2" coveredstatements="7" coveredmethods="2" complexity="3" coveredconditionals="1" statements="7" coveredelements="10" elements="11"/>
+            </class>
+            <line num="17" count="164" visibility="public" complexity="1" type="method" signature="getAddress(Class&lt;?&gt;) : Address"/>
+            <line num="18" count="164" type="stmt"/>
+            <line num="19" count="164" type="stmt"/>
+            <line num="22" count="5" visibility="public" complexity="2" type="method" signature="setAddress(Class&lt;?&gt;,Abonent) : void"/>
+            <line num="23" count="5" type="stmt"/>
+            <line num="24" count="5" type="stmt"/>
+            <line num="24" falsecount="0" type="cond" truecount="5"/>
+            <line num="25" count="5" type="stmt"/>
+            <line num="26" count="5" type="stmt"/>
+            <line num="28" count="5" type="stmt"/>
+         </file>
+         <file name="Message.java" path="C:\Users\arusakov\IdeaProjects\TpJavaServer\src\main\java\message\Message.java">
+            <metrics classes="1" methods="3" conditionals="0" ncloc="18" coveredstatements="4" coveredmethods="3" complexity="3" coveredconditionals="0" statements="4" loc="24" coveredelements="7" elements="7"/>
+            <class name="Message">
+               <metrics methods="3" conditionals="0" coveredstatements="4" coveredmethods="3" complexity="3" coveredconditionals="0" statements="4" coveredelements="7" elements="7"/>
+            </class>
+            <line num="10" count="177" visibility="public" complexity="1" type="method" signature="Message(Address,Address)"/>
+            <line num="11" count="177" type="stmt"/>
+            <line num="12" count="177" type="stmt"/>
+            <line num="15" count="1" visibility="public" complexity="1" type="method" signature="getFrom() : Address"/>
+            <line num="16" count="1" type="stmt"/>
+            <line num="19" count="164" visibility="public" complexity="1" type="method" signature="getTo() : Address"/>
+            <line num="20" count="164" type="stmt"/>
+         </file>
+         <file name="MessageSystemImpl.java" path="C:\Users\arusakov\IdeaProjects\TpJavaServer\src\main\java\message\MessageSystemImpl.java">
+            <metrics classes="1" methods="5" conditionals="4" ncloc="34" coveredstatements="10" coveredmethods="4" complexity="7" coveredconditionals="3" statements="12" loc="44" coveredelements="17" elements="21"/>
+            <class name="MessageSystemImpl">
+               <metrics methods="5" conditionals="4" coveredstatements="10" coveredmethods="4" complexity="7" coveredconditionals="3" statements="12" coveredelements="17" elements="21"/>
+            </class>
+            <line num="15" count="164" visibility="public" complexity="1" type="method" signature="getAddress(Class&lt;?&gt;) : Address"/>
+            <line num="16" count="164" type="stmt"/>
+            <line num="19" count="5" visibility="public" complexity="1" type="method" signature="addService(Class&lt;?&gt;,Abonent) : void"/>
+            <line num="20" count="5" type="stmt"/>
+            <line num="21" count="5" type="stmt"/>
+            <line num="24" count="164" visibility="public" complexity="1" type="method" signature="sendMessage(Message) : void"/>
+            <line num="25" count="164" type="stmt"/>
+            <line num="26" count="164" type="stmt"/>
+            <line num="29" count="47" visibility="public" complexity="3" type="method" signature="execForAbonent(Abonent) : boolean"/>
+            <line num="30" count="47" type="stmt"/>
+            <line num="31" count="47" type="stmt"/>
+            <line num="31" falsecount="47" type="cond" truecount="0"/>
+            <line num="32" count="0" type="stmt"/>
+            <line num="34" count="47" type="stmt"/>
+            <line num="34" falsecount="47" type="cond" truecount="1"/>
+            <line num="35" count="1" type="stmt"/>
+            <line num="37" count="47" type="stmt"/>
+            <line num="40" count="0" visibility="public" complexity="1" type="method" signature="getAddressService() : AddressService"/>
+            <line num="41" count="0" type="stmt"/>
+         </file>
+         <file name="MessageToDbService.java" path="C:\Users\arusakov\IdeaProjects\TpJavaServer\src\main\java\message\MessageToDbService.java">
+            <metrics classes="1" methods="2" conditionals="2" ncloc="18" coveredstatements="1" coveredmethods="1" complexity="3" coveredconditionals="0" statements="5" loc="22" coveredelements="2" elements="9"/>
+            <class name="MessageToDbService">
+               <metrics methods="2" conditionals="2" coveredstatements="1" coveredmethods="1" complexity="3" coveredconditionals="0" statements="5" coveredelements="2" elements="9"/>
+            </class>
+            <line num="9" count="1" visibility="public" complexity="1" type="method" signature="MessageToDbService(Address,Address)"/>
+            <line num="10" count="1" type="stmt"/>
+            <line num="13" count="0" visibility="public" complexity="2" type="method" signature="exec(Abonent) : boolean"/>
+            <line num="14" count="0" type="stmt"/>
+            <line num="14" falsecount="0" type="cond" truecount="0"/>
+            <line num="15" count="0" type="stmt"/>
+            <line num="16" count="0" type="stmt"/>
+            <line num="18" count="0" type="stmt"/>
+         </file>
+         <file name="MessageToFrontend.java" path="C:\Users\arusakov\IdeaProjects\TpJavaServer\src\main\java\message\MessageToFrontend.java">
+            <metrics classes="1" methods="2" conditionals="2" ncloc="17" coveredstatements="5" coveredmethods="2" complexity="3" coveredconditionals="2" statements="5" loc="21" coveredelements="9" elements="9"/>
+            <class name="MessageToFrontend">
+               <metrics methods="2" conditionals="2" coveredstatements="5" coveredmethods="2" complexity="3" coveredconditionals="2" statements="5" coveredelements="9" elements="9"/>
+            </class>
+            <line num="8" count="167" visibility="public" complexity="1" type="method" signature="MessageToFrontend(Address,Address)"/>
+            <line num="9" count="167" type="stmt"/>
+            <line num="12" count="4" visibility="public" complexity="2" type="method" signature="exec(Abonent) : boolean"/>
+            <line num="13" count="4" type="stmt"/>
+            <line num="13" falsecount="1" type="cond" truecount="3"/>
+            <line num="14" count="3" type="stmt"/>
+            <line num="15" count="3" type="stmt"/>
+            <line num="17" count="1" type="stmt"/>
+         </file>
+         <file name="MessageToGameService.java" path="C:\Users\arusakov\IdeaProjects\TpJavaServer\src\main\java\message\MessageToGameService.java">
+            <metrics classes="1" methods="2" conditionals="2" ncloc="17" coveredstatements="1" coveredmethods="1" complexity="3" coveredconditionals="0" statements="5" loc="21" coveredelements="2" elements="9"/>
+            <class name="MessageToGameService">
+               <metrics methods="2" conditionals="2" coveredstatements="1" coveredmethods="1" complexity="3" coveredconditionals="0" statements="5" coveredelements="2" elements="9"/>
+            </class>
+            <line num="8" count="9" visibility="public" complexity="1" type="method" signature="MessageToGameService(Address,Address)"/>
+            <line num="9" count="9" type="stmt"/>
+            <line num="12" count="0" visibility="public" complexity="2" type="method" signature="exec(Abonent) : boolean"/>
+            <line num="13" count="0" type="stmt"/>
+            <line num="13" falsecount="0" type="cond" truecount="0"/>
+            <line num="14" count="0" type="stmt"/>
+            <line num="15" count="0" type="stmt"/>
+            <line num="17" count="0" type="stmt"/>
+         </file>
+      </package>
+      <package name="dbservice">
+         <metrics classes="4" methods="20" conditionals="0" files="4" ncloc="163" coveredstatements="36" coveredmethods="13" complexity="21" coveredconditionals="0" statements="48" loc="231" coveredelements="49" elements="68"/>
+         <file name="DatabaseServiceImpl.java" path="C:\Users\arusakov\IdeaProjects\TpJavaServer\src\main\java\dbservice\DatabaseServiceImpl.java">
+            <metrics classes="1" methods="7" conditionals="0" ncloc="57" coveredstatements="18" coveredmethods="4" complexity="8" coveredconditionals="0" statements="23" loc="83" coveredelements="22" elements="30"/>
+            <class name="DatabaseServiceImpl">
+               <metrics methods="7" conditionals="0" coveredstatements="18" coveredmethods="4" complexity="8" coveredconditionals="0" statements="23" coveredelements="22" elements="30"/>
+            </class>
+            <line num="21" count="0" visibility="public" complexity="1" type="method" signature="run() : void"/>
+            <line num="28" count="2" visibility="public" complexity="1" type="method" signature="DatabaseServiceImpl(MessageSystem,Configuration,ServiceRegistryBuilder)"/>
+            <line num="29" count="2" type="stmt"/>
+            <line num="30" count="2" type="stmt"/>
+            <line num="31" count="2" type="stmt"/>
+            <line num="32" count="2" type="stmt"/>
+            <line num="33" count="2" type="stmt"/>
+            <line num="34" count="2" type="stmt"/>
+            <line num="37" count="2" visibility="private" complexity="1" type="method" signature="createSessionFactory(Configuration) : SessionFactory"/>
+            <line num="38" count="2" type="stmt"/>
+            <line num="39" count="2" type="stmt"/>
+            <line num="40" count="2" type="stmt"/>
+            <line num="41" count="2" type="stmt"/>
+            <line num="42" count="2" type="stmt"/>
+            <line num="43" count="2" type="stmt"/>
+            <line num="44" count="2" type="stmt"/>
+            <line num="46" count="2" type="stmt"/>
+            <line num="47" count="2" type="stmt"/>
+            <line num="48" count="2" type="stmt"/>
+            <line num="51" count="1" visibility="public" complexity="1" type="method" signature="getMessageSystem() : MessageSystem"/>
+            <line num="52" count="1" type="stmt"/>
+            <line num="55" count="1" visibility="public" complexity="1" type="method" signature="getAddress() : Address"/>
+            <line num="56" count="1" type="stmt"/>
+            <line num="59" count="0" visibility="public" complexity="2" type="method" signature="getUserId(String) : LongId&lt;User&gt;"/>
+            <line num="60" count="0" type="stmt"/>
+            <line num="61" count="0" type="stmt"/>
+            <line num="62" count="0" type="stmt"/>
+            <line num="63" count="0" type="stmt"/>
+            <line num="66" count="0" type="stmt"/>
+            <line num="70" count="0" visibility="public" complexity="1" type="method" signature="getUserIdAndAnswer(LongId&lt;UserSession&gt;,String) : void"/>
+         </file>
+         <file name="DbServiceImpl.java" path="C:\Users\arusakov\IdeaProjects\TpJavaServer\src\main\java\dbservice\DbServiceImpl.java">
+            <metrics classes="1" methods="6" conditionals="0" ncloc="44" coveredstatements="11" coveredmethods="4" complexity="6" coveredconditionals="0" statements="15" loc="59" coveredelements="15" elements="21"/>
+            <class name="DbServiceImpl">
+               <metrics methods="6" conditionals="0" coveredstatements="11" coveredmethods="4" complexity="6" coveredconditionals="0" statements="15" coveredelements="15" elements="21"/>
+            </class>
+            <line num="18" count="3" visibility="public" complexity="1" type="method" signature="DbServiceImpl(MessageSystem)"/>
+            <line num="19" count="3" type="stmt"/>
+            <line num="20" count="3" type="stmt"/>
+            <line num="22" count="3" type="stmt"/>
+            <line num="24" count="3" type="stmt"/>
+            <line num="25" count="3" type="stmt"/>
+            <line num="26" count="3" type="stmt"/>
+            <line num="27" count="3" type="stmt"/>
+            <line num="28" count="3" type="stmt"/>
+            <line num="32" count="0" visibility="public" complexity="1" type="method" signature="run() : void"/>
+            <line num="33" count="0" type="stmt"/>
+            <line num="34" count="0" type="stmt"/>
+            <line num="35" count="0" type="stmt"/>
+            <line num="39" count="1" visibility="public" complexity="1" type="method" signature="getAddress() : Address"/>
+            <line num="40" count="1" type="stmt"/>
+            <line num="43" count="1" visibility="public" complexity="1" type="method" signature="getUserId(String) : LongId&lt;User&gt;"/>
+            <line num="44" count="1" type="stmt"/>
+            <line num="47" count="1" visibility="public" complexity="1" type="method" signature="getMessageSystem() : MessageSystem"/>
+            <line num="48" count="1" type="stmt"/>
+            <line num="51" count="0" visibility="public" complexity="1" type="method" signature="getUserIdAndAnswer(LongId&lt;UserSession&gt;,String) : void"/>
+            <line num="52" count="0" type="stmt"/>
+         </file>
+         <file name="UserDataSet.java" path="C:\Users\arusakov\IdeaProjects\TpJavaServer\src\main\java\dbservice\UserDataSet.java">
+            <metrics classes="1" methods="5" conditionals="0" ncloc="49" coveredstatements="7" coveredmethods="5" complexity="5" coveredconditionals="0" statements="7" loc="70" coveredelements="12" elements="12"/>
+            <class name="UserDataSet">
+               <metrics methods="5" conditionals="0" coveredstatements="7" coveredmethods="5" complexity="5" coveredconditionals="0" statements="7" coveredelements="12" elements="12"/>
+            </class>
+            <line num="48" count="2" visibility="public" complexity="1" type="method" signature="UserDataSet(long,String)"/>
+            <line num="49" count="2" type="stmt"/>
+            <line num="50" count="2" type="stmt"/>
+            <line num="54" count="2" visibility="public" complexity="1" type="method" signature="setName(String) : void"/>
+            <line num="55" count="2" type="stmt"/>
+            <line num="57" count="1" visibility="public" complexity="1" type="method" signature="getName() : String"/>
+            <line num="58" count="1" type="stmt"/>
+            <line num="62" count="1" visibility="public" complexity="1" type="method" signature="getId() : LongId&lt;User&gt;"/>
+            <line num="63" count="1" type="stmt"/>
+            <line num="64" count="1" type="stmt"/>
+            <line num="67" count="2" visibility="public" complexity="1" type="method" signature="setId(long) : void"/>
+            <line num="68" count="2" type="stmt"/>
+         </file>
+         <file name="UserDataSetDAO.java" path="C:\Users\arusakov\IdeaProjects\TpJavaServer\src\main\java\dbservice\UserDataSetDAO.java">
+            <metrics classes="1" methods="2" conditionals="0" ncloc="13" coveredstatements="0" coveredmethods="0" complexity="2" coveredconditionals="0" statements="3" loc="19" coveredelements="0" elements="5"/>
+            <class name="UserDataSetDAO">
+               <metrics methods="2" conditionals="0" coveredstatements="0" coveredmethods="0" complexity="2" coveredconditionals="0" statements="3" coveredelements="0" elements="5"/>
+            </class>
+            <line num="10" count="0" visibility="public" complexity="1" type="method" signature="UserDataSetDAO(SessionFactory)"/>
+            <line num="11" count="0" type="stmt"/>
+            <line num="14" count="0" visibility="public" complexity="1" type="method" signature="read(String) : UserDataSet"/>
+            <line num="15" count="0" type="stmt"/>
+            <line num="16" count="0" type="stmt"/>
+         </file>
+      </package>
+      <package name="resource">
+         <metrics classes="7" methods="23" conditionals="60" files="7" ncloc="247" coveredstatements="87" coveredmethods="20" complexity="58" coveredconditionals="35" statements="115" loc="401" coveredelements="142" elements="198"/>
+         <file name="FightResource.java" path="C:\Users\arusakov\IdeaProjects\TpJavaServer\src\main\java\resource\FightResource.java">
+            <metrics classes="1" methods="0" conditionals="0" ncloc="8" coveredstatements="0" coveredmethods="0" complexity="0" coveredconditionals="0" statements="0" loc="12" coveredelements="0" elements="0"/>
+            <class name="FightResource">
+               <metrics methods="0" conditionals="0" coveredstatements="0" coveredmethods="0" complexity="0" coveredconditionals="0" statements="0" coveredelements="0" elements="0"/>
+            </class>
+         </file>
+         <file name="Iterator.java" path="C:\Users\arusakov\IdeaProjects\TpJavaServer\src\main\java\resource\Iterator.java">
+            <metrics classes="1" methods="10" conditionals="44" ncloc="114" coveredstatements="47" coveredmethods="9" complexity="34" coveredconditionals="24" statements="65" loc="137" coveredelements="80" elements="119"/>
+            <class name="Iterator">
+               <metrics methods="10" conditionals="44" coveredstatements="47" coveredmethods="9" complexity="34" coveredconditionals="24" statements="65" coveredelements="80" elements="119"/>
+            </class>
+            <line num="13" count="5" visibility="public" complexity="4" type="method" signature="Iterator(String)"/>
+            <line num="14" count="5" type="stmt"/>
+            <line num="15" count="5" type="stmt"/>
+            <line num="16" count="5" type="stmt"/>
+            <line num="17" count="5" type="stmt"/>
+            <line num="17" falsecount="5" type="cond" truecount="0"/>
+            <line num="18" count="0" type="stmt"/>
+            <line num="20" count="5" type="stmt"/>
+            <line num="20" falsecount="0" type="cond" truecount="5"/>
+            <line num="21" count="5" type="stmt"/>
+            <line num="21" falsecount="0" type="cond" truecount="5"/>
+            <line num="23" count="5" type="stmt"/>
+            <line num="29" count="8" visibility="public" complexity="2" type="method" signature="getFile() : String"/>
+            <line num="30" count="8" type="stmt"/>
+            <line num="30" falsecount="0" type="cond" truecount="8"/>
+            <line num="31" count="8" type="stmt"/>
+            <line num="32" count="8" type="stmt"/>
+            <line num="33" count="8" type="stmt"/>
+            <line num="35" count="0" type="stmt"/>
+            <line num="39" count="8" visibility="private" complexity="2" type="method" signature="moveToNextFile() : void"/>
+            <line num="40" count="8" type="stmt"/>
+            <line num="40" falsecount="8" type="cond" truecount="0"/>
+            <line num="41" count="0" type="stmt"/>
+            <line num="43" count="8" type="stmt"/>
+            <line num="47" count="5" visibility="private" complexity="3" type="method" signature="dirIsEmpty(String) : Boolean"/>
+            <line num="48" count="5" type="stmt"/>
+            <line num="49" count="5" type="stmt"/>
+            <line num="49" falsecount="0" type="cond" truecount="5"/>
+            <line num="50" count="5" type="stmt"/>
+            <line num="51" count="5" type="stmt"/>
+            <line num="51" falsecount="5" type="cond" truecount="0"/>
+            <line num="52" count="0" type="stmt"/>
+            <line num="54" count="5" type="stmt"/>
+            <line num="56" count="0" type="stmt"/>
+            <line num="59" count="8" visibility="private" complexity="8" type="method" signature="getNextFileFromDir(String,File) : void"/>
+            <line num="61" count="8" type="stmt"/>
+            <line num="62" count="8" type="stmt"/>
+            <line num="64" count="8" type="stmt"/>
+            <line num="65" count="8" type="stmt"/>
+            <line num="65" falsecount="3" type="cond" truecount="16"/>
+            <line num="66" count="16" type="stmt"/>
+            <line num="66" falsecount="11" type="cond" truecount="5"/>
+            <line num="67" count="5" type="stmt"/>
+            <line num="68" count="11" type="stmt"/>
+            <line num="68" falsecount="3" type="cond" truecount="8"/>
+            <line num="69" count="8" type="stmt"/>
+            <line num="69" falsecount="3" type="cond" truecount="5"/>
+            <line num="70" count="5" type="stmt"/>
+            <line num="71" count="5" type="stmt"/>
+            <line num="71" falsecount="0" type="cond" truecount="5"/>
+            <line num="72" count="5" type="stmt"/>
+            <line num="73" count="5" type="stmt"/>
+            <line num="75" count="0" type="stmt"/>
+            <line num="75" falsecount="0" type="cond" truecount="0"/>
+            <line num="76" count="0" type="stmt"/>
+            <line num="77" count="0" type="stmt"/>
+            <line num="82" count="3" type="stmt"/>
+            <line num="85" count="3" visibility="private" complexity="5" type="method" signature="moveToTopLevel(String) : void"/>
+            <line num="86" count="3" type="stmt"/>
+            <line num="86" falsecount="3" type="cond" truecount="0"/>
+            <line num="87" count="0" type="stmt"/>
+            <line num="87" falsecount="0" type="cond" truecount="0"/>
+            <line num="88" count="0" type="stmt"/>
+            <line num="89" count="0" type="stmt"/>
+            <line num="91" count="3" type="stmt"/>
+            <line num="91" falsecount="3" type="cond" truecount="0"/>
+            <line num="92" count="0" type="stmt"/>
+            <line num="94" count="3" type="stmt"/>
+            <line num="94" falsecount="0" type="cond" truecount="3"/>
+            <line num="95" count="3" type="stmt"/>
+            <line num="96" count="3" type="stmt"/>
+            <line num="98" count="0" type="stmt"/>
+            <line num="99" count="0" type="stmt"/>
+            <line num="103" count="5" visibility="private" complexity="6" type="method" signature="moveToBottomLevel(String) : void"/>
+            <line num="104" count="5" type="stmt"/>
+            <line num="105" count="5" type="stmt"/>
+            <line num="106" count="5" type="stmt"/>
+            <line num="106" falsecount="0" type="cond" truecount="5"/>
+            <line num="107" count="5" type="stmt"/>
+            <line num="107" falsecount="5" type="cond" truecount="0"/>
+            <line num="108" count="0" type="stmt"/>
+            <line num="109" count="5" type="stmt"/>
+            <line num="110" count="5" type="stmt"/>
+            <line num="110" falsecount="0" type="cond" truecount="5"/>
+            <line num="111" count="5" type="stmt"/>
+            <line num="112" count="5" type="stmt"/>
+            <line num="113" count="5" type="stmt"/>
+            <line num="115" count="0" type="stmt"/>
+            <line num="115" falsecount="0" type="cond" truecount="0"/>
+            <line num="116" count="0" type="stmt"/>
+            <line num="117" count="0" type="stmt"/>
+            <line num="123" count="9" visibility="public" complexity="2" type="method" signature="hasNext() : boolean"/>
+            <line num="125" count="9" type="stmt"/>
+            <line num="125" falsecount="6" type="cond" truecount="3"/>
+            <line num="128" count="1" visibility="public" complexity="1" type="method" signature="next() : String"/>
+            <line num="130" count="1" type="stmt"/>
+            <line num="133" count="0" visibility="public" complexity="1" type="method" signature="remove() : void"/>
+         </file>
+         <file name="MapResource.java" path="C:\Users\arusakov\IdeaProjects\TpJavaServer\src\main\java\resource\MapResource.java">
+            <metrics classes="1" methods="2" conditionals="0" ncloc="13" coveredstatements="3" coveredmethods="2" complexity="2" coveredconditionals="0" statements="3" loc="20" coveredelements="5" elements="5"/>
+            <class name="MapResource">
+               <metrics methods="2" conditionals="0" coveredstatements="3" coveredmethods="2" complexity="2" coveredconditionals="0" statements="3" coveredelements="5" elements="5"/>
+            </class>
+            <line num="6" count="2" visibility="package" complexity="1" type="method" signature="MapResource()"/>
+            <line num="10" count="4" visibility="public" complexity="1" type="method" signature="MapResource(int,int,String)"/>
+            <line num="11" count="4" type="stmt"/>
+            <line num="12" count="4" type="stmt"/>
+            <line num="13" count="4" type="stmt"/>
+         </file>
+         <file name="ReflectionHelper.java" path="C:\Users\arusakov\IdeaProjects\TpJavaServer\src\main\java\resource\ReflectionHelper.java">
+            <metrics classes="1" methods="2" conditionals="4" ncloc="27" coveredstatements="12" coveredmethods="2" complexity="6" coveredconditionals="3" statements="14" loc="45" coveredelements="17" elements="20"/>
+            <class name="ReflectionHelper">
+               <metrics methods="2" conditionals="4" coveredstatements="12" coveredmethods="2" complexity="6" coveredconditionals="3" statements="14" coveredelements="17" elements="20"/>
+            </class>
+            <line num="16" count="4" visibility="public" complexity="2" type="method" signature="createInstance(String) : Object"/>
+            <line num="17" count="4" type="stmt"/>
+            <line num="18" count="4" type="stmt"/>
+            <line num="19" count="4" type="stmt"/>
+            <line num="21" count="0" type="stmt"/>
+            <line num="23" count="4" type="stmt"/>
+            <line num="27" count="14" visibility="public" complexity="4" type="method" signature="setFieldValue(Object,String,String) : void"/>
+            <line num="28" count="14" type="stmt"/>
+            <line num="29" count="14" type="stmt"/>
+            <line num="30" count="14" type="stmt"/>
+            <line num="33" count="14" type="stmt"/>
+            <line num="33" falsecount="12" type="cond" truecount="2"/>
+            <line num="34" count="2" type="stmt"/>
+            <line num="36" count="12" type="stmt"/>
+            <line num="36" falsecount="0" type="cond" truecount="12"/>
+            <line num="37" count="12" type="stmt"/>
+            <line num="39" count="14" type="stmt"/>
+            <line num="41" count="0" type="stmt"/>
+         </file>
+         <file name="ResourceSystemImpl.java" path="C:\Users\arusakov\IdeaProjects\TpJavaServer\src\main\java\resource\ResourceSystemImpl.java">
+            <metrics classes="1" methods="4" conditionals="8" ncloc="48" coveredstatements="13" coveredmethods="2" complexity="9" coveredconditionals="4" statements="21" loc="60" coveredelements="19" elements="33"/>
+            <class name="ResourceSystemImpl">
+               <metrics methods="4" conditionals="8" coveredstatements="13" coveredmethods="2" complexity="9" coveredconditionals="4" statements="21" coveredelements="19" elements="33"/>
+            </class>
+            <line num="19" count="2" visibility="public" complexity="2" type="method" signature="getGameResource() : HashSet&lt;base.Resource&gt;"/>
+            <line num="20" count="2" type="stmt"/>
+            <line num="20" falsecount="0" type="cond" truecount="2"/>
+            <line num="21" count="2" type="stmt"/>
+            <line num="23" count="0" type="stmt"/>
+            <line num="26" count="2" visibility="public" complexity="4" type="method" signature="ResourceSystemImpl()"/>
+            <line num="27" count="2" type="stmt"/>
+            <line num="29" count="2" type="stmt"/>
+            <line num="30" count="2" type="stmt"/>
+            <line num="31" count="2" type="stmt"/>
+            <line num="32" count="2" type="stmt"/>
+            <line num="34" count="2" type="stmt"/>
+            <line num="34" falsecount="2" type="cond" truecount="4"/>
+            <line num="35" count="4" type="stmt"/>
+            <line num="36" count="4" type="stmt"/>
+            <line num="38" count="4" type="stmt"/>
+            <line num="38" falsecount="0" type="cond" truecount="4"/>
+            <line num="39" count="4" type="stmt"/>
+            <line num="40" count="4" type="stmt"/>
+            <line num="44" count="0" type="stmt"/>
+            <line num="48" count="0" visibility="public" complexity="1" type="method" signature="getResource(Class&lt;?&gt;) : Resource"/>
+            <line num="49" count="0" type="stmt"/>
+            <line num="52" count="0" visibility="public" complexity="2" type="method" signature="globalInit() : void"/>
+            <line num="53" count="0" type="stmt"/>
+            <line num="54" count="0" type="stmt"/>
+            <line num="54" falsecount="0" type="cond" truecount="0"/>
+            <line num="55" count="0" type="stmt"/>
+            <line num="56" count="0" type="stmt"/>
+            <line num="57" count="0" type="stmt"/>
+         </file>
+         <file name="SaxEmptyHandler.java" path="C:\Users\arusakov\IdeaProjects\TpJavaServer\src\main\java\resource\SaxEmptyHandler.java">
+            <metrics classes="1" methods="4" conditionals="4" ncloc="31" coveredstatements="11" coveredmethods="4" complexity="6" coveredconditionals="4" statements="11" loc="46" coveredelements="19" elements="19"/>
+            <class name="SaxEmptyHandler">
+               <metrics methods="4" conditionals="4" coveredstatements="11" coveredmethods="4" complexity="6" coveredconditionals="4" statements="11" coveredelements="19" elements="19"/>
+            </class>
+            <line num="21" count="4" visibility="public" complexity="1" type="method" signature="getObject() : Object"/>
+            <line num="22" count="4" type="stmt"/>
+            <line num="25" count="18" visibility="public" complexity="2" type="method" signature="startElement(String,String,String,Attributes) : void"/>
+            <line num="26" count="18" type="stmt"/>
+            <line num="26" falsecount="4" type="cond" truecount="14"/>
+            <line num="27" count="14" type="stmt"/>
+            <line num="29" count="4" type="stmt"/>
+            <line num="30" count="4" type="stmt"/>
+            <line num="31" count="4" type="stmt"/>
+            <line num="35" count="18" visibility="public" complexity="1" type="method" signature="endElement(String,String,String) : void"/>
+            <line num="36" count="18" type="stmt"/>
+            <line num="39" count="32" visibility="public" complexity="2" type="method" signature="characters(char[],int,int) : void"/>
+            <line num="40" count="32" type="stmt"/>
+            <line num="40" falsecount="18" type="cond" truecount="14"/>
+            <line num="41" count="14" type="stmt"/>
+            <line num="42" count="14" type="stmt"/>
+            <line num="43" count="14" type="stmt"/>
+         </file>
+         <file name="VFS.java" path="C:\Users\arusakov\IdeaProjects\TpJavaServer\src\main\java\resource\VFS.java">
+            <metrics classes="1" methods="1" conditionals="0" ncloc="6" coveredstatements="1" coveredmethods="1" complexity="1" coveredconditionals="0" statements="1" loc="81" coveredelements="2" elements="2"/>
+            <class name="VFS">
+               <metrics methods="1" conditionals="0" coveredstatements="1" coveredmethods="1" complexity="1" coveredconditionals="0" statements="1" coveredelements="2" elements="2"/>
+            </class>
+            <line num="76" count="5" visibility="public" complexity="1" type="method" signature="getIterator(String) : Iterator"/>
+            <line num="77" count="5" type="stmt"/>
+         </file>
+      </package>
+      <package name="base">
+         <metrics classes="16" methods="40" conditionals="8" files="16" ncloc="278" coveredstatements="72" coveredmethods="40" complexity="47" coveredconditionals="8" statements="72" loc="371" coveredelements="120" elements="120"/>
+         <file name="Abonent.java" path="C:\Users\arusakov\IdeaProjects\TpJavaServer\src\main\java\base\Abonent.java">
+            <metrics classes="1" methods="0" conditionals="0" ncloc="5" coveredstatements="0" coveredmethods="0" complexity="0" coveredconditionals="0" statements="0" loc="6" coveredelements="0" elements="0"/>
+            <class name="Abonent">
+               <metrics methods="0" conditionals="0" coveredstatements="0" coveredmethods="0" complexity="0" coveredconditionals="0" statements="0" coveredelements="0" elements="0"/>
+            </class>
+         </file>
+         <file name="Address.java" path="C:\Users\arusakov\IdeaProjects\TpJavaServer\src\main\java\base\Address.java">
+            <metrics classes="1" methods="2" conditionals="0" ncloc="12" coveredstatements="2" coveredmethods="2" complexity="2" coveredconditionals="0" statements="2" loc="18" coveredelements="4" elements="4"/>
+            <class name="Address">
+               <metrics methods="2" conditionals="0" coveredstatements="2" coveredmethods="2" complexity="2" coveredconditionals="0" statements="2" coveredelements="4" elements="4"/>
+            </class>
+            <line num="10" count="34" visibility="public" complexity="1" type="method" signature="Address()"/>
+            <line num="11" count="34" type="stmt"/>
+            <line num="14" count="216" visibility="public" complexity="1" type="method" signature="hashCode() : int"/>
+            <line num="15" count="216" type="stmt"/>
+         </file>
+         <file name="AddressService.java" path="C:\Users\arusakov\IdeaProjects\TpJavaServer\src\main\java\base\AddressService.java">
+            <metrics classes="1" methods="0" conditionals="0" ncloc="5" coveredstatements="0" coveredmethods="0" complexity="0" coveredconditionals="0" statements="0" loc="6" coveredelements="0" elements="0"/>
+            <class name="AddressService">
+               <metrics methods="0" conditionals="0" coveredstatements="0" coveredmethods="0" complexity="0" coveredconditionals="0" statements="0" coveredelements="0" elements="0"/>
+            </class>
+         </file>
+         <file name="DbService.java" path="C:\Users\arusakov\IdeaProjects\TpJavaServer\src\main\java\base\DbService.java">
+            <metrics classes="1" methods="0" conditionals="0" ncloc="5" coveredstatements="0" coveredmethods="0" complexity="0" coveredconditionals="0" statements="0" loc="7" coveredelements="0" elements="0"/>
+            <class name="DbService">
+               <metrics methods="0" conditionals="0" coveredstatements="0" coveredmethods="0" complexity="0" coveredconditionals="0" statements="0" coveredelements="0" elements="0"/>
+            </class>
+         </file>
+         <file name="Fireball.java" path="C:\Users\arusakov\IdeaProjects\TpJavaServer\src\main\java\base\Fireball.java">
+            <metrics classes="1" methods="8" conditionals="0" ncloc="37" coveredstatements="14" coveredmethods="8" complexity="8" coveredconditionals="0" statements="14" loc="48" coveredelements="22" elements="22"/>
+            <class name="Fireball">
+               <metrics methods="8" conditionals="0" coveredstatements="14" coveredmethods="8" complexity="8" coveredconditionals="0" statements="14" coveredelements="22" elements="22"/>
+            </class>
+            <line num="10" count="32" visibility="public" complexity="1" type="method" signature="Fireball(float,float,float,float)"/>
+            <line num="11" count="32" type="stmt"/>
+            <line num="12" count="32" type="stmt"/>
+            <line num="13" count="32" type="stmt"/>
+            <line num="14" count="32" type="stmt"/>
+            <line num="17" count="1" visibility="public" complexity="1" type="method" signature="setDamage(int) : void"/>
+            <line num="18" count="1" type="stmt"/>
+            <line num="21" count="15" visibility="public" complexity="1" type="method" signature="getDamage() : int"/>
+            <line num="22" count="15" type="stmt"/>
+            <line num="26" count="18" visibility="public" complexity="1" type="method" signature="move() : void"/>
+            <line num="27" count="18" type="stmt"/>
+            <line num="28" count="18" type="stmt"/>
+            <line num="29" count="18" type="stmt"/>
+            <line num="32" count="22" visibility="public" complexity="1" type="method" signature="getPositionX() : int"/>
+            <line num="33" count="22" type="stmt"/>
+            <line num="36" count="20" visibility="public" complexity="1" type="method" signature="getPositionY() : int"/>
+            <line num="37" count="20" type="stmt"/>
+            <line num="40" count="3" visibility="public" complexity="1" type="method" signature="toString() : String"/>
+            <line num="41" count="3" type="stmt"/>
+            <line num="44" count="15" visibility="public" complexity="1" type="method" signature="clone() : Fireball"/>
+            <line num="45" count="15" type="stmt"/>
+            <line num="46" count="15" type="stmt"/>
+         </file>
+         <file name="Frontend.java" path="C:\Users\arusakov\IdeaProjects\TpJavaServer\src\main\java\base\Frontend.java">
+            <metrics classes="1" methods="0" conditionals="0" ncloc="32" coveredstatements="0" coveredmethods="0" complexity="0" coveredconditionals="0" statements="0" loc="38" coveredelements="0" elements="0"/>
+            <class name="Frontend">
+               <metrics methods="0" conditionals="0" coveredstatements="0" coveredmethods="0" complexity="0" coveredconditionals="0" statements="0" coveredelements="0" elements="0"/>
+            </class>
+         </file>
+         <file name="GameService.java" path="C:\Users\arusakov\IdeaProjects\TpJavaServer\src\main\java\base\GameService.java">
+            <metrics classes="1" methods="0" conditionals="0" ncloc="13" coveredstatements="0" coveredmethods="0" complexity="0" coveredconditionals="0" statements="0" loc="17" coveredelements="0" elements="0"/>
+            <class name="GameService">
+               <metrics methods="0" conditionals="0" coveredstatements="0" coveredmethods="0" complexity="0" coveredconditionals="0" statements="0" coveredelements="0" elements="0"/>
+            </class>
+         </file>
+         <file name="IntegerId.java" path="C:\Users\arusakov\IdeaProjects\TpJavaServer\src\main\java\base\IntegerId.java">
+            <metrics classes="1" methods="6" conditionals="2" ncloc="25" coveredstatements="8" coveredmethods="6" complexity="7" coveredconditionals="2" statements="8" loc="34" coveredelements="16" elements="16"/>
+            <class name="IntegerId">
+               <metrics methods="6" conditionals="2" coveredstatements="8" coveredmethods="6" complexity="7" coveredconditionals="2" statements="8" coveredelements="16" elements="16"/>
+            </class>
+            <line num="7" count="13" visibility="public" complexity="1" type="method" signature="IntegerId(Integer)"/>
+            <line num="8" count="13" type="stmt"/>
+            <line num="11" count="6" visibility="public" complexity="1" type="method" signature="get() : Integer"/>
+            <line num="12" count="6" type="stmt"/>
+            <line num="15" count="2" visibility="public" complexity="1" type="method" signature="set(Integer) : void"/>
+            <line num="16" count="2" type="stmt"/>
+            <line num="20" count="3" visibility="public" complexity="2" type="method" signature="equals(Object) : boolean"/>
+            <line num="21" count="3" type="stmt"/>
+            <line num="21" falsecount="1" type="cond" truecount="2"/>
+            <line num="22" count="2" type="stmt"/>
+            <line num="24" count="1" type="stmt"/>
+            <line num="27" count="1" visibility="public" complexity="1" type="method" signature="hashCode() : int"/>
+            <line num="28" count="1" type="stmt"/>
+            <line num="31" count="1" visibility="public" complexity="1" type="method" signature="toString() : String"/>
+            <line num="32" count="1" type="stmt"/>
+         </file>
+         <file name="LongId.java" path="C:\Users\arusakov\IdeaProjects\TpJavaServer\src\main\java\base\LongId.java">
+            <metrics classes="1" methods="5" conditionals="2" ncloc="22" coveredstatements="7" coveredmethods="5" complexity="6" coveredconditionals="2" statements="7" loc="30" coveredelements="14" elements="14"/>
+            <class name="LongId">
+               <metrics methods="5" conditionals="2" coveredstatements="7" coveredmethods="5" complexity="6" coveredconditionals="2" statements="7" coveredelements="14" elements="14"/>
+            </class>
+            <line num="8" count="153" visibility="public" complexity="1" type="method" signature="LongId(long)"/>
+            <line num="9" count="153" type="stmt"/>
+            <line num="12" count="221" visibility="public" complexity="1" type="method" signature="get() : long"/>
+            <line num="13" count="221" type="stmt"/>
+            <line num="16" count="180" visibility="public" complexity="2" type="method" signature="equals(Object) : boolean"/>
+            <line num="17" count="180" type="stmt"/>
+            <line num="17" falsecount="1" type="cond" truecount="179"/>
+            <line num="18" count="179" type="stmt"/>
+            <line num="20" count="1" type="stmt"/>
+            <line num="23" count="427" visibility="public" complexity="1" type="method" signature="hashCode() : int"/>
+            <line num="24" count="427" type="stmt"/>
+            <line num="27" count="2" visibility="public" complexity="1" type="method" signature="toString() : String"/>
+            <line num="28" count="2" type="stmt"/>
+         </file>
+         <file name="MessageSystem.java" path="C:\Users\arusakov\IdeaProjects\TpJavaServer\src\main\java\base\MessageSystem.java">
+            <metrics classes="1" methods="0" conditionals="0" ncloc="9" coveredstatements="0" coveredmethods="0" complexity="0" coveredconditionals="0" statements="0" loc="15" coveredelements="0" elements="0"/>
+            <class name="MessageSystem">
+               <metrics methods="0" conditionals="0" coveredstatements="0" coveredmethods="0" complexity="0" coveredconditionals="0" statements="0" coveredelements="0" elements="0"/>
+            </class>
+         </file>
+         <file name="Movable.java" path="C:\Users\arusakov\IdeaProjects\TpJavaServer\src\main\java\base\Movable.java">
+            <metrics classes="1" methods="0" conditionals="0" ncloc="6" coveredstatements="0" coveredmethods="0" complexity="0" coveredconditionals="0" statements="0" loc="7" coveredelements="0" elements="0"/>
+            <class name="Movable">
+               <metrics methods="0" conditionals="0" coveredstatements="0" coveredmethods="0" complexity="0" coveredconditionals="0" statements="0" coveredelements="0" elements="0"/>
+            </class>
+         </file>
+         <file name="Player.java" path="C:\Users\arusakov\IdeaProjects\TpJavaServer\src\main\java\base\Player.java">
+            <metrics classes="1" methods="18" conditionals="4" ncloc="85" coveredstatements="38" coveredmethods="18" complexity="22" coveredconditionals="4" statements="38" loc="104" coveredelements="60" elements="60"/>
+            <class name="Player">
+               <metrics methods="18" conditionals="4" coveredstatements="38" coveredmethods="18" complexity="22" coveredconditionals="4" statements="38" coveredelements="60" elements="60"/>
+            </class>
+            <line num="11" count="29" visibility="public" complexity="1" type="method" signature="Player()"/>
+            <line num="12" count="29" type="stmt"/>
+            <line num="13" count="29" type="stmt"/>
+            <line num="14" count="29" type="stmt"/>
+            <line num="15" count="29" type="stmt"/>
+            <line num="17" count="14" visibility="public" complexity="1" type="method" signature="Player(int,int)"/>
+            <line num="18" count="14" type="stmt"/>
+            <line num="19" count="14" type="stmt"/>
+            <line num="20" count="14" type="stmt"/>
+            <line num="21" count="14" type="stmt"/>
+            <line num="24" count="6" visibility="public" complexity="1" type="method" signature="Player(int,int,int,int)"/>
+            <line num="25" count="6" type="stmt"/>
+            <line num="26" count="6" type="stmt"/>
+            <line num="27" count="6" type="stmt"/>
+            <line num="28" count="6" type="stmt"/>
+            <line num="32" count="2" visibility="public" complexity="1" type="method" signature="getHealthMax() : int"/>
+            <line num="33" count="2" type="stmt"/>
+            <line num="36" count="1" visibility="public" complexity="1" type="method" signature="setHealthMax(int) : void"/>
+            <line num="37" count="1" type="stmt"/>
+            <line num="40" count="2" visibility="public" complexity="1" type="method" signature="setSize(int,int) : void"/>
+            <line num="41" count="2" type="stmt"/>
+            <line num="42" count="2" type="stmt"/>
+            <line num="45" count="52" visibility="public" complexity="1" type="method" signature="setPosition(int,int) : void"/>
+            <line num="46" count="52" type="stmt"/>
+            <line num="47" count="52" type="stmt"/>
+            <line num="50" count="3" visibility="public" complexity="1" type="method" signature="setVelocity(int,int) : void"/>
+            <line num="51" count="3" type="stmt"/>
+            <line num="52" count="3" type="stmt"/>
+            <line num="55" count="1" visibility="public" complexity="1" type="method" signature="setPosition(Player) : void"/>
+            <line num="56" count="1" type="stmt"/>
+            <line num="57" count="1" type="stmt"/>
+            <line num="60" count="8" visibility="public" complexity="1" type="method" signature="getPositionX() : int"/>
+            <line num="61" count="8" type="stmt"/>
+            <line num="63" count="167" visibility="public" complexity="1" type="method" signature="getPositionY() : int"/>
+            <line num="64" count="167" type="stmt"/>
+            <line num="67" count="3" visibility="public" complexity="1" type="method" signature="move() : void"/>
+            <line num="68" count="3" type="stmt"/>
+            <line num="69" count="3" type="stmt"/>
+            <line num="72" count="14" visibility="public" complexity="5" type="method" signature="collision(int,int) : boolean"/>
+            <line num="73" count="14" type="stmt"/>
+            <line num="75" count="14" type="stmt"/>
+            <line num="75" falsecount="7" type="cond" truecount="7"/>
+            <line num="76" count="7" type="stmt"/>
+            <line num="76" falsecount="2" type="cond" truecount="5"/>
+            <line num="77" count="5" type="stmt"/>
+            <line num="80" count="9" type="stmt"/>
+            <line num="83" count="2" visibility="public" complexity="1" type="method" signature="setHealth(int) : void"/>
+            <line num="84" count="2" type="stmt"/>
+            <line num="87" count="5" visibility="public" complexity="1" type="method" signature="hurt(int) : int"/>
+            <line num="88" count="5" type="stmt"/>
+            <line num="89" count="5" type="stmt"/>
+            <line num="92" count="3" visibility="public" complexity="1" type="method" signature="isAlive() : boolean"/>
+            <line num="93" count="3" type="stmt"/>
+            <line num="96" count="4" visibility="public" complexity="1" type="method" signature="toString() : String"/>
+            <line num="97" count="4" type="stmt"/>
+            <line num="100" count="1" visibility="public" complexity="1" type="method" signature="clone() : Player"/>
+            <line num="101" count="1" type="stmt"/>
+            <line num="102" count="1" type="stmt"/>
+         </file>
+         <file name="Resource.java" path="C:\Users\arusakov\IdeaProjects\TpJavaServer\src\main\java\base\Resource.java">
+            <metrics classes="1" methods="0" conditionals="0" ncloc="3" coveredstatements="0" coveredmethods="0" complexity="0" coveredconditionals="0" statements="0" loc="11" coveredelements="0" elements="0"/>
+            <class name="Resource">
+               <metrics methods="0" conditionals="0" coveredstatements="0" coveredmethods="0" complexity="0" coveredconditionals="0" statements="0" coveredelements="0" elements="0"/>
+            </class>
+         </file>
+         <file name="ResourceSystem.java" path="C:\Users\arusakov\IdeaProjects\TpJavaServer\src\main\java\base\ResourceSystem.java">
+            <metrics classes="1" methods="0" conditionals="0" ncloc="6" coveredstatements="0" coveredmethods="0" complexity="0" coveredconditionals="0" statements="0" loc="15" coveredelements="0" elements="0"/>
+            <class name="ResourceSystem">
+               <metrics methods="0" conditionals="0" coveredstatements="0" coveredmethods="0" complexity="0" coveredconditionals="0" statements="0" coveredelements="0" elements="0"/>
+            </class>
+         </file>
+         <file name="StartGameSession.java" path="C:\Users\arusakov\IdeaProjects\TpJavaServer\src\main\java\base\StartGameSession.java">
+            <metrics classes="1" methods="0" conditionals="0" ncloc="3" coveredstatements="0" coveredmethods="0" complexity="0" coveredconditionals="0" statements="0" loc="4" coveredelements="0" elements="0"/>
+            <class name="StartGameSession">
+               <metrics methods="0" conditionals="0" coveredstatements="0" coveredmethods="0" complexity="0" coveredconditionals="0" statements="0" coveredelements="0" elements="0"/>
+            </class>
+         </file>
+         <file name="TimeHelper.java" path="C:\Users\arusakov\IdeaProjects\TpJavaServer\src\main\java\base\TimeHelper.java">
+            <metrics classes="1" methods="1" conditionals="0" ncloc="10" coveredstatements="3" coveredmethods="1" complexity="2" coveredconditionals="0" statements="3" loc="11" coveredelements="4" elements="4"/>
+            <class name="TimeHelper">
+               <metrics methods="1" conditionals="0" coveredstatements="3" coveredmethods="1" complexity="2" coveredconditionals="0" statements="3" coveredelements="4" elements="4"/>
+            </class>
+            <line num="4" count="47" visibility="public" complexity="2" type="method" signature="sleep(int) : void"/>
+            <line num="5" count="47" type="stmt"/>
+            <line num="6" count="47" type="stmt"/>
+            <line num="8" count="2" type="stmt"/>
+         </file>
+      </package>
+      <package name="game">
+         <metrics classes="9" methods="51" conditionals="62" files="9" ncloc="513" coveredstatements="179" coveredmethods="37" complexity="84" coveredconditionals="43" statements="220" loc="675" coveredelements="259" elements="333"/>
+         <file name="ChatMessage.java" path="C:\Users\arusakov\IdeaProjects\TpJavaServer\src\main\java\game\ChatMessage.java">
+            <metrics classes="1" methods="3" conditionals="0" ncloc="20" coveredstatements="5" coveredmethods="2" complexity="3" coveredconditionals="0" statements="6" loc="32" coveredelements="7" elements="9"/>
+            <class name="ChatMessage">
+               <metrics methods="3" conditionals="0" coveredstatements="5" coveredmethods="2" complexity="3" coveredconditionals="0" statements="6" coveredelements="7" elements="9"/>
+            </class>
+            <line num="13" count="3" visibility="public" complexity="1" type="method" signature="ChatMessage(LongId&lt;User&gt;,String)"/>
+            <line num="14" count="3" type="stmt"/>
+            <line num="15" count="3" type="stmt"/>
+            <line num="16" count="3" type="stmt"/>
+            <line num="19" count="3" visibility="private" complexity="1" type="method" signature="setDateTime() : String"/>
+            <line num="20" count="3" type="stmt"/>
+            <line num="22" count="3" type="stmt"/>
+            <line num="25" count="0" visibility="public" complexity="1" type="method" signature="getStringMessage() : String"/>
+            <line num="26" count="0" type="stmt"/>
+         </file>
+         <file name="GameMap.java" path="C:\Users\arusakov\IdeaProjects\TpJavaServer\src\main\java\game\GameMap.java">
+            <metrics classes="1" methods="1" conditionals="0" ncloc="8" coveredstatements="0" coveredmethods="0" complexity="1" coveredconditionals="0" statements="0" loc="11" coveredelements="0" elements="1"/>
+            <class name="GameMap">
+               <metrics methods="1" conditionals="0" coveredstatements="0" coveredmethods="0" complexity="1" coveredconditionals="0" statements="0" coveredelements="0" elements="1"/>
+            </class>
+            <line num="8" count="0" visibility="public" complexity="1" type="method" signature="GameMap()"/>
+         </file>
+         <file name="GameServiceImpl.java" path="C:\Users\arusakov\IdeaProjects\TpJavaServer\src\main\java\game\GameServiceImpl.java">
+            <metrics classes="1" methods="25" conditionals="50" ncloc="315" coveredstatements="127" coveredmethods="17" complexity="52" coveredconditionals="32" statements="161" loc="398" coveredelements="176" elements="236"/>
+            <class name="GameServiceImpl">
+               <metrics methods="25" conditionals="50" coveredstatements="127" coveredmethods="17" complexity="52" coveredconditionals="32" statements="161" coveredelements="176" elements="236"/>
+            </class>
+            <line num="28" count="4" visibility="public" complexity="1" type="method" signature="GameServiceImpl(MessageSystem,ResourceSystem)"/>
+            <line num="29" count="4" type="stmt"/>
+            <line num="31" count="4" type="stmt"/>
+            <line num="32" count="4" type="stmt"/>
+            <line num="33" count="4" type="stmt"/>
+            <line num="37" count="4" type="stmt"/>
+            <line num="38" count="4" type="stmt"/>
+            <line num="39" count="4" type="stmt"/>
+            <line num="43" count="2" visibility="public" complexity="2" type="method" signature="run() : void"/>
+            <line num="44" count="2" type="stmt"/>
+            <line num="45" count="46" type="stmt"/>
+            <line num="47" count="46" type="stmt"/>
+            <line num="48" count="46" type="stmt"/>
+            <line num="50" count="46" type="stmt"/>
+            <line num="53" count="46" type="stmt"/>
+            <line num="54" count="44" type="stmt"/>
+            <line num="54" falsecount="44" type="cond" truecount="0"/>
+            <line num="55" count="0" type="stmt"/>
+            <line num="60" count="46" visibility="private" complexity="5" type="method" signature="clearGames() : void"/>
+            <line num="61" count="46" type="stmt"/>
+            <line num="61" falsecount="2" type="cond" truecount="44"/>
+            <line num="62" count="44" type="stmt"/>
+            <line num="64" count="2" type="stmt"/>
+            <line num="65" count="2" type="stmt"/>
+            <line num="66" count="2" type="stmt"/>
+            <line num="67" count="2" type="stmt"/>
+            <line num="69" count="2" type="stmt"/>
+            <line num="69" falsecount="2" type="cond" truecount="5"/>
+            <line num="70" count="5" type="stmt"/>
+            <line num="71" count="5" type="stmt"/>
+            <line num="73" count="5" type="stmt"/>
+            <line num="73" falsecount="4" type="cond" truecount="1"/>
+            <line num="74" count="1" type="stmt"/>
+            <line num="77" count="2" type="stmt"/>
+            <line num="77" falsecount="1" type="cond" truecount="1"/>
+            <line num="78" count="1" type="stmt"/>
+            <line num="79" count="1" type="stmt"/>
+            <line num="84" count="46" visibility="private" complexity="2" type="method" signature="calculateGame() : void"/>
+            <line num="85" count="46" type="stmt"/>
+            <line num="86" count="46" type="stmt"/>
+            <line num="88" count="46" type="stmt"/>
+            <line num="88" falsecount="46" type="cond" truecount="158"/>
+            <line num="89" count="158" type="stmt"/>
+            <line num="90" count="158" type="stmt"/>
+            <line num="91" count="158" type="stmt"/>
+            <line num="95" count="158" visibility="private" complexity="2" type="method" signature="calculatePlayers(GameSession) : void"/>
+            <line num="96" count="158" type="stmt"/>
+            <line num="97" count="158" type="stmt"/>
+            <line num="98" count="158" type="stmt"/>
+            <line num="100" count="158" type="stmt"/>
+            <line num="101" count="159" type="stmt"/>
+            <line num="103" count="159" type="stmt"/>
+            <line num="103" falsecount="158" type="cond" truecount="1"/>
+            <line num="104" count="1" type="stmt"/>
+            <line num="109" count="164" visibility="public" complexity="7" type="method" signature="calculateFireballs(GameSession) : void"/>
+            <line num="110" count="164" type="stmt"/>
+            <line num="111" count="164" type="stmt"/>
+            <line num="113" count="164" type="stmt"/>
+            <line num="114" count="164" type="stmt"/>
+            <line num="116" count="164" type="stmt"/>
+            <line num="117" count="17" type="stmt"/>
+            <line num="118" count="17" type="stmt"/>
+            <line num="119" count="17" type="stmt"/>
+            <line num="119" falsecount="15" type="cond" truecount="2"/>
+            <line num="120" count="2" type="stmt"/>
+            <line num="121" count="2" type="stmt"/>
+            <line num="123" count="15" type="stmt"/>
+            <line num="124" count="15" type="stmt"/>
+            <line num="124" falsecount="14" type="cond" truecount="1"/>
+            <line num="125" count="1" type="stmt"/>
+            <line num="126" count="1" type="stmt"/>
+            <line num="128" count="14" type="stmt"/>
+            <line num="128" falsecount="14" type="cond" truecount="0"/>
+            <line num="129" count="0" type="stmt"/>
+            <line num="130" count="0" type="stmt"/>
+            <line num="132" count="14" type="stmt"/>
+            <line num="136" count="164" type="stmt"/>
+            <line num="136" falsecount="161" type="cond" truecount="3"/>
+            <line num="137" count="3" type="stmt"/>
+            <line num="140" count="164" type="stmt"/>
+            <line num="141" count="164" type="stmt"/>
+            <line num="142" count="14" type="stmt"/>
+            <line num="145" count="164" type="stmt"/>
+            <line num="146" count="164" type="stmt"/>
+            <line num="147" count="164" type="stmt"/>
+            <line num="148" count="158" type="stmt"/>
+            <line num="153" count="158" type="stmt"/>
+            <line num="157" count="14" visibility="private" complexity="3" type="method" signature="collisionWithPlayers(GameSession,int,int) : boolean"/>
+            <line num="158" count="14" type="stmt"/>
+            <line num="159" count="14" type="stmt"/>
+            <line num="160" count="14" type="stmt"/>
+            <line num="162" count="14" type="stmt"/>
+            <line num="164" count="14" type="stmt"/>
+            <line num="165" count="3" type="stmt"/>
+            <line num="166" count="3" type="stmt"/>
+            <line num="166" falsecount="3" type="cond" truecount="0"/>
+            <line num="167" count="0" type="stmt"/>
+            <line num="168" count="0" type="stmt"/>
+            <line num="168" falsecount="0" type="cond" truecount="0"/>
+            <line num="169" count="0" type="stmt"/>
+            <line num="174" count="0" type="stmt"/>
+            <line num="177" count="0" type="stmt"/>
+            <line num="179" count="0" type="stmt"/>
+            <line num="182" count="14" type="stmt"/>
+            <line num="185" count="1" visibility="private" complexity="3" type="method" signature="playerLose(GameSession,Map&lt;LongId&lt;User&gt;, Player&gt;,LongId&lt;User&gt;) : void"/>
+            <line num="186" count="1" type="stmt"/>
+            <line num="187" count="1" type="stmt"/>
+            <line num="188" count="1" type="stmt"/>
+            <line num="191" count="1" type="stmt"/>
+            <line num="196" count="1" type="stmt"/>
+            <line num="198" count="1" type="stmt"/>
+            <line num="198" falsecount="0" type="cond" truecount="1"/>
+            <line num="200" count="1" type="stmt"/>
+            <line num="202" count="1" type="stmt"/>
+            <line num="207" count="1" type="stmt"/>
+            <line num="210" count="1" type="stmt"/>
+            <line num="211" count="1" type="stmt"/>
+            <line num="215" count="0" type="stmt"/>
+            <line num="216" count="0" type="stmt"/>
+            <line num="216" falsecount="0" type="cond" truecount="0"/>
+            <line num="217" count="0" type="stmt"/>
+            <line num="222" count="0" type="stmt"/>
+            <line num="228" count="46" visibility="private" complexity="3" type="method" signature="replicatePositionsToFrontend() : void"/>
+            <line num="229" count="46" type="stmt"/>
+            <line num="231" count="46" type="stmt"/>
+            <line num="231" falsecount="46" type="cond" truecount="158"/>
+            <line num="232" count="158" type="stmt"/>
+            <line num="233" count="158" type="stmt"/>
+            <line num="234" count="158" type="stmt"/>
+            <line num="236" count="158" type="stmt"/>
+            <line num="237" count="157" type="stmt"/>
+            <line num="238" count="157" type="stmt"/>
+            <line num="238" falsecount="157" type="cond" truecount="0"/>
+            <line num="239" count="0" type="stmt"/>
+            <line num="245" count="0" type="stmt"/>
+            <line num="252" count="4" visibility="public" complexity="2" type="method" signature="startGame(LongId&lt;User&gt;) : LongId&lt;GameSession&gt;"/>
+            <line num="253" count="4" type="stmt"/>
+            <line num="254" count="4" type="stmt"/>
+            <line num="254" falsecount="1" type="cond" truecount="3"/>
+            <line num="255" count="3" type="stmt"/>
+            <line num="256" count="3" type="stmt"/>
+            <line num="257" count="3" type="stmt"/>
+            <line num="259" count="4" type="stmt"/>
+            <line num="263" count="5" visibility="public" complexity="1" type="method" signature="addNewGameSession(LongId&lt;User&gt;) : LongId&lt;GameSession&gt;"/>
+            <line num="264" count="5" type="stmt"/>
+            <line num="266" count="5" type="stmt"/>
+            <line num="268" count="5" type="stmt"/>
+            <line num="269" count="5" type="stmt"/>
+            <line num="270" count="5" type="stmt"/>
+            <line num="273" count="3" visibility="private" complexity="1" type="method" signature="replicateStartGameToFrontend(LongId&lt;User&gt;,LongId&lt;GameSession&gt;) : void"/>
+            <line num="274" count="3" type="stmt"/>
+            <line num="279" count="3" type="stmt"/>
+            <line num="282" count="1" visibility="public" complexity="2" type="method" signature="joinToGame(LongId&lt;User&gt;,LongId&lt;GameSession&gt;) : boolean"/>
+            <line num="283" count="1" type="stmt"/>
+            <line num="284" count="1" type="stmt"/>
+            <line num="284" falsecount="0" type="cond" truecount="1"/>
+            <line num="285" count="1" type="stmt"/>
+            <line num="286" count="1" type="stmt"/>
+            <line num="287" count="1" type="stmt"/>
+            <line num="289" count="1" type="stmt"/>
+            <line num="290" count="1" type="stmt"/>
+            <line num="293" count="1" visibility="private" complexity="1" type="method" signature="replicateJoinGameToFrontend(LongId&lt;User&gt;) : void"/>
+            <line num="294" count="1" type="stmt"/>
+            <line num="298" count="1" type="stmt"/>
+            <line num="302" count="0" visibility="public" complexity="2" type="method" signature="doGameStep(LongId&lt;User&gt;) : void"/>
+            <line num="303" count="0" type="stmt"/>
+            <line num="304" count="0" type="stmt"/>
+            <line num="305" count="0" type="stmt"/>
+            <line num="305" falsecount="0" type="cond" truecount="0"/>
+            <line num="306" count="0" type="stmt"/>
+            <line num="310" count="0" visibility="private" complexity="1" type="method" signature="replicateGameStepToFrontend(LongId&lt;User&gt;,ChatMessage[]) : void"/>
+            <line num="311" count="0" type="stmt"/>
+            <line num="316" count="0" type="stmt"/>
+            <line num="320" count="0" visibility="public" complexity="1" type="method" signature="doGameAction(LongId&lt;User&gt;,String) : void"/>
+            <line num="321" count="0" type="stmt"/>
+            <line num="322" count="0" type="stmt"/>
+            <line num="326" count="0" visibility="public" complexity="1" type="method" signature="finishGame(LongId&lt;User&gt;) : void"/>
+            <line num="327" count="0" type="stmt"/>
+            <line num="328" count="0" type="stmt"/>
+            <line num="332" count="0" visibility="private" complexity="1" type="method" signature="replicateFinishGameToFrontend(LongId&lt;User&gt;) : void"/>
+            <line num="333" count="0" type="stmt"/>
+            <line num="338" count="0" type="stmt"/>
+            <line num="341" count="0" visibility="public" complexity="1" type="method" signature="getAvailableGameSessionForUser(LongId&lt;User&gt;) : void"/>
+            <line num="342" count="0" type="stmt"/>
+            <line num="345" count="0" visibility="private" complexity="1" type="method" signature="replicateAvailableGameSessionForUser(LongId&lt;User&gt;,Set&lt;LongId&lt;GameSession&gt;&gt;) : void"/>
+            <line num="347" count="0" type="stmt"/>
+            <line num="352" count="0" type="stmt"/>
+            <line num="356" count="1" visibility="public" complexity="4" type="method" signature="refreshPosition(LongId&lt;User&gt;,int,int,int,int) : void"/>
+            <line num="357" count="1" type="stmt"/>
+            <line num="358" count="1" type="stmt"/>
+            <line num="358" falsecount="0" type="cond" truecount="1"/>
+            <line num="359" count="1" type="stmt"/>
+            <line num="360" count="1" type="stmt"/>
+            <line num="360" falsecount="0" type="cond" truecount="1"/>
+            <line num="361" count="1" type="stmt"/>
+            <line num="362" count="1" type="stmt"/>
+            <line num="362" falsecount="0" type="cond" truecount="1"/>
+            <line num="363" count="1" type="stmt"/>
+            <line num="364" count="1" type="stmt"/>
+            <line num="370" count="2" visibility="public" complexity="3" type="method" signature="addFireball(LongId&lt;User&gt;,Fireball) : void"/>
+            <line num="372" count="2" type="stmt"/>
+            <line num="373" count="2" type="stmt"/>
+            <line num="373" falsecount="2" type="cond" truecount="0"/>
+            <line num="374" count="0" type="stmt"/>
+            <line num="375" count="0" type="stmt"/>
+            <line num="375" falsecount="0" type="cond" truecount="0"/>
+            <line num="377" count="0" type="stmt"/>
+            <line num="391" count="224" visibility="public" complexity="1" type="method" signature="getAddress() : Address"/>
+            <line num="392" count="224" type="stmt"/>
+            <line num="395" count="0" visibility="public" complexity="1" type="method" signature="getMessageSystem() : MessageSystem"/>
+            <line num="396" count="0" type="stmt"/>
+         </file>
+         <file name="GameSession.java" path="C:\Users\arusakov\IdeaProjects\TpJavaServer\src\main\java\game\GameSession.java">
+            <metrics classes="1" methods="12" conditionals="12" ncloc="76" coveredstatements="34" coveredmethods="12" complexity="18" coveredconditionals="11" statements="34" loc="104" coveredelements="57" elements="58"/>
+            <class name="GameSession">
+               <metrics methods="12" conditionals="12" coveredstatements="34" coveredmethods="12" complexity="18" coveredconditionals="11" statements="34" coveredelements="57" elements="58"/>
+            </class>
+            <line num="21" count="7" visibility="package" complexity="1" type="method" signature="GameSession(LongId&lt;User&gt;)"/>
+            <line num="22" count="7" type="stmt"/>
+            <line num="26" count="2" visibility="public" complexity="1" type="method" signature="addMessageToChat(LongId&lt;User&gt;,String) : void"/>
+            <line num="27" count="2" type="stmt"/>
+            <line num="28" count="2" type="stmt"/>
+            <line num="31" count="1" visibility="public" complexity="1" type="method" signature="addIndexLastMsg(LongId&lt;User&gt;) : void"/>
+            <line num="32" count="1" type="stmt"/>
+            <line num="36" count="3" visibility="public" complexity="4" type="method" signature="getMessagesForUser(LongId&lt;User&gt;) : ChatMessage[]"/>
+            <line num="38" count="3" type="stmt"/>
+            <line num="39" count="3" type="stmt"/>
+            <line num="39" falsecount="2" type="cond" truecount="1"/>
+            <line num="40" count="1" type="stmt"/>
+            <line num="41" count="2" type="stmt"/>
+            <line num="42" count="2" type="stmt"/>
+            <line num="44" count="2" type="stmt"/>
+            <line num="44" falsecount="0" type="cond" truecount="2"/>
+            <line num="45" count="2" type="stmt"/>
+            <line num="46" count="2" type="stmt"/>
+            <line num="46" falsecount="2" type="cond" truecount="2"/>
+            <line num="47" count="2" type="stmt"/>
+            <line num="48" count="2" type="stmt"/>
+            <line num="51" count="2" type="stmt"/>
+            <line num="54" count="2" visibility="public" complexity="1" type="method" signature="getPlayer(LongId&lt;User&gt;) : Player"/>
+            <line num="55" count="2" type="stmt"/>
+            <line num="58" count="326" visibility="public" complexity="1" type="method" signature="getAllUserId() : Set&lt;LongId&lt;User&gt;&gt;"/>
+            <line num="59" count="326" type="stmt"/>
+            <line num="62" count="158" visibility="public" complexity="3" type="method" signature="getEnemiesArray(LongId&lt;User&gt;) : LinkedList&lt;Player&gt;"/>
+            <line num="63" count="158" type="stmt"/>
+            <line num="64" count="158" type="stmt"/>
+            <line num="65" count="158" type="stmt"/>
+            <line num="67" count="158" type="stmt"/>
+            <line num="67" falsecount="158" type="cond" truecount="159"/>
+            <line num="68" count="159" type="stmt"/>
+            <line num="69" count="159" type="stmt"/>
+            <line num="69" falsecount="158" type="cond" truecount="1"/>
+            <line num="70" count="1" type="stmt"/>
+            <line num="73" count="158" type="stmt"/>
+            <line num="76" count="12" visibility="public" complexity="2" type="method" signature="addNewPlayer(LongId&lt;User&gt;) : Player"/>
+            <line num="77" count="12" type="stmt"/>
+            <line num="77" falsecount="3" type="cond" truecount="9"/>
+            <line num="79" count="9" type="stmt"/>
+            <line num="80" count="9" type="stmt"/>
+            <line num="83" count="9" type="stmt"/>
+            <line num="86" count="3" type="stmt"/>
+            <line num="89" count="177" visibility="public" complexity="1" type="method" signature="getAllPlayers() : Map&lt;LongId&lt;User&gt;, Player&gt;"/>
+            <line num="90" count="177" type="stmt"/>
+            <line num="93" count="7" visibility="public" complexity="1" type="method" signature="addFireball(Fireball) : void"/>
+            <line num="94" count="7" type="stmt"/>
+            <line num="97" count="4" visibility="public" complexity="1" type="method" signature="setFireballs(LinkedList&lt;Fireball&gt;) : void"/>
+            <line num="98" count="4" type="stmt"/>
+            <line num="101" count="165" visibility="public" complexity="1" type="method" signature="getFireballs() : LinkedList&lt;Fireball&gt;"/>
+            <line num="102" count="165" type="stmt"/>
+         </file>
+         <file name="MessageFinishGameToFrontend.java" path="C:\Users\arusakov\IdeaProjects\TpJavaServer\src\main\java\game\MessageFinishGameToFrontend.java">
+            <metrics classes="1" methods="2" conditionals="0" ncloc="19" coveredstatements="3" coveredmethods="1" complexity="2" coveredconditionals="0" statements="4" loc="25" coveredelements="4" elements="6"/>
+            <class name="MessageFinishGameToFrontend">
+               <metrics methods="2" conditionals="0" coveredstatements="3" coveredmethods="1" complexity="2" coveredconditionals="0" statements="4" coveredelements="4" elements="6"/>
+            </class>
+            <line num="15" count="2" visibility="package" complexity="1" type="method" signature="MessageFinishGameToFrontend(Address,Address,LongId&lt;User&gt;,boolean)"/>
+            <line num="16" count="2" type="stmt"/>
+            <line num="17" count="2" type="stmt"/>
+            <line num="18" count="2" type="stmt"/>
+            <line num="21" count="0" visibility="public" complexity="1" type="method" signature="exec(Frontend) : void"/>
+            <line num="22" count="0" type="stmt"/>
+         </file>
+         <file name="MessageJoinGameToFrontend.java" path="C:\Users\arusakov\IdeaProjects\TpJavaServer\src\main\java\game\MessageJoinGameToFrontend.java">
+            <metrics classes="1" methods="2" conditionals="0" ncloc="18" coveredstatements="2" coveredmethods="1" complexity="2" coveredconditionals="0" statements="3" loc="23" coveredelements="3" elements="5"/>
+            <class name="MessageJoinGameToFrontend">
+               <metrics methods="2" conditionals="0" coveredstatements="2" coveredmethods="1" complexity="2" coveredconditionals="0" statements="3" coveredelements="3" elements="5"/>
+            </class>
+            <line num="15" count="1" visibility="package" complexity="1" type="method" signature="MessageJoinGameToFrontend(Address,Address,LongId&lt;User&gt;)"/>
+            <line num="16" count="1" type="stmt"/>
+            <line num="17" count="1" type="stmt"/>
+            <line num="20" count="0" visibility="public" complexity="1" type="method" signature="exec(Frontend) : void"/>
+            <line num="21" count="0" type="stmt"/>
+         </file>
+         <file name="MessageReplicateGameToFrontend.java" path="C:\Users\arusakov\IdeaProjects\TpJavaServer\src\main\java\game\MessageReplicateGameToFrontend.java">
+            <metrics classes="1" methods="2" conditionals="0" ncloc="18" coveredstatements="0" coveredmethods="0" complexity="2" coveredconditionals="0" statements="4" loc="23" coveredelements="0" elements="6"/>
+            <class name="MessageReplicateGameToFrontend">
+               <metrics methods="2" conditionals="0" coveredstatements="0" coveredmethods="0" complexity="2" coveredconditionals="0" statements="4" coveredelements="0" elements="6"/>
+            </class>
+            <line num="14" count="0" visibility="package" complexity="1" type="method" signature="MessageReplicateGameToFrontend(Address,Address,LongId&lt;User&gt;,ChatMessage[])"/>
+            <line num="15" count="0" type="stmt"/>
+            <line num="16" count="0" type="stmt"/>
+            <line num="17" count="0" type="stmt"/>
+            <line num="20" count="0" visibility="public" complexity="1" type="method" signature="exec(Frontend) : void"/>
+            <line num="21" count="0" type="stmt"/>
+         </file>
+         <file name="MessageStartGameToFrontend.java" path="C:\Users\arusakov\IdeaProjects\TpJavaServer\src\main\java\game\MessageStartGameToFrontend.java">
+            <metrics classes="1" methods="2" conditionals="0" ncloc="19" coveredstatements="4" coveredmethods="2" complexity="2" coveredconditionals="0" statements="4" loc="24" coveredelements="6" elements="6"/>
+            <class name="MessageStartGameToFrontend">
+               <metrics methods="2" conditionals="0" coveredstatements="4" coveredmethods="2" complexity="2" coveredconditionals="0" statements="4" coveredelements="6" elements="6"/>
+            </class>
+            <line num="14" count="5" visibility="public" complexity="1" type="method" signature="MessageStartGameToFrontend(Address,Address,LongId&lt;User&gt;,LongId&lt;GameSession&gt;)"/>
+            <line num="16" count="5" type="stmt"/>
+            <line num="17" count="5" type="stmt"/>
+            <line num="18" count="5" type="stmt"/>
+            <line num="21" count="2" visibility="public" complexity="1" type="method" signature="exec(Frontend) : void"/>
+            <line num="22" count="2" type="stmt"/>
+         </file>
+         <file name="MessageUpdateAvalibleGameSession.java" path="C:\Users\arusakov\IdeaProjects\TpJavaServer\src\main\java\game\MessageUpdateAvalibleGameSession.java">
+            <metrics classes="1" methods="2" conditionals="0" ncloc="20" coveredstatements="4" coveredmethods="2" complexity="2" coveredconditionals="0" statements="4" loc="35" coveredelements="6" elements="6"/>
+            <class name="MessageUpdateAvalibleGameSession">
+               <metrics methods="2" conditionals="0" coveredstatements="4" coveredmethods="2" complexity="2" coveredconditionals="0" statements="4" coveredelements="6" elements="6"/>
+            </class>
+            <line num="23" count="1" visibility="package" complexity="1" type="method" signature="MessageUpdateAvalibleGameSession(Address,Address,LongId&lt;User&gt;,Set&lt; LongId &lt; GameSession &gt; &gt;)"/>
+            <line num="26" count="1" type="stmt"/>
+            <line num="27" count="1" type="stmt"/>
+            <line num="28" count="1" type="stmt"/>
+            <line num="31" count="1" visibility="public" complexity="1" type="method" signature="exec(Frontend) : void"/>
+            <line num="32" count="1" type="stmt"/>
+         </file>
+      </package>
+      <package name="frontend">
+         <metrics classes="15" methods="74" conditionals="66" files="15" ncloc="705" coveredstatements="243" coveredmethods="52" complexity="111" coveredconditionals="34" statements="305" loc="1008" coveredelements="329" elements="445"/>
+         <file name="FrontendImpl.java" path="C:\Users\arusakov\IdeaProjects\TpJavaServer\src\main\java\frontend\FrontendImpl.java">
+            <metrics classes="1" methods="39" conditionals="66" ncloc="335" coveredstatements="128" coveredmethods="35" complexity="76" coveredconditionals="34" statements="161" loc="489" coveredelements="197" elements="266"/>
+            <class name="FrontendImpl">
+               <metrics methods="39" conditionals="66" coveredstatements="128" coveredmethods="35" complexity="76" coveredconditionals="34" statements="161" coveredelements="197" elements="266"/>
+            </class>
+            <line num="33" count="24" visibility="public" complexity="1" type="method" signature="addUserSession(LongId&lt;UserSession&gt;,String) : void"/>
+            <line num="34" count="24" type="stmt"/>
+            <line num="35" count="24" type="stmt"/>
+            <line num="38" count="24" visibility="public" complexity="1" type="method" signature="addUserIdToSession(LongId&lt;User&gt;,LongId&lt;UserSession&gt;) : void"/>
+            <line num="39" count="24" type="stmt"/>
+            <line num="43" count="1" visibility="public" complexity="5" type="method" signature="getSessionIdFromCookie(HttpServletRequest) : LongId&lt;UserSession&gt;"/>
+            <line num="44" count="1" type="stmt"/>
+            <line num="45" count="1" type="stmt"/>
+            <line num="46" count="1" type="stmt"/>
+            <line num="46" falsecount="1" type="cond" truecount="0"/>
+            <line num="47" count="0" type="stmt"/>
+            <line num="48" count="0" type="stmt"/>
+            <line num="48" falsecount="0" type="cond" truecount="0"/>
+            <line num="49" count="0" type="stmt"/>
+            <line num="50" count="0" type="stmt"/>
+            <line num="52" count="1" type="stmt"/>
+            <line num="52" falsecount="0" type="cond" truecount="1"/>
+            <line num="56" count="1" visibility="private" complexity="2" type="method" signature="favIcon(HttpServletRequest) : boolean"/>
+            <line num="57" count="1" type="stmt"/>
+            <line num="57" falsecount="1" type="cond" truecount="0"/>
+            <line num="61" count="1" visibility="private" complexity="2" type="method" signature="createNewSessionId(HttpServletResponse) : LongId&lt;UserSession&gt;"/>
+            <line num="62" count="1" type="stmt"/>
+            <line num="63" count="1" type="stmt"/>
+            <line num="64" count="1" type="stmt"/>
+            <line num="65" count="1" type="stmt"/>
+            <line num="66" falsecount="1" type="cond" truecount="0"/>
+            <line num="67" count="1" type="stmt"/>
+            <line num="69" count="1" type="stmt"/>
+            <line num="70" count="1" type="stmt"/>
+            <line num="74" count="1" visibility="private" complexity="1" type="method" signature="createNewUserSessionAndSendMessageR(LongId&lt;UserSession&gt;,String,HttpServletResponse) : void"/>
+            <line num="78" count="1" type="stmt"/>
+            <line num="79" count="1" type="stmt"/>
+            <line num="81" count="1" type="stmt"/>
+            <line num="86" count="1" type="stmt"/>
+            <line num="88" count="1" type="stmt"/>
+            <line num="91" count="0" visibility="private" complexity="1" type="method" signature="joinToSelectedChat(LongId&lt;UserSession&gt;,LongId&lt;GameSession&gt;) : void"/>
+            <line num="92" count="0" type="stmt"/>
+            <line num="93" count="0" type="stmt"/>
+            <line num="99" count="0" type="stmt"/>
+            <line num="102" count="1" visibility="public" complexity="4" type="method" signature="chatSelected(HttpServletRequest,LongId&lt;UserSession&gt;) : boolean"/>
+            <line num="103" count="1" type="stmt"/>
+            <line num="105" count="1" type="stmt"/>
+            <line num="105" falsecount="0" type="cond" truecount="1"/>
+            <line num="106" count="1" type="stmt"/>
+            <line num="107" count="1" type="stmt"/>
+            <line num="108" count="1" type="stmt"/>
+            <line num="111" count="0" type="stmt"/>
+            <line num="112" count="0" type="stmt"/>
+            <line num="112" falsecount="0" type="cond" truecount="0"/>
+            <line num="113" count="0" type="stmt"/>
+            <line num="114" count="0" type="stmt"/>
+            <line num="116" count="0" type="stmt"/>
+            <line num="119" count="0" type="stmt"/>
+            <line num="135" count="1" visibility="private" complexity="1" type="method" signature="addMessageToGame(String,LongId&lt;UserSession&gt;) : void"/>
+            <line num="136" count="1" type="stmt"/>
+            <line num="138" count="1" type="stmt"/>
+            <line num="143" count="1" type="stmt"/>
+            <line num="146" count="1" visibility="private" complexity="3" type="method" signature="messageAdd(HttpServletRequest,LongId&lt;UserSession&gt;) : void"/>
+            <line num="148" count="1" type="stmt"/>
+            <line num="149" count="1" type="stmt"/>
+            <line num="149" falsecount="1" type="cond" truecount="0"/>
+            <line num="150" count="0" type="stmt"/>
+            <line num="151" count="1" type="stmt"/>
+            <line num="156" count="2" visibility="public" complexity="1" type="method" signature="startGameSM(LongId&lt;UserSession&gt;) : void"/>
+            <line num="158" count="2" type="stmt"/>
+            <line num="159" count="2" type="stmt"/>
+            <line num="163" count="2" type="stmt"/>
+            <line num="167" count="2" visibility="private" complexity="3" type="method" signature="existAvailableGames(LongId&lt;UserSession&gt;) : boolean"/>
+            <line num="168" count="2" type="stmt"/>
+            <line num="170" count="2" type="stmt"/>
+            <line num="170" falsecount="1" type="cond" truecount="1"/>
+            <line num="170" falsecount="0" type="cond" truecount="1"/>
+            <line num="178" count="2" visibility="public" complexity="4" type="method" signature="availableGames(HttpServletRequest,LongId&lt;UserSession&gt;) : boolean"/>
+            <line num="179" count="2" type="stmt"/>
+            <line num="180" count="2" type="stmt"/>
+            <line num="184" count="2" type="stmt"/>
+            <line num="185" count="2" type="stmt"/>
+            <line num="187" count="2" type="stmt"/>
+            <line num="187" falsecount="2" type="cond" truecount="0"/>
+            <line num="187" falsecount="1" type="cond" truecount="1"/>
+            <line num="209" count="2" visibility="public" complexity="2" type="method" signature="removeSession(LongId&lt;UserSession&gt;) : void"/>
+            <line num="210" count="2" type="stmt"/>
+            <line num="210" falsecount="0" type="cond" truecount="2"/>
+            <line num="211" count="2" type="stmt"/>
+            <line num="215" count="4" visibility="public" complexity="5" type="method" signature="processAction(String,HttpServletRequest,HttpServletResponse,UserSession) : String"/>
+            <line num="219" count="4" type="stmt"/>
+            <line num="219" falsecount="0" type="cond" truecount="4"/>
+            <line num="220" count="4" type="stmt"/>
+            <line num="220" falsecount="3" type="cond" truecount="1"/>
+            <line num="221" count="1" type="stmt"/>
+            <line num="222" count="3" type="stmt"/>
+            <line num="222" falsecount="2" type="cond" truecount="1"/>
+            <line num="223" count="1" type="stmt"/>
+            <line num="224" count="2" type="stmt"/>
+            <line num="224" falsecount="1" type="cond" truecount="1"/>
+            <line num="225" count="1" type="stmt"/>
+            <line num="228" count="3" type="stmt"/>
+            <line num="232" count="1" visibility="public" complexity="1" type="method" signature="processGameStep(HttpServletRequest,LongId&lt;UserSession&gt;) : String"/>
+            <line num="233" count="1" type="stmt"/>
+            <line num="234" count="1" type="stmt"/>
+            <line num="235" count="1" type="stmt"/>
+            <line num="239" count="1" visibility="private" complexity="1" type="method" signature="fireballFromClient(HttpServletRequest,UserSession) : void"/>
+            <line num="241" count="1" type="stmt"/>
+            <line num="246" count="1" type="stmt"/>
+            <line num="248" count="1" type="stmt"/>
+            <line num="253" count="1" type="stmt"/>
+            <line num="256" count="1" visibility="private" complexity="1" type="method" signature="positionFromClient(HttpServletRequest,UserSession) : void"/>
+            <line num="257" count="1" type="stmt"/>
+            <line num="262" count="1" type="stmt"/>
+            <line num="263" count="1" type="stmt"/>
+            <line num="264" count="1" type="stmt"/>
+            <line num="265" count="1" type="stmt"/>
+            <line num="270" count="1" type="stmt"/>
+            <line num="273" count="1" visibility="private" complexity="1" type="method" signature="infoFromClient(HttpServletResponse,UserSession) : String"/>
+            <line num="274" count="1" type="stmt"/>
+            <line num="276" count="1" type="stmt"/>
+            <line num="280" count="1" type="stmt"/>
+            <line num="281" count="1" type="stmt"/>
+            <line num="282" count="1" type="stmt"/>
+            <line num="283" count="1" type="stmt"/>
+            <line num="284" count="1" type="stmt"/>
+            <line num="287" count="1" type="stmt"/>
+            <line num="290" count="1" visibility="public" complexity="2" type="method" signature="updateFireballs(LongId&lt;User&gt;,LinkedList&lt;Fireball&gt;) : void"/>
+            <line num="291" count="1" type="stmt"/>
+            <line num="292" count="1" type="stmt"/>
+            <line num="292" falsecount="0" type="cond" truecount="1"/>
+            <line num="293" count="1" type="stmt"/>
+            <line num="297" count="1" visibility="public" complexity="2" type="method" signature="updateHealth(LongId&lt;User&gt;,int) : void"/>
+            <line num="298" count="1" type="stmt"/>
+            <line num="299" count="1" type="stmt"/>
+            <line num="299" falsecount="0" type="cond" truecount="1"/>
+            <line num="300" count="1" type="stmt"/>
+            <line num="305" count="1" visibility="private" complexity="3" type="method" signature="responseNewMessage(LongId&lt;UserSession&gt;) : String"/>
+            <line num="306" count="1" type="stmt"/>
+            <line num="308" count="1" type="stmt"/>
+            <line num="308" falsecount="1" type="cond" truecount="0"/>
+            <line num="310" count="0" type="stmt"/>
+            <line num="311" count="0" type="stmt"/>
+            <line num="311" falsecount="0" type="cond" truecount="0"/>
+            <line num="312" count="0" type="stmt"/>
+            <line num="315" count="0" type="stmt"/>
+            <line num="317" count="1" type="stmt"/>
+            <line num="320" count="1" visibility="private" complexity="1" type="method" signature="setResponseSettings(Request,HttpServletResponse) : void"/>
+            <line num="321" count="1" type="stmt"/>
+            <line num="322" count="1" type="stmt"/>
+            <line num="323" count="1" type="stmt"/>
+            <line num="326" count="1" visibility="public" complexity="6" type="method" signature="handle(String,Request,HttpServletRequest,HttpServletResponse) : void"/>
+            <line num="332" count="1" type="stmt"/>
+            <line num="332" falsecount="1" type="cond" truecount="0"/>
+            <line num="333" count="0" type="stmt"/>
+            <line num="334" count="1" type="stmt"/>
+            <line num="336" count="1" type="stmt"/>
+            <line num="337" count="1" type="stmt"/>
+            <line num="337" falsecount="0" type="cond" truecount="1"/>
+            <line num="338" count="1" type="stmt"/>
+            <line num="341" count="1" type="stmt"/>
+            <line num="343" count="1" type="stmt"/>
+            <line num="343" falsecount="0" type="cond" truecount="1"/>
+            <line num="345" count="1" type="stmt"/>
+            <line num="346" count="1" type="stmt"/>
+            <line num="347" count="1" type="stmt"/>
+            <line num="347" falsecount="1" type="cond" truecount="0"/>
+            <line num="348" count="0" type="stmt"/>
+            <line num="349" count="0" type="stmt"/>
+            <line num="351" count="1" type="stmt"/>
+            <line num="352" count="1" type="stmt"/>
+            <line num="354" count="0" type="stmt"/>
+            <line num="355" count="0" type="stmt"/>
+            <line num="355" falsecount="0" type="cond" truecount="0"/>
+            <line num="356" count="0" type="stmt"/>
+            <line num="358" count="0" type="stmt"/>
+            <line num="362" count="24" visibility="public" complexity="1" type="method" signature="FrontendImpl(MessageSystem)"/>
+            <line num="363" count="24" type="stmt"/>
+            <line num="364" count="24" type="stmt"/>
+            <line num="365" count="24" type="stmt"/>
+            <line num="368" count="1" visibility="private" complexity="1" type="method" signature="updateGameStep(LongId&lt;UserSession&gt;) : void"/>
+            <line num="369" count="1" type="stmt"/>
+            <line num="370" count="1" type="stmt"/>
+            <line num="373" count="1" type="stmt"/>
+            <line num="376" count="0" visibility="public" complexity="1" type="method" signature="run() : void"/>
+            <line num="377" count="0" type="stmt"/>
+            <line num="379" count="0" type="stmt"/>
+            <line num="380" count="0" type="stmt"/>
+            <line num="405" count="1" visibility="public" complexity="3" type="method" signature="updateUserId(LongId&lt;UserSession&gt;,LongId&lt;User&gt;) : void"/>
+            <line num="406" count="1" type="stmt"/>
+            <line num="407" count="1" type="stmt"/>
+            <line num="407" falsecount="1" type="cond" truecount="0"/>
+            <line num="408" count="0" type="stmt"/>
+            <line num="410" count="1" type="stmt"/>
+            <line num="410" falsecount="1" type="cond" truecount="0"/>
+            <line num="411" count="0" type="stmt"/>
+            <line num="412" count="0" type="stmt"/>
+            <line num="414" count="1" type="stmt"/>
+            <line num="415" count="1" type="stmt"/>
+            <line num="416" count="1" type="stmt"/>
+            <line num="419" count="4" visibility="public" complexity="2" type="method" signature="updateUserState(LongId&lt;UserSession&gt;,UserState) : void"/>
+            <line num="420" count="4" type="stmt"/>
+            <line num="421" count="4" type="stmt"/>
+            <line num="421" falsecount="4" type="cond" truecount="0"/>
+            <line num="422" count="0" type="stmt"/>
+            <line num="424" count="4" type="stmt"/>
+            <line num="427" count="1" visibility="public" complexity="1" type="method" signature="startGame(LongId&lt;User&gt;,LongId&lt;GameSession&gt;) : void"/>
+            <line num="428" count="1" type="stmt"/>
+            <line num="429" count="1" type="stmt"/>
+            <line num="433" count="0" visibility="public" complexity="1" type="method" signature="joinToGame(LongId&lt;User&gt;) : void"/>
+            <line num="438" count="1" visibility="public" complexity="1" type="method" signature="updateGameStep(LongId&lt;User&gt;,ChatMessage[]) : void"/>
+            <line num="439" count="1" type="stmt"/>
+            <line num="440" count="1" type="stmt"/>
+            <line num="444" count="0" visibility="public" complexity="1" type="method" signature="updateAvailableGameSessionForUser(LongId&lt;User&gt;,Set&lt;LongId&lt;GameSession&gt;&gt;) : void"/>
+            <line num="446" count="0" type="stmt"/>
+            <line num="452" count="1" visibility="public" complexity="3" type="method" signature="finishGame(LongId&lt;User&gt;,boolean) : void"/>
+            <line num="453" count="1" type="stmt"/>
+            <line num="454" count="1" type="stmt"/>
+            <line num="454" falsecount="0" type="cond" truecount="1"/>
+            <line num="456" count="1" type="stmt"/>
+            <line num="457" count="1" type="stmt"/>
+            <line num="458" count="1" type="stmt"/>
+            <line num="458" falsecount="0" type="cond" truecount="1"/>
+            <line num="462" count="1" visibility="public" complexity="2" type="method" signature="refreshPosition(LongId&lt;User&gt;,LinkedList&lt;Player&gt;) : void"/>
+            <line num="463" count="1" type="stmt"/>
+            <line num="464" count="1" type="stmt"/>
+            <line num="464" falsecount="0" type="cond" truecount="1"/>
+            <line num="465" count="1" type="stmt"/>
+            <line num="469" count="23" visibility="public" complexity="1" type="method" signature="getUserSessionBySessionId(LongId&lt;UserSession&gt;) : UserSession"/>
+            <line num="470" count="23" type="stmt"/>
+            <line num="473" count="47" visibility="public" complexity="2" type="method" signature="getUserSession(LongId&lt;User&gt;) : UserSession"/>
+            <line num="474" count="47" type="stmt"/>
+            <line num="479" count="47" type="stmt"/>
+            <line num="479" falsecount="0" type="cond" truecount="47"/>
+            <line num="482" count="8" visibility="public" complexity="1" type="method" signature="getAddress() : Address"/>
+            <line num="483" count="8" type="stmt"/>
+            <line num="486" count="1" visibility="public" complexity="1" type="method" signature="getMessageSystem() : MessageSystem"/>
+            <line num="487" count="1" type="stmt"/>
+         </file>
+         <file name="MessageAddFireball.java" path="C:\Users\arusakov\IdeaProjects\TpJavaServer\src\main\java\frontend\MessageAddFireball.java">
+            <metrics classes="1" methods="2" conditionals="0" ncloc="21" coveredstatements="3" coveredmethods="1" complexity="2" coveredconditionals="0" statements="5" loc="25" coveredelements="4" elements="7"/>
+            <class name="MessageAddFireball">
+               <metrics methods="2" conditionals="0" coveredstatements="3" coveredmethods="1" complexity="2" coveredconditionals="0" statements="5" coveredelements="4" elements="7"/>
+            </class>
+            <line num="15" count="1" visibility="public" complexity="1" type="method" signature="MessageAddFireball(Address,Address,LongId&lt;User&gt;,Fireball)"/>
+            <line num="16" count="1" type="stmt"/>
+            <line num="17" count="1" type="stmt"/>
+            <line num="18" count="1" type="stmt"/>
+            <line num="21" count="0" visibility="public" complexity="1" type="method" signature="exec(GameService) : void"/>
+            <line num="22" count="0" type="stmt"/>
+            <line num="23" count="0" type="stmt"/>
+         </file>
+         <file name="MessageFinishGame.java" path="C:\Users\arusakov\IdeaProjects\TpJavaServer\src\main\java\frontend\MessageFinishGame.java">
+            <metrics classes="1" methods="2" conditionals="0" ncloc="16" coveredstatements="0" coveredmethods="0" complexity="2" coveredconditionals="0" statements="3" loc="21" coveredelements="0" elements="5"/>
+            <class name="MessageFinishGame">
+               <metrics methods="2" conditionals="0" coveredstatements="0" coveredmethods="0" complexity="2" coveredconditionals="0" statements="3" coveredelements="0" elements="5"/>
+            </class>
+            <line num="12" count="0" visibility="package" complexity="1" type="method" signature="MessageFinishGame(Address,Address,LongId&lt;User&gt;)"/>
+            <line num="13" count="0" type="stmt"/>
+            <line num="14" count="0" type="stmt"/>
+            <line num="18" count="0" visibility="public" complexity="1" type="method" signature="exec(GameService) : void"/>
+            <line num="19" count="0" type="stmt"/>
+         </file>
+         <file name="MessageFireballsToFrontend.java" path="C:\Users\arusakov\IdeaProjects\TpJavaServer\src\main\java\frontend\MessageFireballsToFrontend.java">
+            <metrics classes="1" methods="2" conditionals="0" ncloc="21" coveredstatements="3" coveredmethods="1" complexity="2" coveredconditionals="0" statements="4" loc="26" coveredelements="4" elements="6"/>
+            <class name="MessageFireballsToFrontend">
+               <metrics methods="2" conditionals="0" coveredstatements="3" coveredmethods="1" complexity="2" coveredconditionals="0" statements="4" coveredelements="4" elements="6"/>
+            </class>
+            <line num="17" count="158" visibility="public" complexity="1" type="method" signature="MessageFireballsToFrontend(Address,Address,LongId&lt;User&gt;,LinkedList&lt;Fireball&gt;)"/>
+            <line num="18" count="158" type="stmt"/>
+            <line num="19" count="158" type="stmt"/>
+            <line num="20" count="158" type="stmt"/>
+            <line num="23" count="0" visibility="public" complexity="1" type="method" signature="exec(Frontend) : void"/>
+            <line num="24" count="0" type="stmt"/>
+         </file>
+         <file name="MessageGameAction.java" path="C:\Users\arusakov\IdeaProjects\TpJavaServer\src\main\java\frontend\MessageGameAction.java">
+            <metrics classes="1" methods="2" conditionals="0" ncloc="19" coveredstatements="3" coveredmethods="1" complexity="2" coveredconditionals="0" statements="4" loc="29" coveredelements="4" elements="6"/>
+            <class name="MessageGameAction">
+               <metrics methods="2" conditionals="0" coveredstatements="3" coveredmethods="1" complexity="2" coveredconditionals="0" statements="4" coveredelements="4" elements="6"/>
+            </class>
+            <line num="17" count="1" visibility="package" complexity="1" type="method" signature="MessageGameAction(Address,Address,LongId&lt;User&gt;,String)"/>
+            <line num="18" count="1" type="stmt"/>
+            <line num="19" count="1" type="stmt"/>
+            <line num="20" count="1" type="stmt"/>
+            <line num="24" count="0" visibility="public" complexity="1" type="method" signature="exec(GameService) : void"/>
+            <line num="25" count="0" type="stmt"/>
+         </file>
+         <file name="MessageGameStep.java" path="C:\Users\arusakov\IdeaProjects\TpJavaServer\src\main\java\frontend\MessageGameStep.java">
+            <metrics classes="1" methods="2" conditionals="0" ncloc="18" coveredstatements="2" coveredmethods="1" complexity="2" coveredconditionals="0" statements="3" loc="27" coveredelements="3" elements="5"/>
+            <class name="MessageGameStep">
+               <metrics methods="2" conditionals="0" coveredstatements="2" coveredmethods="1" complexity="2" coveredconditionals="0" statements="3" coveredelements="3" elements="5"/>
+            </class>
+            <line num="16" count="2" visibility="public" complexity="1" type="method" signature="MessageGameStep(Address,Address,LongId&lt;User&gt;)"/>
+            <line num="17" count="2" type="stmt"/>
+            <line num="18" count="2" type="stmt"/>
+            <line num="22" count="0" visibility="public" complexity="1" type="method" signature="exec(GameService) : void"/>
+            <line num="23" count="0" type="stmt"/>
+         </file>
+         <file name="MessageGetAvailableGameSession.java" path="C:\Users\arusakov\IdeaProjects\TpJavaServer\src\main\java\frontend\MessageGetAvailableGameSession.java">
+            <metrics classes="1" methods="2" conditionals="0" ncloc="16" coveredstatements="2" coveredmethods="1" complexity="2" coveredconditionals="0" statements="3" loc="33" coveredelements="3" elements="5"/>
+            <class name="MessageGetAvailableGameSession">
+               <metrics methods="2" conditionals="0" coveredstatements="2" coveredmethods="1" complexity="2" coveredconditionals="0" statements="3" coveredelements="3" elements="5"/>
+            </class>
+            <line num="21" count="2" visibility="public" complexity="1" type="method" signature="MessageGetAvailableGameSession(Address,Address,LongId&lt;User&gt;)"/>
+            <line num="22" count="2" type="stmt"/>
+            <line num="23" count="2" type="stmt"/>
+            <line num="26" count="0" visibility="public" complexity="1" type="method" signature="exec(GameService) : void"/>
+            <line num="27" count="0" type="stmt"/>
+         </file>
+         <file name="MessageHealthToFrontend.java" path="C:\Users\arusakov\IdeaProjects\TpJavaServer\src\main\java\frontend\MessageHealthToFrontend.java">
+            <metrics classes="1" methods="2" conditionals="0" ncloc="21" coveredstatements="0" coveredmethods="0" complexity="2" coveredconditionals="0" statements="4" loc="26" coveredelements="0" elements="6"/>
+            <class name="MessageHealthToFrontend">
+               <metrics methods="2" conditionals="0" coveredstatements="0" coveredmethods="0" complexity="2" coveredconditionals="0" statements="4" coveredelements="0" elements="6"/>
+            </class>
+            <line num="17" count="0" visibility="public" complexity="1" type="method" signature="MessageHealthToFrontend(Address,Address,LongId&lt;User&gt;,int)"/>
+            <line num="18" count="0" type="stmt"/>
+            <line num="19" count="0" type="stmt"/>
+            <line num="20" count="0" type="stmt"/>
+            <line num="23" count="0" visibility="public" complexity="1" type="method" signature="exec(Frontend) : void"/>
+            <line num="24" count="0" type="stmt"/>
+         </file>
+         <file name="MessageJoinToGame.java" path="C:\Users\arusakov\IdeaProjects\TpJavaServer\src\main\java\frontend\MessageJoinToGame.java">
+            <metrics classes="1" methods="2" conditionals="0" ncloc="20" coveredstatements="0" coveredmethods="0" complexity="2" coveredconditionals="0" statements="4" loc="29" coveredelements="0" elements="6"/>
+            <class name="MessageJoinToGame">
+               <metrics methods="2" conditionals="0" coveredstatements="0" coveredmethods="0" complexity="2" coveredconditionals="0" statements="4" coveredelements="0" elements="6"/>
+            </class>
+            <line num="18" count="0" visibility="public" complexity="1" type="method" signature="MessageJoinToGame(Address,Address,LongId&lt;User&gt;,LongId&lt;GameSession&gt;)"/>
+            <line num="19" count="0" type="stmt"/>
+            <line num="20" count="0" type="stmt"/>
+            <line num="21" count="0" type="stmt"/>
+            <line num="25" count="0" visibility="public" complexity="1" type="method" signature="exec(GameService) : void"/>
+            <line num="26" count="0" type="stmt"/>
+         </file>
+         <file name="MessageRefreshPosition.java" path="C:\Users\arusakov\IdeaProjects\TpJavaServer\src\main\java\frontend\MessageRefreshPosition.java">
+            <metrics classes="1" methods="2" conditionals="0" ncloc="22" coveredstatements="6" coveredmethods="1" complexity="2" coveredconditionals="0" statements="7" loc="26" coveredelements="7" elements="9"/>
+            <class name="MessageRefreshPosition">
+               <metrics methods="2" conditionals="0" coveredstatements="6" coveredmethods="1" complexity="2" coveredconditionals="0" statements="7" coveredelements="7" elements="9"/>
+            </class>
+            <line num="14" count="1" visibility="public" complexity="1" type="method" signature="MessageRefreshPosition(Address,Address,LongId&lt;User&gt;,int,int,int,int)"/>
+            <line num="15" count="1" type="stmt"/>
+            <line num="16" count="1" type="stmt"/>
+            <line num="17" count="1" type="stmt"/>
+            <line num="18" count="1" type="stmt"/>
+            <line num="19" count="1" type="stmt"/>
+            <line num="20" count="1" type="stmt"/>
+            <line num="23" count="0" visibility="public" complexity="1" type="method" signature="exec(GameService) : void"/>
+            <line num="24" count="0" type="stmt"/>
+         </file>
+         <file name="MessageRefreshPositionToFrontend.java" path="C:\Users\arusakov\IdeaProjects\TpJavaServer\src\main\java\frontend\MessageRefreshPositionToFrontend.java">
+            <metrics classes="1" methods="2" conditionals="0" ncloc="24" coveredstatements="0" coveredmethods="0" complexity="2" coveredconditionals="0" statements="4" loc="29" coveredelements="0" elements="6"/>
+            <class name="MessageRefreshPositionToFrontend">
+               <metrics methods="2" conditionals="0" coveredstatements="0" coveredmethods="0" complexity="2" coveredconditionals="0" statements="4" coveredelements="0" elements="6"/>
+            </class>
+            <line num="20" count="0" visibility="public" complexity="1" type="method" signature="MessageRefreshPositionToFrontend(Address,Address,LongId&lt;User&gt;,LinkedList&lt;Player&gt;)"/>
+            <line num="21" count="0" type="stmt"/>
+            <line num="22" count="0" type="stmt"/>
+            <line num="23" count="0" type="stmt"/>
+            <line num="26" count="0" visibility="public" complexity="1" type="method" signature="exec(Frontend) : void"/>
+            <line num="27" count="0" type="stmt"/>
+         </file>
+         <file name="MessageStartGame.java" path="C:\Users\arusakov\IdeaProjects\TpJavaServer\src\main\java\frontend\MessageStartGame.java">
+            <metrics classes="1" methods="2" conditionals="0" ncloc="17" coveredstatements="2" coveredmethods="1" complexity="2" coveredconditionals="0" statements="3" loc="27" coveredelements="3" elements="5"/>
+            <class name="MessageStartGame">
+               <metrics methods="2" conditionals="0" coveredstatements="2" coveredmethods="1" complexity="2" coveredconditionals="0" statements="3" coveredelements="3" elements="5"/>
+            </class>
+            <line num="16" count="2" visibility="public" complexity="1" type="method" signature="MessageStartGame(Address,Address,LongId&lt;User&gt;)"/>
+            <line num="17" count="2" type="stmt"/>
+            <line num="18" count="2" type="stmt"/>
+            <line num="22" count="0" visibility="public" complexity="1" type="method" signature="exec(GameService) : void"/>
+            <line num="23" count="0" type="stmt"/>
+         </file>
+         <file name="MessageUserIdGet.java" path="C:\Users\arusakov\IdeaProjects\TpJavaServer\src\main\java\frontend\MessageUserIdGet.java">
+            <metrics classes="1" methods="2" conditionals="0" ncloc="17" coveredstatements="3" coveredmethods="1" complexity="2" coveredconditionals="0" statements="5" loc="21" coveredelements="4" elements="7"/>
+            <class name="MessageUserIdGet">
+               <metrics methods="2" conditionals="0" coveredstatements="3" coveredmethods="1" complexity="2" coveredconditionals="0" statements="5" coveredelements="4" elements="7"/>
+            </class>
+            <line num="11" count="1" visibility="public" complexity="1" type="method" signature="MessageUserIdGet(Address,Address,LongId&lt;UserSession&gt;,String)"/>
+            <line num="12" count="1" type="stmt"/>
+            <line num="13" count="1" type="stmt"/>
+            <line num="14" count="1" type="stmt"/>
+            <line num="17" count="0" visibility="public" complexity="1" type="method" signature="exec(DbService) : void"/>
+            <line num="18" count="0" type="stmt"/>
+            <line num="19" count="0" type="stmt"/>
+         </file>
+         <file name="MessageUserIdUpdate.java" path="C:\Users\arusakov\IdeaProjects\TpJavaServer\src\main\java\frontend\MessageUserIdUpdate.java">
+            <metrics classes="1" methods="2" conditionals="0" ncloc="19" coveredstatements="0" coveredmethods="0" complexity="2" coveredconditionals="0" statements="4" loc="25" coveredelements="0" elements="6"/>
+            <class name="MessageUserIdUpdate">
+               <metrics methods="2" conditionals="0" coveredstatements="0" coveredmethods="0" complexity="2" coveredconditionals="0" statements="4" coveredelements="0" elements="6"/>
+            </class>
+            <line num="16" count="0" visibility="public" complexity="1" type="method" signature="MessageUserIdUpdate(Address,Address,LongId&lt;UserSession&gt;,LongId&lt;User&gt;)"/>
+            <line num="17" count="0" type="stmt"/>
+            <line num="18" count="0" type="stmt"/>
+            <line num="19" count="0" type="stmt"/>
+            <line num="22" count="0" visibility="public" complexity="1" type="method" signature="exec(Frontend) : void"/>
+            <line num="23" count="0" type="stmt"/>
+         </file>
+         <file name="Page.java" path="C:\Users\arusakov\IdeaProjects\TpJavaServer\src\main\java\frontend\Page.java">
+            <metrics classes="1" methods="9" conditionals="0" ncloc="119" coveredstatements="91" coveredmethods="9" complexity="9" coveredconditionals="0" statements="91" loc="175" coveredelements="100" elements="100"/>
+            <class name="Page">
+               <metrics methods="9" conditionals="0" coveredstatements="91" coveredmethods="9" complexity="9" coveredconditionals="0" statements="91" coveredelements="100" elements="100"/>
+            </class>
+            <line num="13" count="2" visibility="public" complexity="1" type="method" signature="Start(LongId&lt;UserSession&gt;) : String"/>
+            <line num="14" count="2" type="stmt"/>
+            <line num="16" count="2" type="stmt"/>
+            <line num="18" count="2" type="stmt"/>
+            <line num="19" count="2" type="stmt"/>
+            <line num="20" count="2" type="stmt"/>
+            <line num="21" count="2" type="stmt"/>
+            <line num="22" count="2" type="stmt"/>
+            <line num="23" count="2" type="stmt"/>
+            <line num="25" count="2" type="stmt"/>
+            <line num="28" count="4" visibility="public" complexity="1" type="method" signature="FinishLose(LongId&lt;UserSession&gt;) : String"/>
+            <line num="29" count="4" type="stmt"/>
+            <line num="31" count="4" type="stmt"/>
+            <line num="33" count="4" type="stmt"/>
+            <line num="34" count="4" type="stmt"/>
+            <line num="35" count="4" type="stmt"/>
+            <line num="36" count="4" type="stmt"/>
+            <line num="37" count="4" type="stmt"/>
+            <line num="40" count="8" visibility="private" complexity="1" type="method" signature="refreshForm(StringBuilder) : void"/>
+            <line num="41" count="8" type="stmt"/>
+            <line num="42" count="8" type="stmt"/>
+            <line num="45" count="4" visibility="public" complexity="1" type="method" signature="FinishWin(LongId&lt;UserSession&gt;) : String"/>
+            <line num="46" count="4" type="stmt"/>
+            <line num="48" count="4" type="stmt"/>
+            <line num="50" count="4" type="stmt"/>
+            <line num="51" count="4" type="stmt"/>
+            <line num="52" count="4" type="stmt"/>
+            <line num="53" count="4" type="stmt"/>
+            <line num="55" count="4" type="stmt"/>
+            <line num="58" count="4" visibility="public" complexity="1" type="method" signature="WaitForAuthorization(LongId&lt;UserSession&gt;,String) : String"/>
+            <line num="59" count="4" type="stmt"/>
+            <line num="61" count="4" type="stmt"/>
+            <line num="63" count="4" type="stmt"/>
+            <line num="64" count="4" type="stmt"/>
+            <line num="65" count="4" type="stmt"/>
+            <line num="66" count="4" type="stmt"/>
+            <line num="67" count="4" type="stmt"/>
+            <line num="69" count="4" type="stmt"/>
+            <line num="71" count="4" type="stmt"/>
+            <line num="73" count="4" type="stmt"/>
+            <line num="76" count="5" visibility="public" complexity="1" type="method" signature="AuthAccept(LongId&lt;UserSession&gt;,String,LongId&lt;User&gt;) : String"/>
+            <line num="77" count="5" type="stmt"/>
+            <line num="79" count="5" type="stmt"/>
+            <line num="80" count="5" type="stmt"/>
+            <line num="81" count="5" type="stmt"/>
+            <line num="83" count="5" type="stmt"/>
+            <line num="85" count="5" type="stmt"/>
+            <line num="86" count="5" type="stmt"/>
+            <line num="87" count="5" type="stmt"/>
+            <line num="90" count="5" type="stmt"/>
+            <line num="91" count="5" type="stmt"/>
+            <line num="92" count="5" type="stmt"/>
+            <line num="93" count="5" type="stmt"/>
+            <line num="94" count="5" type="stmt"/>
+            <line num="96" count="5" type="stmt"/>
+            <line num="98" count="5" type="stmt"/>
+            <line num="100" count="5" type="stmt"/>
+            <line num="103" count="2" visibility="public" complexity="1" type="method" signature="PlayJQuery(LongId&lt;UserSession&gt;,String) : String"/>
+            <line num="104" count="2" type="stmt"/>
+            <line num="105" count="2" type="stmt"/>
+            <line num="106" count="2" type="stmt"/>
+            <line num="108" count="2" type="stmt"/>
+            <line num="109" count="2" type="stmt"/>
+            <line num="110" count="2" type="stmt"/>
+            <line num="111" count="2" type="stmt"/>
+            <line num="115" count="2" type="stmt"/>
+            <line num="117" count="2" type="stmt"/>
+            <line num="118" count="2" type="stmt"/>
+            <line num="120" count="2" type="stmt"/>
+            <line num="121" count="2" type="stmt"/>
+            <line num="123" count="2" type="stmt"/>
+            <line num="126" count="2" type="stmt"/>
+            <line num="128" count="2" type="stmt"/>
+            <line num="129" count="2" type="stmt"/>
+            <line num="130" count="2" type="stmt"/>
+            <line num="131" count="2" type="stmt"/>
+            <line num="135" count="2" visibility="public" complexity="1" type="method" signature="Play(LongId&lt;UserSession&gt;,String) : String"/>
+            <line num="136" count="2" type="stmt"/>
+            <line num="138" count="2" type="stmt"/>
+            <line num="140" count="2" type="stmt"/>
+            <line num="141" count="2" type="stmt"/>
+            <line num="143" count="2" type="stmt"/>
+            <line num="144" count="2" type="stmt"/>
+            <line num="146" count="2" type="stmt"/>
+            <line num="147" count="2" type="stmt"/>
+            <line num="148" count="2" type="stmt"/>
+            <line num="150" count="2" type="stmt"/>
+            <line num="151" count="2" type="stmt"/>
+            <line num="153" count="2" type="stmt"/>
+            <line num="159" count="3" visibility="public" complexity="1" type="method" signature="NotAuthorized(LongId&lt;UserSession&gt;,String) : String"/>
+            <line num="160" count="3" type="stmt"/>
+            <line num="162" count="3" type="stmt"/>
+            <line num="164" count="3" type="stmt"/>
+            <line num="165" count="3" type="stmt"/>
+            <line num="166" count="3" type="stmt"/>
+            <line num="167" count="3" type="stmt"/>
+            <line num="169" count="3" type="stmt"/>
+            <line num="170" count="3" type="stmt"/>
+            <line num="171" count="3" type="stmt"/>
+            <line num="173" count="3" type="stmt"/>
+         </file>
+      </package>
+      <package name="user">
+         <metrics classes="10" methods="28" conditionals="28" files="10" ncloc="276" coveredstatements="84" coveredmethods="27" complexity="45" coveredconditionals="25" statements="91" loc="424" coveredelements="136" elements="147"/>
+         <file name="StateAuthorized.java" path="C:\Users\arusakov\IdeaProjects\TpJavaServer\src\main\java\user\StateAuthorized.java">
+            <metrics classes="1" methods="2" conditionals="6" ncloc="40" coveredstatements="11" coveredmethods="2" complexity="5" coveredconditionals="3" statements="17" loc="59" coveredelements="16" elements="25"/>
+            <class name="StateAuthorized">
+               <metrics methods="2" conditionals="6" coveredstatements="11" coveredmethods="2" complexity="5" coveredconditionals="3" statements="17" coveredelements="16" elements="25"/>
+            </class>
+            <line num="27" count="3" visibility="public" complexity="2" type="method" signature="getLinkForAvailableGames(Frontend,LongId&lt;UserSession&gt;) : String"/>
+            <line num="29" count="3" type="stmt"/>
+            <line num="30" count="3" type="stmt"/>
+            <line num="31" count="3" type="stmt"/>
+            <line num="32" count="3" type="stmt"/>
+            <line num="32" falsecount="3" type="cond" truecount="2"/>
+            <line num="33" count="2" type="stmt"/>
+            <line num="34" count="3" type="stmt"/>
+            <line num="39" count="1" visibility="public" complexity="3" type="method" signature="processUserState(Frontend,LongId&lt;UserSession&gt;,HttpServletRequest,HttpServletResponse) : void"/>
+            <line num="42" count="1" type="stmt"/>
+            <line num="43" count="1" type="stmt"/>
+            <line num="45" count="1" type="stmt"/>
+            <line num="45" falsecount="0" type="cond" truecount="1"/>
+            <line num="46" count="1" type="stmt"/>
+            <line num="47" count="1" type="stmt"/>
+            <line num="49" count="0" type="stmt"/>
+            <line num="49" falsecount="0" type="cond" truecount="0"/>
+            <line num="50" count="0" type="stmt"/>
+            <line num="51" count="0" type="stmt"/>
+            <line num="52" count="0" type="stmt"/>
+            <line num="53" count="0" type="stmt"/>
+            <line num="55" count="0" type="stmt"/>
+         </file>
+         <file name="StateFinishLose.java" path="C:\Users\arusakov\IdeaProjects\TpJavaServer\src\main\java\user\StateFinishLose.java">
+            <metrics classes="1" methods="1" conditionals="4" ncloc="26" coveredstatements="11" coveredmethods="1" complexity="4" coveredconditionals="4" statements="11" loc="44" coveredelements="16" elements="16"/>
+            <class name="StateFinishLose">
+               <metrics methods="1" conditionals="4" coveredstatements="11" coveredmethods="1" complexity="4" coveredconditionals="4" statements="11" coveredelements="16" elements="16"/>
+            </class>
+            <line num="22" count="4" visibility="public" complexity="4" type="method" signature="processUserState(Frontend,LongId&lt;UserSession&gt;,HttpServletRequest,HttpServletResponse) : void"/>
+            <line num="25" count="4" type="stmt"/>
+            <line num="26" count="4" type="stmt"/>
+            <line num="29" count="4" type="stmt"/>
+            <line num="29" falsecount="3" type="cond" truecount="1"/>
+            <line num="30" count="1" type="stmt"/>
+            <line num="31" count="1" type="stmt"/>
+            <line num="33" count="3" type="stmt"/>
+            <line num="34" count="3" type="stmt"/>
+            <line num="34" falsecount="2" type="cond" truecount="1"/>
+            <line num="35" count="1" type="stmt"/>
+            <line num="36" count="1" type="stmt"/>
+            <line num="37" count="1" type="stmt"/>
+            <line num="40" count="2" type="stmt"/>
+         </file>
+         <file name="StateFinishWin.java" path="C:\Users\arusakov\IdeaProjects\TpJavaServer\src\main\java\user\StateFinishWin.java">
+            <metrics classes="1" methods="1" conditionals="4" ncloc="26" coveredstatements="11" coveredmethods="1" complexity="4" coveredconditionals="4" statements="11" loc="43" coveredelements="16" elements="16"/>
+            <class name="StateFinishWin">
+               <metrics methods="1" conditionals="4" coveredstatements="11" coveredmethods="1" complexity="4" coveredconditionals="4" statements="11" coveredelements="16" elements="16"/>
+            </class>
+            <line num="21" count="4" visibility="public" complexity="4" type="method" signature="processUserState(Frontend,LongId&lt;UserSession&gt;,HttpServletRequest,HttpServletResponse) : void"/>
+            <line num="24" count="4" type="stmt"/>
+            <line num="25" count="4" type="stmt"/>
+            <line num="28" count="4" type="stmt"/>
+            <line num="28" falsecount="3" type="cond" truecount="1"/>
+            <line num="29" count="1" type="stmt"/>
+            <line num="30" count="1" type="stmt"/>
+            <line num="32" count="3" type="stmt"/>
+            <line num="33" count="3" type="stmt"/>
+            <line num="33" falsecount="2" type="cond" truecount="1"/>
+            <line num="34" count="1" type="stmt"/>
+            <line num="35" count="1" type="stmt"/>
+            <line num="36" count="1" type="stmt"/>
+            <line num="39" count="2" type="stmt"/>
+         </file>
+         <file name="StateNotAuthorized.java" path="C:\Users\arusakov\IdeaProjects\TpJavaServer\src\main\java\user\StateNotAuthorized.java">
+            <metrics classes="1" methods="1" conditionals="0" ncloc="15" coveredstatements="2" coveredmethods="1" complexity="1" coveredconditionals="0" statements="2" loc="28" coveredelements="3" elements="3"/>
+            <class name="StateNotAuthorized">
+               <metrics methods="1" conditionals="0" coveredstatements="2" coveredmethods="1" complexity="1" coveredconditionals="0" statements="2" coveredelements="3" elements="3"/>
+            </class>
+            <line num="21" count="1" visibility="public" complexity="1" type="method" signature="processUserState(Frontend,LongId&lt;UserSession&gt;,HttpServletRequest,HttpServletResponse) : void"/>
+            <line num="25" count="1" type="stmt"/>
+            <line num="26" count="1" type="stmt"/>
+         </file>
+         <file name="StatePlay.java" path="C:\Users\arusakov\IdeaProjects\TpJavaServer\src\main\java\user\StatePlay.java">
+            <metrics classes="1" methods="2" conditionals="12" ncloc="43" coveredstatements="21" coveredmethods="2" complexity="9" coveredconditionals="12" statements="21" loc="68" coveredelements="35" elements="35"/>
+            <class name="StatePlay">
+               <metrics methods="2" conditionals="12" coveredstatements="21" coveredmethods="2" complexity="9" coveredconditionals="12" statements="21" coveredelements="35" elements="35"/>
+            </class>
+            <line num="23" count="7" visibility="public" complexity="3" type="method" signature="chatExit(Frontend,HttpServletRequest,LongId&lt;UserSession&gt;) : boolean"/>
+            <line num="24" count="7" type="stmt"/>
+            <line num="25" count="7" type="stmt"/>
+            <line num="25" falsecount="4" type="cond" truecount="3"/>
+            <line num="26" count="3" type="stmt"/>
+            <line num="26" falsecount="1" type="cond" truecount="2"/>
+            <line num="27" count="2" type="stmt"/>
+            <line num="28" count="2" type="stmt"/>
+            <line num="31" count="5" type="stmt"/>
+            <line num="35" count="5" visibility="public" complexity="6" type="method" signature="processUserState(Frontend,LongId&lt;UserSession&gt;,HttpServletRequest,HttpServletResponse) : void"/>
+            <line num="39" count="5" type="stmt"/>
+            <line num="40" count="5" type="stmt"/>
+            <line num="42" count="5" type="stmt"/>
+            <line num="42" falsecount="3" type="cond" truecount="2"/>
+            <line num="43" count="2" type="stmt"/>
+            <line num="45" count="2" type="stmt"/>
+            <line num="45" falsecount="1" type="cond" truecount="1"/>
+            <line num="46" count="1" type="stmt"/>
+            <line num="47" count="1" type="stmt"/>
+            <line num="51" count="4" type="stmt"/>
+            <line num="51" falsecount="1" type="cond" truecount="3"/>
+            <line num="53" count="3" type="stmt"/>
+            <line num="55" count="3" type="stmt"/>
+            <line num="55" falsecount="1" type="cond" truecount="2"/>
+            <line num="56" count="2" type="stmt"/>
+            <line num="57" count="2" type="stmt"/>
+            <line num="59" count="1" type="stmt"/>
+            <line num="60" count="1" type="stmt"/>
+            <line num="62" count="1" type="stmt"/>
+         </file>
+         <file name="StateWaitForAuth.java" path="C:\Users\arusakov\IdeaProjects\TpJavaServer\src\main\java\user\StateWaitForAuth.java">
+            <metrics classes="1" methods="1" conditionals="0" ncloc="16" coveredstatements="1" coveredmethods="1" complexity="1" coveredconditionals="0" statements="1" loc="29" coveredelements="2" elements="2"/>
+            <class name="StateWaitForAuth">
+               <metrics methods="1" conditionals="0" coveredstatements="1" coveredmethods="1" complexity="1" coveredconditionals="0" statements="1" coveredelements="2" elements="2"/>
+            </class>
+            <line num="21" count="1" visibility="public" complexity="1" type="method" signature="processUserState(Frontend,LongId&lt;UserSession&gt;,HttpServletRequest,HttpServletResponse) : void"/>
+            <line num="25" count="1" type="stmt"/>
+         </file>
+         <file name="User.java" path="C:\Users\arusakov\IdeaProjects\TpJavaServer\src\main\java\user\User.java">
+            <metrics classes="1" methods="0" conditionals="0" ncloc="4" coveredstatements="0" coveredmethods="0" complexity="0" coveredconditionals="0" statements="0" loc="5" coveredelements="0" elements="0"/>
+            <class name="User">
+               <metrics methods="0" conditionals="0" coveredstatements="0" coveredmethods="0" complexity="0" coveredconditionals="0" statements="0" coveredelements="0" elements="0"/>
+            </class>
+         </file>
+         <file name="UserSession.java" path="C:\Users\arusakov\IdeaProjects\TpJavaServer\src\main\java\user\UserSession.java">
+            <metrics classes="1" methods="20" conditionals="2" ncloc="92" coveredstatements="27" coveredmethods="19" complexity="21" coveredconditionals="2" statements="28" loc="119" coveredelements="48" elements="50"/>
+            <class name="UserSession">
+               <metrics methods="20" conditionals="2" coveredstatements="27" coveredmethods="19" complexity="21" coveredconditionals="2" statements="28" coveredelements="48" elements="50"/>
+            </class>
+            <line num="30" count="34" visibility="public" complexity="1" type="method" signature="UserSession(String)"/>
+            <line num="31" count="34" type="stmt"/>
+            <line num="32" count="34" type="stmt"/>
+            <line num="33" count="34" type="stmt"/>
+            <line num="34" count="34" type="stmt"/>
+            <line num="35" count="34" type="stmt"/>
+            <line num="36" count="34" type="stmt"/>
+            <line num="37" count="34" type="stmt"/>
+            <line num="40" count="11" visibility="public" complexity="1" type="method" signature="getUserId() : LongId&lt;User&gt;"/>
+            <line num="41" count="11" type="stmt"/>
+            <line num="44" count="6" visibility="public" complexity="1" type="method" signature="getUserName() : String"/>
+            <line num="45" count="6" type="stmt"/>
+            <line num="48" count="10" visibility="public" complexity="1" type="method" signature="setUserId(LongId&lt;User&gt;) : void"/>
+            <line num="49" count="10" type="stmt"/>
+            <line num="52" count="10" visibility="public" complexity="1" type="method" signature="updateUserState(UserState) : void"/>
+            <line num="53" count="10" type="stmt"/>
+            <line num="56" count="4" visibility="public" complexity="1" type="method" signature="getUserState() : UserState"/>
+            <line num="57" count="4" type="stmt"/>
+            <line num="60" count="34" visibility="public" complexity="1" type="method" signature="updateLastTime() : void"/>
+            <line num="61" count="34" type="stmt"/>
+            <line num="64" count="1" visibility="public" complexity="1" type="method" signature="getLastTime() : long"/>
+            <line num="65" count="1" type="stmt"/>
+            <line num="68" count="1" visibility="public" complexity="1" type="method" signature="setNewMessages(ChatMessage[]) : void"/>
+            <line num="69" count="1" type="stmt"/>
+            <line num="73" count="9" visibility="public" complexity="1" type="method" signature="setAvailableGameSessions(Set&lt;LongId&lt;GameSession&gt;&gt;) : void"/>
+            <line num="74" count="9" type="stmt"/>
+            <line num="77" count="6" visibility="public" complexity="1" type="method" signature="getAvailableGameSessions() : Set&lt;LongId&lt;GameSession&gt;&gt;"/>
+            <line num="78" count="6" type="stmt"/>
+            <line num="81" count="2" visibility="public" complexity="1" type="method" signature="getNewMessage() : ChatMessage[]"/>
+            <line num="83" count="2" type="stmt"/>
+            <line num="84" count="2" type="stmt"/>
+            <line num="85" count="2" type="stmt"/>
+            <line num="88" count="5" visibility="public" complexity="1" type="method" signature="getPlayer() : Player"/>
+            <line num="89" count="5" type="stmt"/>
+            <line num="92" count="25" visibility="public" complexity="1" type="method" signature="setPlayer(Player) : void"/>
+            <line num="93" count="25" type="stmt"/>
+            <line num="96" count="3" visibility="public" complexity="1" type="method" signature="getEnemies() : LinkedList&lt;Player&gt;"/>
+            <line num="97" count="3" type="stmt"/>
+            <line num="100" count="3" visibility="public" complexity="1" type="method" signature="setEnemies(LinkedList&lt;Player&gt;) : void"/>
+            <line num="101" count="3" type="stmt"/>
+            <line num="104" count="3" visibility="public" complexity="1" type="method" signature="setFireballs(LinkedList&lt;Fireball&gt;) : void"/>
+            <line num="105" count="3" type="stmt"/>
+            <line num="108" count="3" visibility="public" complexity="1" type="method" signature="getFireballs() : LinkedList&lt;Fireball&gt;"/>
+            <line num="109" count="3" type="stmt"/>
+            <line num="112" count="3" visibility="public" complexity="2" type="method" signature="hasState() : boolean"/>
+            <line num="113" count="3" type="stmt"/>
+            <line num="113" falsecount="1" type="cond" truecount="2"/>
+            <line num="115" count="0" visibility="public" complexity="1" type="method" signature="processUserState(Frontend,LongId&lt;UserSession&gt;,HttpServletRequest,HttpServletResponse) : void"/>
+            <line num="117" count="0" type="stmt"/>
+         </file>
+         <file name="UserState.java" path="C:\Users\arusakov\IdeaProjects\TpJavaServer\src\main\java\user\UserState.java">
+            <metrics classes="1" methods="0" conditionals="0" ncloc="10" coveredstatements="0" coveredmethods="0" complexity="0" coveredconditionals="0" statements="0" loc="22" coveredelements="0" elements="0"/>
+            <class name="UserState">
+               <metrics methods="0" conditionals="0" coveredstatements="0" coveredmethods="0" complexity="0" coveredconditionals="0" statements="0" coveredelements="0" elements="0"/>
+            </class>
+         </file>
+         <file name="UserStateDeprecated.java" path="C:\Users\arusakov\IdeaProjects\TpJavaServer\src\main\java\user\UserStateDeprecated.java">
+            <metrics classes="1" methods="0" conditionals="0" ncloc="4" coveredstatements="0" coveredmethods="0" complexity="0" coveredconditionals="0" statements="0" loc="7" coveredelements="0" elements="0"/>
+            <class name="UserStateDeprecated">
+               <metrics methods="0" conditionals="0" coveredstatements="0" coveredmethods="0" complexity="0" coveredconditionals="0" statements="0" coveredelements="0" elements="0"/>
+            </class>
+         </file>
+      </package>
+      <package name="main">
+         <metrics classes="1" methods="1" conditionals="0" files="1" ncloc="26" coveredstatements="0" coveredmethods="0" complexity="1" coveredconditionals="0" statements="13" loc="35" coveredelements="0" elements="14"/>
+         <file name="Main.java" path="C:\Users\arusakov\IdeaProjects\TpJavaServer\src\main\java\main\Main.java">
+            <metrics classes="1" methods="1" conditionals="0" ncloc="26" coveredstatements="0" coveredmethods="0" complexity="1" coveredconditionals="0" statements="13" loc="35" coveredelements="0" elements="14"/>
+            <class name="Main">
+               <metrics methods="1" conditionals="0" coveredstatements="0" coveredmethods="0" complexity="1" coveredconditionals="0" statements="13" coveredelements="0" elements="14"/>
+            </class>
+            <line num="14" count="0" visibility="public" complexity="1" type="method" signature="main(String[]) : void"/>
+            <line num="16" count="0" type="stmt"/>
+            <line num="17" count="0" type="stmt"/>
+            <line num="18" count="0" type="stmt"/>
+            <line num="20" count="0" type="stmt"/>
+            <line num="21" count="0" type="stmt"/>
+            <line num="22" count="0" type="stmt"/>
+            <line num="25" count="0" type="stmt"/>
+            <line num="26" count="0" type="stmt"/>
+            <line num="27" count="0" type="stmt"/>
+            <line num="29" count="0" type="stmt"/>
+            <line num="30" count="0" type="stmt"/>
+            <line num="32" count="0" type="stmt"/>
+            <line num="33" count="0" type="stmt"/>
+         </file>
+      </package>
+   </project>
+   <testproject timestamp="1381965770059" name="TpJavaServer 0.1.1">
+      <metrics conditionals="10" methods="102" classes="16" files="16" packages="7" coveredstatements="404" complexity="107" loc="1302" ncloc="957" coveredmethods="102" coveredconditionals="7" statements="404" coveredelements="513" elements="516"/>
+      <package name="message">
+         <metrics classes="1" methods="4" conditionals="0" files="1" ncloc="46" coveredstatements="9" coveredmethods="4" complexity="4" coveredconditionals="0" statements="9" loc="58" coveredelements="13" elements="13"/>
+         <file name="MessageToTest.java" path="C:\Users\arusakov\IdeaProjects\TpJavaServer\src\test\java\message\MessageToTest.java">
+            <metrics classes="1" methods="4" conditionals="0" ncloc="46" coveredstatements="9" coveredmethods="4" complexity="4" coveredconditionals="0" statements="9" loc="58" coveredelements="13" elements="13"/>
+            <class name="MessageToTest">
+               <metrics conditionals="0" methods="4" coveredstatements="9" complexity="4" testpasses="3" testruns="3" coveredmethods="4" coveredconditionals="0" statements="9" testfailures="0" coveredelements="13" testduration="0.0" elements="13"/>
+            </class>
+            <line num="32" count="3" visibility="public" complexity="1" type="method" signature="setUp() : void"/>
+            <line num="34" count="3" type="stmt"/>
+            <line num="35" count="3" type="stmt"/>
+            <line num="36" count="3" type="stmt"/>
+            <line num="39" testsuccess="true" count="1" visibility="public" complexity="1" type="method" testduration="0.0" signature="getFromTest() : void"/>
+            <line num="41" count="1" type="stmt"/>
+            <line num="42" count="1" type="stmt"/>
+            <line num="45" testsuccess="true" count="1" visibility="public" complexity="1" type="method" testduration="0.0" signature="toFrontendTest() : void"/>
+            <line num="47" count="1" type="stmt"/>
+            <line num="48" count="1" type="stmt"/>
+            <line num="49" count="1" type="stmt"/>
+            <line num="52" testsuccess="true" count="1" visibility="public" complexity="1" type="method" testduration="0.0" signature="messageGameStep() : void"/>
+            <line num="54" count="1" type="stmt"/>
+         </file>
+      </package>
+      <package name="dbservice">
+         <metrics classes="3" methods="10" conditionals="0" files="3" ncloc="80" coveredstatements="10" coveredmethods="10" complexity="10" coveredconditionals="0" statements="10" loc="122" coveredelements="20" elements="20"/>
+         <file name="DatabaseServiceImplTest.java" path="C:\Users\arusakov\IdeaProjects\TpJavaServer\src\test\java\dbservice\DatabaseServiceImplTest.java">
+            <metrics classes="1" methods="3" conditionals="0" ncloc="31" coveredstatements="3" coveredmethods="3" complexity="3" coveredconditionals="0" statements="3" loc="48" coveredelements="6" elements="6"/>
+            <class name="DatabaseServiceImplTest">
+               <metrics conditionals="0" methods="3" coveredstatements="3" complexity="3" testpasses="2" testruns="2" coveredmethods="3" coveredconditionals="0" statements="3" testfailures="0" coveredelements="6" testduration="0.0" elements="6"/>
+            </class>
+            <line num="32" count="2" visibility="public" complexity="1" type="method" signature="setUp() : void"/>
+            <line num="34" count="2" type="stmt"/>
+            <line num="38" testsuccess="true" count="1" visibility="public" complexity="1" type="method" testduration="0.0" signature="getMsgSystem() : void"/>
+            <line num="40" count="1" type="stmt"/>
+            <line num="43" testsuccess="true" count="1" visibility="public" complexity="1" type="method" testduration="0.0" signature="getAddress() : void"/>
+            <line num="45" count="1" type="stmt"/>
+         </file>
+         <file name="DbServiceImplTest.java" path="C:\Users\arusakov\IdeaProjects\TpJavaServer\src\test\java\dbservice\DbServiceImplTest.java">
+            <metrics classes="1" methods="4" conditionals="0" ncloc="30" coveredstatements="4" coveredmethods="4" complexity="4" coveredconditionals="0" statements="4" loc="44" coveredelements="8" elements="8"/>
+            <class name="DbServiceImplTest">
+               <metrics conditionals="0" methods="4" coveredstatements="4" complexity="4" testpasses="3" testruns="3" coveredmethods="4" coveredconditionals="0" statements="4" testfailures="0" coveredelements="8" testduration="0.0" elements="8"/>
+            </class>
+            <line num="24" count="3" visibility="public" complexity="1" type="method" signature="setUp() : void"/>
+            <line num="26" count="3" type="stmt"/>
+            <line num="30" testsuccess="true" count="1" visibility="public" complexity="1" type="method" testduration="0.0" signature="getAddress() : void"/>
+            <line num="32" count="1" type="stmt"/>
+            <line num="34" testsuccess="true" count="1" visibility="public" complexity="1" type="method" testduration="0.0" signature="getMsgSystem() : void"/>
+            <line num="36" count="1" type="stmt"/>
+            <line num="39" testsuccess="true" count="1" visibility="public" complexity="1" type="method" testduration="0.0" signature="getUsrId() : void"/>
+            <line num="41" count="1" type="stmt"/>
+         </file>
+         <file name="UserDataSetTest.java" path="C:\Users\arusakov\IdeaProjects\TpJavaServer\src\test\java\dbservice\UserDataSetTest.java">
+            <metrics classes="1" methods="3" conditionals="0" ncloc="19" coveredstatements="3" coveredmethods="3" complexity="3" coveredconditionals="0" statements="3" loc="30" coveredelements="6" elements="6"/>
+            <class name="UserDataSetTest">
+               <metrics conditionals="0" methods="3" coveredstatements="3" complexity="3" testpasses="2" testruns="2" coveredmethods="3" coveredconditionals="0" statements="3" testfailures="0" coveredelements="6" testduration="0.0" elements="6"/>
+            </class>
+            <line num="16" count="2" visibility="public" complexity="1" type="method" signature="setUp() : void"/>
+            <line num="18" count="2" type="stmt"/>
+            <line num="21" testsuccess="true" count="1" visibility="public" complexity="1" type="method" testduration="0.0" signature="getName() : void"/>
+            <line num="23" count="1" type="stmt"/>
+            <line num="26" testsuccess="true" count="1" visibility="public" complexity="1" type="method" testduration="0.0" signature="getId() : void"/>
+            <line num="28" count="1" type="stmt"/>
+         </file>
+      </package>
+      <package name="resource">
+         <metrics classes="2" methods="7" conditionals="10" files="2" ncloc="74" coveredstatements="36" coveredmethods="7" complexity="12" coveredconditionals="7" statements="36" loc="108" coveredelements="50" elements="53"/>
+         <file name="IteratorTest.java" path="C:\Users\arusakov\IdeaProjects\TpJavaServer\src\test\java\resource\IteratorTest.java">
+            <metrics classes="1" methods="4" conditionals="2" ncloc="27" coveredstatements="6" coveredmethods="4" complexity="5" coveredconditionals="2" statements="6" loc="43" coveredelements="12" elements="12"/>
+            <class name="IteratorTest">
+               <metrics conditionals="2" methods="4" coveredstatements="6" complexity="5" testpasses="3" testruns="3" coveredmethods="4" coveredconditionals="2" statements="6" testfailures="0" coveredelements="12" testduration="0.002" elements="12"/>
+            </class>
+            <line num="20" count="3" visibility="public" complexity="1" type="method" signature="setUp() : void"/>
+            <line num="22" count="3" type="stmt"/>
+            <line num="23" count="3" type="stmt"/>
+            <line num="26" testsuccess="true" count="1" visibility="public" complexity="1" type="method" testduration="0.0" signature="iteratorGetStartFile() : void"/>
+            <line num="28" count="1" type="stmt"/>
+            <line num="31" testsuccess="true" count="1" visibility="public" complexity="2" type="method" testduration="0.002" signature="iteratorTraverseAllFiles() : void"/>
+            <line num="33" count="1" type="stmt"/>
+            <line num="33" falsecount="1" type="cond" truecount="2"/>
+            <line num="34" count="2" type="stmt"/>
+            <line num="38" testsuccess="true" count="1" visibility="public" complexity="1" type="method" testduration="0.0" signature="next() : void"/>
+            <line num="40" count="1" type="stmt"/>
+         </file>
+         <file name="ResourceSystemImplTest.java" path="C:\Users\arusakov\IdeaProjects\TpJavaServer\src\test\java\resource\ResourceSystemImplTest.java">
+            <metrics classes="1" methods="3" conditionals="8" ncloc="47" coveredstatements="30" coveredmethods="3" complexity="7" coveredconditionals="5" statements="30" loc="65" coveredelements="38" elements="41"/>
+            <class name="ResourceSystemImplTest">
+               <metrics conditionals="8" methods="3" coveredstatements="30" complexity="7" testpasses="2" testruns="2" coveredmethods="3" coveredconditionals="5" statements="30" testfailures="0" coveredelements="38" testduration="0.0" elements="41"/>
+            </class>
+            <line num="20" count="2" visibility="public" complexity="1" type="method" signature="setUp() : void"/>
+            <line num="22" count="2" type="stmt"/>
+            <line num="24" testsuccess="true" count="1" visibility="public" complexity="3" type="method" testduration="0.0" signature="testLoadFightResource() : void"/>
+            <line num="26" count="1" type="stmt"/>
+            <line num="27" count="1" type="stmt"/>
+            <line num="28" count="1" type="stmt"/>
+            <line num="29" count="1" type="stmt"/>
+            <line num="31" count="1" type="stmt"/>
+            <line num="31" falsecount="0" type="cond" truecount="1"/>
+            <line num="32" count="1" type="stmt"/>
+            <line num="33" count="1" type="stmt"/>
+            <line num="33" count="1" type="stmt"/>
+            <line num="33" falsecount="0" type="cond" truecount="1"/>
+            <line num="36" count="1" type="stmt"/>
+            <line num="37" count="1" type="stmt"/>
+            <line num="38" count="1" type="stmt"/>
+            <line num="39" count="1" type="stmt"/>
+            <line num="40" count="1" type="stmt"/>
+            <line num="41" count="1" type="stmt"/>
+            <line num="42" count="1" type="stmt"/>
+            <line num="45" testsuccess="true" count="1" visibility="public" complexity="3" type="method" testduration="0.0" signature="testLoadMapResource() : void"/>
+            <line num="47" count="1" type="stmt"/>
+            <line num="48" count="1" type="stmt"/>
+            <line num="49" count="1" type="stmt"/>
+            <line num="50" count="1" type="stmt"/>
+            <line num="52" count="1" type="stmt"/>
+            <line num="52" falsecount="0" type="cond" truecount="2"/>
+            <line num="53" count="2" type="stmt"/>
+            <line num="54" count="2" type="stmt"/>
+            <line num="54" count="1" type="stmt"/>
+            <line num="54" falsecount="1" type="cond" truecount="1"/>
+            <line num="57" count="1" type="stmt"/>
+            <line num="58" count="1" type="stmt"/>
+            <line num="59" count="1" type="stmt"/>
+            <line num="60" count="1" type="stmt"/>
+            <line num="61" count="1" type="stmt"/>
+            <line num="62" count="1" type="stmt"/>
+         </file>
+      </package>
+      <package name="base">
+         <metrics classes="2" methods="6" conditionals="0" files="2" ncloc="52" coveredstatements="24" coveredmethods="6" complexity="6" coveredconditionals="0" statements="24" loc="72" coveredelements="30" elements="30"/>
+         <file name="IntegerIdTest.java" path="C:\Users\arusakov\IdeaProjects\TpJavaServer\src\test\java\base\IntegerIdTest.java">
+            <metrics classes="1" methods="3" conditionals="0" ncloc="26" coveredstatements="12" coveredmethods="3" complexity="3" coveredconditionals="0" statements="12" loc="36" coveredelements="15" elements="15"/>
+            <class name="IntegerIdTest">
+               <metrics conditionals="0" methods="3" coveredstatements="12" complexity="3" testpasses="3" testruns="3" coveredmethods="3" coveredconditionals="0" statements="12" testfailures="0" coveredelements="15" testduration="0.014" elements="15"/>
+            </class>
+            <line num="8" testsuccess="true" count="1" visibility="public" complexity="1" type="method" testduration="0.013" signature="equalsTest() : void"/>
+            <line num="10" count="1" type="stmt"/>
+            <line num="11" count="1" type="stmt"/>
+            <line num="12" count="1" type="stmt"/>
+            <line num="14" count="1" type="stmt"/>
+            <line num="15" count="1" type="stmt"/>
+            <line num="16" count="1" type="stmt"/>
+            <line num="18" count="1" type="stmt"/>
+            <line num="21" testsuccess="true" count="1" visibility="public" complexity="1" type="method" testduration="0.0" signature="hashCodeTest() : void"/>
+            <line num="23" count="1" type="stmt"/>
+            <line num="24" count="1" type="stmt"/>
+            <line num="26" count="1" type="stmt"/>
+            <line num="29" testsuccess="true" count="1" visibility="public" complexity="1" type="method" testduration="0.001" signature="toStringTest() : void"/>
+            <line num="31" count="1" type="stmt"/>
+            <line num="33" count="1" type="stmt"/>
+         </file>
+         <file name="LongIdTest.java" path="C:\Users\arusakov\IdeaProjects\TpJavaServer\src\test\java\base\LongIdTest.java">
+            <metrics classes="1" methods="3" conditionals="0" ncloc="26" coveredstatements="12" coveredmethods="3" complexity="3" coveredconditionals="0" statements="12" loc="36" coveredelements="15" elements="15"/>
+            <class name="LongIdTest">
+               <metrics conditionals="0" methods="3" coveredstatements="12" complexity="3" testpasses="3" testruns="3" coveredmethods="3" coveredconditionals="0" statements="12" testfailures="0" coveredelements="15" testduration="0.001" elements="15"/>
+            </class>
+            <line num="8" testsuccess="true" count="1" visibility="public" complexity="1" type="method" testduration="0.001" signature="equalsTest() : void"/>
+            <line num="10" count="1" type="stmt"/>
+            <line num="11" count="1" type="stmt"/>
+            <line num="12" count="1" type="stmt"/>
+            <line num="14" count="1" type="stmt"/>
+            <line num="15" count="1" type="stmt"/>
+            <line num="16" count="1" type="stmt"/>
+            <line num="18" count="1" type="stmt"/>
+            <line num="21" testsuccess="true" count="1" visibility="public" complexity="1" type="method" testduration="0.0" signature="hashCodeTest() : void"/>
+            <line num="23" count="1" type="stmt"/>
+            <line num="24" count="1" type="stmt"/>
+            <line num="26" count="1" type="stmt"/>
+            <line num="29" testsuccess="true" count="1" visibility="public" complexity="1" type="method" testduration="0.0" signature="toStringTest() : void"/>
+            <line num="31" count="1" type="stmt"/>
+            <line num="33" count="1" type="stmt"/>
+         </file>
+      </package>
+      <package name="game">
+         <metrics classes="4" methods="34" conditionals="0" files="4" ncloc="315" coveredstatements="158" coveredmethods="34" complexity="34" coveredconditionals="0" statements="158" loc="419" coveredelements="192" elements="192"/>
+         <file name="FireballTest.java" path="C:\Users\arusakov\IdeaProjects\TpJavaServer\src\test\java\game\FireballTest.java">
+            <metrics classes="1" methods="6" conditionals="0" ncloc="42" coveredstatements="16" coveredmethods="6" complexity="6" coveredconditionals="0" statements="16" loc="58" coveredelements="22" elements="22"/>
+            <class name="FireballTest">
+               <metrics conditionals="0" methods="6" coveredstatements="16" complexity="6" testpasses="5" testruns="5" coveredmethods="6" coveredconditionals="0" statements="16" testfailures="0" coveredelements="22" testduration="0.001" elements="22"/>
+            </class>
+            <line num="12" count="1" visibility="public" complexity="1" type="method" signature="beforeClass() : void"/>
+            <line num="14" count="1" type="stmt"/>
+            <line num="17" testsuccess="true" count="1" visibility="public" complexity="1" type="method" testduration="0.0" signature="damageTest() : void"/>
+            <line num="19" count="1" type="stmt"/>
+            <line num="22" testsuccess="true" count="1" visibility="public" complexity="1" type="method" testduration="0.0" signature="constructorTest() : void"/>
+            <line num="24" count="1" type="stmt"/>
+            <line num="25" count="1" type="stmt"/>
+            <line num="26" count="1" type="stmt"/>
+            <line num="29" testsuccess="true" count="1" visibility="public" complexity="1" type="method" testduration="0.0" signature="moveTest() : void"/>
+            <line num="31" count="1" type="stmt"/>
+            <line num="32" count="1" type="stmt"/>
+            <line num="34" count="1" type="stmt"/>
+            <line num="35" count="1" type="stmt"/>
+            <line num="39" testsuccess="true" count="1" visibility="public" complexity="1" type="method" testduration="0.0" signature="toStringTest() : void"/>
+            <line num="42" count="1" type="stmt"/>
+            <line num="43" count="1" type="stmt"/>
+            <line num="45" count="1" type="stmt"/>
+            <line num="48" testsuccess="true" count="1" visibility="public" complexity="1" type="method" testduration="0.001" signature="cloneTest() : void"/>
+            <line num="50" count="1" type="stmt"/>
+            <line num="51" count="1" type="stmt"/>
+            <line num="53" count="1" type="stmt"/>
+            <line num="54" count="1" type="stmt"/>
+         </file>
+         <file name="GameServiceTest.java" path="C:\Users\arusakov\IdeaProjects\TpJavaServer\src\test\java\game\GameServiceTest.java">
+            <metrics classes="1" methods="10" conditionals="0" ncloc="107" coveredstatements="54" coveredmethods="10" complexity="10" coveredconditionals="0" statements="54" loc="148" coveredelements="64" elements="64"/>
+            <class name="GameServiceTest">
+               <metrics conditionals="0" methods="10" coveredstatements="54" complexity="10" testpasses="9" testruns="9" coveredmethods="10" coveredconditionals="0" statements="54" testfailures="0" coveredelements="64" testduration="0.108" elements="64"/>
+            </class>
+            <line num="32" count="1" visibility="public" complexity="1" type="method" signature="initGameService() : void"/>
+            <line num="35" count="1" type="stmt"/>
+            <line num="37" count="1" type="stmt"/>
+            <line num="39" count="1" type="stmt"/>
+            <line num="40" count="1" type="stmt"/>
+            <line num="42" count="1" type="stmt"/>
+            <line num="44" count="1" type="stmt"/>
+            <line num="45" count="1" type="stmt"/>
+            <line num="47" count="1" type="stmt"/>
+            <line num="48" count="1" type="stmt"/>
+            <line num="49" count="1" type="stmt"/>
+            <line num="51" count="1" type="stmt"/>
+            <line num="55" testsuccess="true" count="1" visibility="public" complexity="1" type="method" testduration="0.0" signature="joinToEmtyGame() : void"/>
+            <line num="61" testsuccess="true" count="1" visibility="public" complexity="1" type="method" testduration="0.0" signature="runTest() : void"/>
+            <line num="63" count="1" type="stmt"/>
+            <line num="64" count="1" type="stmt"/>
+            <line num="65" count="1" type="stmt"/>
+            <line num="68" testsuccess="true" count="1" visibility="public" complexity="1" type="method" testduration="0.0" signature="failStartGameTest() : void"/>
+            <line num="70" count="1" type="stmt"/>
+            <line num="71" count="1" type="stmt"/>
+            <line num="72" count="1" type="stmt"/>
+            <line num="73" count="1" type="stmt"/>
+            <line num="74" count="1" type="stmt"/>
+            <line num="77" testsuccess="true" count="1" visibility="public" complexity="1" type="method" testduration="0.004" signature="aStartGameTest() : void"/>
+            <line num="79" count="1" type="stmt"/>
+            <line num="80" count="1" type="stmt"/>
+            <line num="81" count="1" type="stmt"/>
+            <line num="84" testsuccess="true" count="1" visibility="public" complexity="1" type="method" testduration="0.103" signature="bJoinToGameTest() : void"/>
+            <line num="86" count="1" type="stmt"/>
+            <line num="87" count="1" type="stmt"/>
+            <line num="89" count="1" type="stmt"/>
+            <line num="90" count="1" type="stmt"/>
+            <line num="91" count="1" type="stmt"/>
+            <line num="93" count="1" type="stmt"/>
+            <line num="94" count="1" type="stmt"/>
+            <line num="96" count="1" type="stmt"/>
+            <line num="99" testsuccess="true" count="1" visibility="public" complexity="1" type="method" testduration="0.0" signature="cAddFireballTest() : void"/>
+            <line num="102" count="1" type="stmt"/>
+            <line num="104" count="1" type="stmt"/>
+            <line num="105" count="1" type="stmt"/>
+            <line num="108" testsuccess="true" count="1" visibility="public" complexity="1" type="method" testduration="0.001" signature="updateAvalibleGameSessionTest() : void"/>
+            <line num="110" count="1" type="stmt"/>
+            <line num="111" count="1" type="stmt"/>
+            <line num="112" count="1" type="stmt"/>
+            <line num="113" count="1" type="stmt"/>
+            <line num="115" count="1" type="stmt"/>
+            <line num="118" testsuccess="true" count="1" visibility="public" complexity="1" type="method" testduration="0.0" signature="calcFireballsTest() : void"/>
+            <line num="120" count="1" type="stmt"/>
+            <line num="121" count="1" type="stmt"/>
+            <line num="122" count="1" type="stmt"/>
+            <line num="124" count="1" type="stmt"/>
+            <line num="125" count="1" type="stmt"/>
+            <line num="127" count="1" type="stmt"/>
+            <line num="128" count="1" type="stmt"/>
+            <line num="130" count="1" type="stmt"/>
+            <line num="131" count="1" type="stmt"/>
+            <line num="133" count="1" type="stmt"/>
+            <line num="134" count="1" type="stmt"/>
+            <line num="136" count="1" type="stmt"/>
+            <line num="137" count="1" type="stmt"/>
+            <line num="138" count="1" type="stmt"/>
+            <line num="141" testsuccess="true" count="1" visibility="public" complexity="1" type="method" testduration="0.0" signature="gameStep() : void"/>
+            <line num="143" count="1" type="stmt"/>
+            <line num="144" count="1" type="stmt"/>
+         </file>
+         <file name="GameSessionTest.java" path="C:\Users\arusakov\IdeaProjects\TpJavaServer\src\test\java\game\GameSessionTest.java">
+            <metrics classes="1" methods="8" conditionals="0" ncloc="68" coveredstatements="27" coveredmethods="8" complexity="8" coveredconditionals="0" statements="27" loc="87" coveredelements="35" elements="35"/>
+            <class name="GameSessionTest">
+               <metrics conditionals="0" methods="8" coveredstatements="27" complexity="8" testpasses="7" testruns="7" coveredmethods="8" coveredconditionals="0" statements="27" testfailures="0" coveredelements="35" testduration="0.0" elements="35"/>
+            </class>
+            <line num="22" count="1" visibility="public" complexity="1" type="method" signature="initGameSession() : void"/>
+            <line num="24" count="1" type="stmt"/>
+            <line num="25" count="1" type="stmt"/>
+            <line num="27" count="1" type="stmt"/>
+            <line num="28" count="1" type="stmt"/>
+            <line num="31" testsuccess="true" count="1" visibility="public" complexity="1" type="method" testduration="0.0" signature="aGameSessionConstruct() : void"/>
+            <line num="33" count="1" type="stmt"/>
+            <line num="34" count="1" type="stmt"/>
+            <line num="37" testsuccess="true" count="1" visibility="public" complexity="1" type="method" testduration="0.0" signature="bAddUserToGamesessionTest() : void"/>
+            <line num="39" count="1" type="stmt"/>
+            <line num="41" count="1" type="stmt"/>
+            <line num="42" count="1" type="stmt"/>
+            <line num="44" count="1" type="stmt"/>
+            <line num="45" count="1" type="stmt"/>
+            <line num="48" testsuccess="true" count="1" visibility="public" complexity="1" type="method" testduration="0.0" signature="cChatMessagesTest() : void"/>
+            <line num="50" count="1" type="stmt"/>
+            <line num="51" count="1" type="stmt"/>
+            <line num="52" count="1" type="stmt"/>
+            <line num="54" count="1" type="stmt"/>
+            <line num="55" count="1" type="stmt"/>
+            <line num="56" count="1" type="stmt"/>
+            <line num="60" testsuccess="true" count="1" visibility="public" complexity="1" type="method" testduration="0.0" signature="eChatMessageEmptyTest() : void"/>
+            <line num="62" count="1" type="stmt"/>
+            <line num="65" testsuccess="true" count="1" visibility="public" complexity="1" type="method" testduration="0.0" signature="doubleAddToGameTest() : void"/>
+            <line num="67" count="1" type="stmt"/>
+            <line num="70" testsuccess="true" count="1" visibility="public" complexity="1" type="method" testduration="0.0" signature="addFireballTest() : void"/>
+            <line num="72" count="1" type="stmt"/>
+            <line num="73" count="1" type="stmt"/>
+            <line num="75" count="1" type="stmt"/>
+            <line num="76" count="1" type="stmt"/>
+            <line num="77" count="1" type="stmt"/>
+            <line num="81" testsuccess="true" count="1" visibility="public" complexity="1" type="method" testduration="0.0" signature="enemiesTest() : void"/>
+            <line num="83" count="1" type="stmt"/>
+            <line num="84" count="1" type="stmt"/>
+            <line num="85" count="1" type="stmt"/>
+         </file>
+         <file name="PlayerTest.java" path="C:\Users\arusakov\IdeaProjects\TpJavaServer\src\test\java\game\PlayerTest.java">
+            <metrics classes="1" methods="10" conditionals="0" ncloc="98" coveredstatements="61" coveredmethods="10" complexity="10" coveredconditionals="0" statements="61" loc="126" coveredelements="71" elements="71"/>
+            <class name="PlayerTest">
+               <metrics conditionals="0" methods="10" coveredstatements="61" complexity="10" testpasses="9" testruns="9" coveredmethods="10" coveredconditionals="0" statements="61" testfailures="0" coveredelements="71" testduration="0.001" elements="71"/>
+            </class>
+            <line num="10" count="1" visibility="public" complexity="1" type="method" signature="beforeClass() : void"/>
+            <line num="12" count="1" type="stmt"/>
+            <line num="13" count="1" type="stmt"/>
+            <line num="16" testsuccess="true" count="1" visibility="public" complexity="1" type="method" testduration="0.0" signature="healthMaxTest() : void"/>
+            <line num="18" count="1" type="stmt"/>
+            <line num="21" testsuccess="true" count="1" visibility="public" complexity="1" type="method" testduration="0.0" signature="constructorDefaultTest() : void"/>
+            <line num="23" count="1" type="stmt"/>
+            <line num="24" count="1" type="stmt"/>
+            <line num="25" count="1" type="stmt"/>
+            <line num="27" count="1" type="stmt"/>
+            <line num="28" count="1" type="stmt"/>
+            <line num="30" count="1" type="stmt"/>
+            <line num="31" count="1" type="stmt"/>
+            <line num="33" count="1" type="stmt"/>
+            <line num="34" count="1" type="stmt"/>
+            <line num="37" testsuccess="true" count="1" visibility="public" complexity="1" type="method" testduration="0.001" signature="zeroVelocityTest() : void"/>
+            <line num="39" count="1" type="stmt"/>
+            <line num="40" count="1" type="stmt"/>
+            <line num="42" count="1" type="stmt"/>
+            <line num="43" count="1" type="stmt"/>
+            <line num="46" testsuccess="true" count="1" visibility="public" complexity="1" type="method" testduration="0.0" signature="velocityTest() : void"/>
+            <line num="48" count="1" type="stmt"/>
+            <line num="49" count="1" type="stmt"/>
+            <line num="51" count="1" type="stmt"/>
+            <line num="52" count="1" type="stmt"/>
+            <line num="54" count="1" type="stmt"/>
+            <line num="55" count="1" type="stmt"/>
+            <line num="56" count="1" type="stmt"/>
+            <line num="57" count="1" type="stmt"/>
+            <line num="60" testsuccess="true" count="1" visibility="public" complexity="1" type="method" testduration="0.0" signature="collisionTest() : void"/>
+            <line num="63" count="1" type="stmt"/>
+            <line num="65" count="1" type="stmt"/>
+            <line num="66" count="1" type="stmt"/>
+            <line num="67" count="1" type="stmt"/>
+            <line num="68" count="1" type="stmt"/>
+            <line num="69" count="1" type="stmt"/>
+            <line num="70" count="1" type="stmt"/>
+            <line num="71" count="1" type="stmt"/>
+            <line num="72" count="1" type="stmt"/>
+            <line num="73" count="1" type="stmt"/>
+            <line num="75" count="1" type="stmt"/>
+            <line num="76" count="1" type="stmt"/>
+            <line num="80" testsuccess="true" count="1" visibility="public" complexity="1" type="method" testduration="0.0" signature="liveTest() : void"/>
+            <line num="82" count="1" type="stmt"/>
+            <line num="83" count="1" type="stmt"/>
+            <line num="84" count="1" type="stmt"/>
+            <line num="86" count="1" type="stmt"/>
+            <line num="87" count="1" type="stmt"/>
+            <line num="89" count="1" type="stmt"/>
+            <line num="90" count="1" type="stmt"/>
+            <line num="91" count="1" type="stmt"/>
+            <line num="93" count="1" type="stmt"/>
+            <line num="94" count="1" type="stmt"/>
+            <line num="97" testsuccess="true" count="1" visibility="public" complexity="1" type="method" testduration="0.0" signature="toStringTest() : void"/>
+            <line num="99" count="1" type="stmt"/>
+            <line num="100" count="1" type="stmt"/>
+            <line num="101" count="1" type="stmt"/>
+            <line num="104" testsuccess="true" count="1" visibility="public" complexity="1" type="method" testduration="0.0" signature="setPositionTest() : void"/>
+            <line num="106" count="1" type="stmt"/>
+            <line num="107" count="1" type="stmt"/>
+            <line num="109" count="1" type="stmt"/>
+            <line num="110" count="1" type="stmt"/>
+            <line num="111" count="1" type="stmt"/>
+            <line num="113" count="1" type="stmt"/>
+            <line num="114" count="1" type="stmt"/>
+            <line num="115" count="1" type="stmt"/>
+            <line num="118" testsuccess="true" count="1" visibility="public" complexity="1" type="method" testduration="0.0" signature="cloneTest() : void"/>
+            <line num="120" count="1" type="stmt"/>
+            <line num="121" count="1" type="stmt"/>
+            <line num="123" count="1" type="stmt"/>
+            <line num="124" count="1" type="stmt"/>
+         </file>
+      </package>
+      <package name="frontend">
+         <metrics classes="2" methods="26" conditionals="0" files="2" ncloc="186" coveredstatements="57" coveredmethods="26" complexity="26" coveredconditionals="0" statements="57" loc="245" coveredelements="83" elements="83"/>
+         <file name="FrontendImplTest.java" path="C:\Users\arusakov\IdeaProjects\TpJavaServer\src\test\java\frontend\FrontendImplTest.java">
+            <metrics classes="1" methods="18" conditionals="0" ncloc="138" coveredstatements="49" coveredmethods="18" complexity="18" coveredconditionals="0" statements="49" loc="183" coveredelements="67" elements="67"/>
+            <class name="FrontendImplTest">
+               <metrics conditionals="0" methods="18" coveredstatements="49" complexity="18" testpasses="17" testruns="17" coveredmethods="18" coveredconditionals="0" statements="49" testfailures="0" coveredelements="67" testduration="0.034" elements="67"/>
+            </class>
+            <line num="50" count="17" visibility="public" complexity="1" type="method" signature="setUp() : void"/>
+            <line num="53" count="17" type="stmt"/>
+            <line num="54" count="17" type="stmt"/>
+            <line num="55" count="17" type="stmt"/>
+            <line num="56" count="17" type="stmt"/>
+            <line num="57" count="17" type="stmt"/>
+            <line num="58" count="17" type="stmt"/>
+            <line num="61" count="17" type="stmt"/>
+            <line num="63" count="17" type="stmt"/>
+            <line num="64" count="17" type="stmt"/>
+            <line num="65" count="17" type="stmt"/>
+            <line num="66" count="17" type="stmt"/>
+            <line num="67" count="17" type="stmt"/>
+            <line num="69" count="17" type="stmt"/>
+            <line num="70" count="17" type="stmt"/>
+            <line num="71" count="17" type="stmt"/>
+            <line num="72" count="17" type="stmt"/>
+            <line num="75" testsuccess="true" count="1" visibility="public" complexity="1" type="method" testduration="0.0" signature="cookieTest() : void"/>
+            <line num="86" testsuccess="true" count="1" visibility="public" complexity="1" type="method" testduration="0.001" signature="startGameSM() : void"/>
+            <line num="88" count="1" type="stmt"/>
+            <line num="91" testsuccess="true" count="1" visibility="public" complexity="1" type="method" testduration="0.0" signature="updateUserState() : void"/>
+            <line num="93" count="1" type="stmt"/>
+            <line num="94" count="1" type="stmt"/>
+            <line num="95" count="1" type="stmt"/>
+            <line num="98" testsuccess="true" count="1" visibility="public" complexity="1" type="method" testduration="0.002" signature="updateGameStep() : void"/>
+            <line num="100" count="1" type="stmt"/>
+            <line num="101" count="1" type="stmt"/>
+            <line num="102" count="1" type="stmt"/>
+            <line num="105" testsuccess="true" count="1" visibility="public" complexity="1" type="method" testduration="0.0" signature="finishGame() : void"/>
+            <line num="107" count="1" type="stmt"/>
+            <line num="108" count="1" type="stmt"/>
+            <line num="109" count="1" type="stmt"/>
+            <line num="112" testsuccess="true" count="1" visibility="public" complexity="1" type="method" testduration="0.001" signature="updateUserId() : void"/>
+            <line num="114" count="1" type="stmt"/>
+            <line num="115" count="1" type="stmt"/>
+            <line num="116" count="1" type="stmt"/>
+            <line num="119" testsuccess="true" count="1" visibility="public" complexity="1" type="method" testduration="0.0" signature="updateHealth() : void"/>
+            <line num="121" count="1" type="stmt"/>
+            <line num="122" count="1" type="stmt"/>
+            <line num="125" testsuccess="true" count="1" visibility="public" complexity="1" type="method" testduration="0.0" signature="updateFireBalls() : void"/>
+            <line num="127" count="1" type="stmt"/>
+            <line num="128" count="1" type="stmt"/>
+            <line num="129" count="1" type="stmt"/>
+            <line num="130" count="1" type="stmt"/>
+            <line num="131" count="1" type="stmt"/>
+            <line num="134" testsuccess="true" count="1" visibility="public" complexity="1" type="method" testduration="0.008" signature="processAction() : void"/>
+            <line num="136" count="1" type="stmt"/>
+            <line num="137" count="1" type="stmt"/>
+            <line num="138" count="1" type="stmt"/>
+            <line num="141" testsuccess="true" count="1" visibility="public" complexity="1" type="method" testduration="0.011" signature="handle() : void"/>
+            <line num="143" count="1" type="stmt"/>
+            <line num="146" testsuccess="true" count="1" visibility="public" complexity="1" type="method" testduration="0.003" signature="availableGames() : void"/>
+            <line num="148" count="1" type="stmt"/>
+            <line num="150" testsuccess="true" count="1" visibility="public" complexity="1" type="method" testduration="0.0" signature="removeSession() : void"/>
+            <line num="152" count="1" type="stmt"/>
+            <line num="155" testsuccess="true" count="1" visibility="public" complexity="1" type="method" testduration="0.002" signature="selectChat() : void"/>
+            <line num="157" count="1" type="stmt"/>
+            <line num="160" testsuccess="true" count="1" visibility="public" complexity="1" type="method" testduration="0.003" signature="processGameStep() : void"/>
+            <line num="162" count="1" type="stmt"/>
+            <line num="165" testsuccess="true" count="1" visibility="public" complexity="1" type="method" testduration="0.0" signature="getMessageSystem() : void"/>
+            <line num="167" count="1" type="stmt"/>
+            <line num="170" testsuccess="true" count="1" visibility="public" complexity="1" type="method" testduration="0.001" signature="refreshPosition() : void"/>
+            <line num="172" count="1" type="stmt"/>
+            <line num="173" count="1" type="stmt"/>
+            <line num="176" testsuccess="true" count="1" visibility="public" complexity="1" type="method" testduration="0.002" signature="startGame() : void"/>
+            <line num="178" count="1" type="stmt"/>
+            <line num="179" count="1" type="stmt"/>
+         </file>
+         <file name="PageTest.java" path="C:\Users\arusakov\IdeaProjects\TpJavaServer\src\test\java\frontend\PageTest.java">
+            <metrics classes="1" methods="8" conditionals="0" ncloc="48" coveredstatements="8" coveredmethods="8" complexity="8" coveredconditionals="0" statements="8" loc="62" coveredelements="16" elements="16"/>
+            <class name="PageTest">
+               <metrics conditionals="0" methods="8" coveredstatements="8" complexity="8" testpasses="8" testruns="8" coveredmethods="8" coveredconditionals="0" statements="8" testfailures="0" coveredelements="16" testduration="0.001" elements="16"/>
+            </class>
+            <line num="22" testsuccess="true" count="1" visibility="public" complexity="1" type="method" testduration="0.0" signature="testStart() : void"/>
+            <line num="24" count="1" type="stmt"/>
+            <line num="27" testsuccess="true" count="1" visibility="public" complexity="1" type="method" testduration="0.0" signature="testFinishLose() : void"/>
+            <line num="29" count="1" type="stmt"/>
+            <line num="32" testsuccess="true" count="1" visibility="public" complexity="1" type="method" testduration="0.0" signature="testFinishWin() : void"/>
+            <line num="34" count="1" type="stmt"/>
+            <line num="37" testsuccess="true" count="1" visibility="public" complexity="1" type="method" testduration="0.001" signature="testWaitForAuthorization() : void"/>
+            <line num="39" count="1" type="stmt"/>
+            <line num="42" testsuccess="true" count="1" visibility="public" complexity="1" type="method" testduration="0.0" signature="testAuthAccept() : void"/>
+            <line num="44" count="1" type="stmt"/>
+            <line num="47" testsuccess="true" count="1" visibility="public" complexity="1" type="method" testduration="0.0" signature="playJqueryTest() : void"/>
+            <line num="49" count="1" type="stmt"/>
+            <line num="53" testsuccess="true" count="1" visibility="public" complexity="1" type="method" testduration="0.0" signature="PlayTest() : void"/>
+            <line num="55" count="1" type="stmt"/>
+            <line num="58" testsuccess="true" count="1" visibility="public" complexity="1" type="method" testduration="0.0" signature="notAuthTest() : void"/>
+            <line num="60" count="1" type="stmt"/>
+         </file>
+      </package>
+      <package name="user">
+         <metrics classes="2" methods="15" conditionals="0" files="2" ncloc="204" coveredstatements="110" coveredmethods="15" complexity="15" coveredconditionals="0" statements="110" loc="278" coveredelements="125" elements="125"/>
+         <file name="StateTest.java" path="C:\Users\arusakov\IdeaProjects\TpJavaServer\src\test\java\user\StateTest.java">
+            <metrics classes="1" methods="8" conditionals="0" ncloc="141" coveredstatements="81" coveredmethods="8" complexity="8" coveredconditionals="0" statements="81" loc="199" coveredelements="89" elements="89"/>
+            <class name="StateTest">
+               <metrics conditionals="0" methods="8" coveredstatements="81" complexity="8" testpasses="7" testruns="7" coveredmethods="8" coveredconditionals="0" statements="81" testfailures="0" coveredelements="89" testduration="0.038" elements="89"/>
+            </class>
+            <line num="52" count="7" visibility="public" complexity="1" type="method" signature="setUp() : void"/>
+            <line num="55" count="7" type="stmt"/>
+            <line num="56" count="7" type="stmt"/>
+            <line num="57" count="7" type="stmt"/>
+            <line num="58" count="7" type="stmt"/>
+            <line num="59" count="7" type="stmt"/>
+            <line num="60" count="7" type="stmt"/>
+            <line num="63" count="7" type="stmt"/>
+            <line num="65" count="7" type="stmt"/>
+            <line num="66" count="7" type="stmt"/>
+            <line num="67" count="7" type="stmt"/>
+            <line num="68" count="7" type="stmt"/>
+            <line num="69" count="7" type="stmt"/>
+            <line num="70" count="7" type="stmt"/>
+            <line num="72" count="7" type="stmt"/>
+            <line num="73" count="7" type="stmt"/>
+            <line num="74" count="7" type="stmt"/>
+            <line num="75" count="7" type="stmt"/>
+            <line num="77" count="7" type="stmt"/>
+            <line num="78" count="7" type="stmt"/>
+            <line num="79" count="7" type="stmt"/>
+            <line num="80" count="7" type="stmt"/>
+            <line num="85" testsuccess="true" count="1" visibility="public" complexity="1" type="method" testduration="0.002" signature="authorized() : void"/>
+            <line num="87" count="1" type="stmt"/>
+            <line num="88" count="1" type="stmt"/>
+            <line num="90" count="1" type="stmt"/>
+            <line num="92" count="1" type="stmt"/>
+            <line num="93" count="1" type="stmt"/>
+            <line num="95" count="1" type="stmt"/>
+            <line num="96" count="1" type="stmt"/>
+            <line num="97" count="1" type="stmt"/>
+            <line num="98" count="1" type="stmt"/>
+            <line num="99" count="1" type="stmt"/>
+            <line num="109" testsuccess="true" count="1" visibility="public" complexity="1" type="method" testduration="0.003" signature="finishLose() : void"/>
+            <line num="111" count="1" type="stmt"/>
+            <line num="112" count="1" type="stmt"/>
+            <line num="114" count="1" type="stmt"/>
+            <line num="115" count="1" type="stmt"/>
+            <line num="117" count="1" type="stmt"/>
+            <line num="118" count="1" type="stmt"/>
+            <line num="120" count="1" type="stmt"/>
+            <line num="121" count="1" type="stmt"/>
+            <line num="123" testsuccess="true" count="1" visibility="public" complexity="1" type="method" testduration="0.003" signature="finishWin() : void"/>
+            <line num="125" count="1" type="stmt"/>
+            <line num="126" count="1" type="stmt"/>
+            <line num="128" count="1" type="stmt"/>
+            <line num="129" count="1" type="stmt"/>
+            <line num="131" count="1" type="stmt"/>
+            <line num="132" count="1" type="stmt"/>
+            <line num="134" count="1" type="stmt"/>
+            <line num="135" count="1" type="stmt"/>
+            <line num="136" count="1" type="stmt"/>
+            <line num="137" count="1" type="stmt"/>
+            <line num="140" count="1" type="stmt"/>
+            <line num="141" count="1" type="stmt"/>
+            <line num="142" count="1" type="stmt"/>
+            <line num="145" testsuccess="true" count="1" visibility="public" complexity="1" type="method" testduration="0.026" signature="play() : void"/>
+            <line num="147" count="1" type="stmt"/>
+            <line num="148" count="1" type="stmt"/>
+            <line num="150" count="1" type="stmt"/>
+            <line num="151" count="1" type="stmt"/>
+            <line num="153" count="1" type="stmt"/>
+            <line num="154" count="1" type="stmt"/>
+            <line num="155" count="1" type="stmt"/>
+            <line num="156" count="1" type="stmt"/>
+            <line num="157" count="1" type="stmt"/>
+            <line num="158" count="1" type="stmt"/>
+            <line num="159" count="1" type="stmt"/>
+            <line num="161" count="1" type="stmt"/>
+            <line num="162" count="1" type="stmt"/>
+            <line num="164" count="1" type="stmt"/>
+            <line num="165" count="1" type="stmt"/>
+            <line num="168" count="1" type="stmt"/>
+            <line num="169" count="1" type="stmt"/>
+            <line num="174" testsuccess="true" count="1" visibility="public" complexity="1" type="method" testduration="0.002" signature="notAuth() : void"/>
+            <line num="176" count="1" type="stmt"/>
+            <line num="178" testsuccess="true" count="1" visibility="public" complexity="1" type="method" testduration="0.001" signature="statеWait() : void"/>
+            <line num="180" count="1" type="stmt"/>
+            <line num="183" testsuccess="true" count="1" visibility="public" complexity="1" type="method" testduration="0.001" signature="chatExit() : void"/>
+            <line num="185" count="1" type="stmt"/>
+            <line num="186" count="1" type="stmt"/>
+            <line num="188" count="1" type="stmt"/>
+            <line num="189" count="1" type="stmt"/>
+            <line num="191" count="1" type="stmt"/>
+            <line num="192" count="1" type="stmt"/>
+            <line num="193" count="1" type="stmt"/>
+            <line num="195" count="1" type="stmt"/>
+            <line num="196" count="1" type="stmt"/>
+            <line num="197" count="1" type="stmt"/>
+         </file>
+         <file name="UserSessionTest.java" path="C:\Users\arusakov\IdeaProjects\TpJavaServer\src\test\java\user\UserSessionTest.java">
+            <metrics classes="1" methods="7" conditionals="0" ncloc="63" coveredstatements="29" coveredmethods="7" complexity="7" coveredconditionals="0" statements="29" loc="79" coveredelements="36" elements="36"/>
+            <class name="UserSessionTest">
+               <metrics conditionals="0" methods="7" coveredstatements="29" complexity="7" testpasses="7" testruns="7" coveredmethods="7" coveredconditionals="0" statements="29" testfailures="0" coveredelements="36" testduration="0.001" elements="36"/>
+            </class>
+            <line num="17" testsuccess="true" count="1" visibility="public" complexity="1" type="method" testduration="0.0" signature="testUserName() : void"/>
+            <line num="19" count="1" type="stmt"/>
+            <line num="20" count="1" type="stmt"/>
+            <line num="23" testsuccess="true" count="1" visibility="public" complexity="1" type="method" testduration="0.001" signature="setUserIdTest() : void"/>
+            <line num="25" count="1" type="stmt"/>
+            <line num="26" count="1" type="stmt"/>
+            <line num="27" count="1" type="stmt"/>
+            <line num="30" testsuccess="true" count="1" visibility="public" complexity="1" type="method" testduration="0.0" signature="playerTest() : void"/>
+            <line num="32" count="1" type="stmt"/>
+            <line num="33" count="1" type="stmt"/>
+            <line num="35" count="1" type="stmt"/>
+            <line num="36" count="1" type="stmt"/>
+            <line num="39" testsuccess="true" count="1" visibility="public" complexity="1" type="method" testduration="0.0" signature="hasStateTest() : void"/>
+            <line num="41" count="1" type="stmt"/>
+            <line num="42" count="1" type="stmt"/>
+            <line num="45" testsuccess="true" count="1" visibility="public" complexity="1" type="method" testduration="0.0" signature="gameSessionsTest() : void"/>
+            <line num="47" count="1" type="stmt"/>
+            <line num="48" count="1" type="stmt"/>
+            <line num="49" count="1" type="stmt"/>
+            <line num="51" count="1" type="stmt"/>
+            <line num="52" count="1" type="stmt"/>
+            <line num="55" testsuccess="true" count="1" visibility="public" complexity="1" type="method" testduration="0.0" signature="stateTest() : void"/>
+            <line num="57" count="1" type="stmt"/>
+            <line num="58" count="1" type="stmt"/>
+            <line num="60" count="1" type="stmt"/>
+            <line num="61" count="1" type="stmt"/>
+            <line num="64" testsuccess="true" count="1" visibility="public" complexity="1" type="method" testduration="0.0" signature="enemiesFireballTest() : void"/>
+            <line num="66" count="1" type="stmt"/>
+            <line num="67" count="1" type="stmt"/>
+            <line num="68" count="1" type="stmt"/>
+            <line num="70" count="1" type="stmt"/>
+            <line num="71" count="1" type="stmt"/>
+            <line num="73" count="1" type="stmt"/>
+            <line num="74" count="1" type="stmt"/>
+            <line num="76" count="1" type="stmt"/>
+            <line num="77" count="1" type="stmt"/>
+         </file>
+      </package>
+   </testproject>
+</coverage>
