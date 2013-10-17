@@ -56,7 +56,7 @@ public class StateTest {
         when(request.getParameter((anyString()))).thenReturn("0");
         when(request.getParameter("showChats")).thenReturn("yes");
         when(request.getParameter("Exit")).thenReturn("Exit");
-        when(request.getMethod()).thenReturn("POST").thenReturn("POST");
+        when(request.getMethod()).thenReturn("POST");
 
         //response
         when(response.getWriter()).thenReturn(printWriter);
