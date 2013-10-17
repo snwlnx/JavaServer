@@ -4,6 +4,8 @@
 /out
 /target
 
+!/target/site
+
 *.class
 *.jar
 *.war
