@@ -40,7 +40,7 @@ public class FrontendImpl extends AbstractHandler implements Frontend {
     }
 
 
-    private LongId<UserSession> getSessionIdFromCookie(HttpServletRequest request) {
+    public LongId<UserSession> getSessionIdFromCookie(HttpServletRequest request) {
         Cookie cookie = null;
         Cookie[] cookies = request.getCookies();
         if (cookies != null && cookies.length != 0)
