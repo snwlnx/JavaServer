@@ -72,6 +72,17 @@ public class FrontendImplTest extends Assert {
         frontend.getUserSession(userGameNumber).setPlayer(new Player());
     }
 
+	@Test
+	public void cookieTest() {
+//		when(request.getCookies()).thenReturn(null);
+//		assertNull(frontend.getSessionIdFromCookie(request));
+
+//		frontend.getSessionIdFromCookie(request);
+//
+//		when(request.getCookies()).thenReturn(null);
+//		assertNull(frontend.getSessionIdFromCookie(request));
+	}
+
     @Test
     public void startGameSM() {
         frontend.startGameSM(userSessionNumber);
