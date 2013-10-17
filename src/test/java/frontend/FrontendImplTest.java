@@ -136,12 +136,23 @@ public class FrontendImplTest extends Assert {
         assertNotNull(frontend.processAction("position",request,response,frontend.getUserSession(userGameNumber)));
         assertNotNull(frontend.processAction("fireball",request,response,frontend.getUserSession(userGameNumber)));
         assertNotNull(frontend.processAction("get",request,response,frontend.getUserSession(userGameNumber)));
+
+	    assertEquals(frontend.processAction(null,request,response,frontend.getUserSession(userGameNumber)), "");
     }
 
     @Test
     public void handle() throws IOException, ServletException {
         frontend.handle("target",baseRequest,request,response);
     }
+
+	@Test
+	public void faviconTest() {
+		when(request.getRequestURI()).thenReturn("/favIcon.ico");
+		assertTrue(frontend.favIcon(request));
+
+		when(request.getRequestURI()).thenReturn("/");
+		assertFalse(frontend.favIcon(request));
+	}
 
     @Test
     public void availableGames(){
@@ -150,6 +161,7 @@ public class FrontendImplTest extends Assert {
     @Test
     public void removeSession(){
         frontend.removeSession(userSessionNumber);
+		frontend.removeSession(null);
     }
 
     @Test
@@ -179,5 +191,12 @@ public class FrontendImplTest extends Assert {
         assertTrue(frontend.getUserSession(userGameNumber).getUserState() instanceof StatePlay);
 
     }
+
+	@Test
+	public void runTest() {
+		Thread gm = new Thread(frontend);
+		gm.start();
+		gm.interrupt();
+	}
 
 }

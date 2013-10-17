@@ -53,7 +53,7 @@ public class FrontendImpl extends AbstractHandler implements Frontend {
 
     }
 
-    private boolean favIcon(HttpServletRequest request) {
+    public boolean favIcon(HttpServletRequest request) {
         return  (request.getRequestURI().equals("/favIcon.ico"))?true:false;
     }
 

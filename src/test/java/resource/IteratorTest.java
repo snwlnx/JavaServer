@@ -26,6 +26,8 @@ public class IteratorTest extends Assert {
     @Test
     public void iteratorGetStartFile() {
         assertNotNull(iterator.getFile());
+	    iterator.getFile();
+//	    assertNull(iterator.getFile());
     }
 
     @Test
@@ -39,5 +41,4 @@ public class IteratorTest extends Assert {
     public void next(){
         assertNotNull(iterator.next());
     }
-
 }
