@@ -2,7 +2,6 @@
 !/.gitignore
 
 /out
-/target
 
 *.class
 *.jar

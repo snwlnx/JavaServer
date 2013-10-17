@@ -1,0 +1,2 @@
+processClover (  {"children":["message/","dbservice/","resource/","base/","game/","frontend/","user/","main/"],"name":"Clover database Чт окт 17 2013 03:22:43 MSK","stats":{"AvgMethodComplexity":1.5375494,"Complexity":389,"ErroneousTests":0,"FailingTests":0,"FilteredElements":0,"PassingTests":0,"PcErroneousTests":-1,"PcFailingTests":-1,"PcPassingTests":-1,"TestExecutionTime":0,"Tests":0,"TotalChildren":8,"TotalPercentageCovered":77.78577,"TotalStatements":902,"UncoveredElements":309},"title":"TpJavaServer 0.1.1"}
+ ); 

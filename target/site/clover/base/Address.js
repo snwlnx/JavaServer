@@ -1,0 +1,10 @@
+var clover = new Object();
+
+// JSON: {classes : [{name, id, sl, el,  methods : [{sl, el}, ...]}, ...]}
+clover.pageData = {"classes":[{"el":18,"id":0,"methods":[{"el":12,"sc":5,"sl":10},{"el":16,"sc":5,"sl":14}],"name":"Address","sl":5}]}
+
+// JSON: {test_ID : {"methods": [ID1, ID2, ID3...], "name" : "testXXX() void"}, ...};
+clover.testTargets = {"test_1":{"methods":[{"sl":14}],"name":"runTest","pass":true,"statements":[{"sl":15}]},"test_13":{"methods":[{"sl":14}],"name":"bJoinToGameTest","pass":true,"statements":[{"sl":15}]},"test_20":{"methods":[{"sl":14}],"name":"eChatMessageEmptyTest","pass":true,"statements":[{"sl":15}]},"test_31":{"methods":[{"sl":14}],"name":"finishWin","pass":true,"statements":[{"sl":15}]},"test_34":{"methods":[{"sl":14}],"name":"hasStateTest","pass":true,"statements":[{"sl":15}]},"test_37":{"methods":[{"sl":14}],"name":"toFrontendTest","pass":true,"statements":[{"sl":15}]},"test_39":{"methods":[{"sl":14}],"name":"failStartGameTest","pass":true,"statements":[{"sl":15}]},"test_40":{"methods":[{"sl":14}],"name":"play","pass":true,"statements":[{"sl":15}]},"test_47":{"methods":[{"sl":14}],"name":"stateTest","pass":true,"statements":[{"sl":15}]},"test_54":{"methods":[{"sl":14}],"name":"chatExit","pass":true,"statements":[{"sl":15}]},"test_55":{"methods":[{"sl":14}],"name":"constructorDefaultTest","pass":true,"statements":[{"sl":15}]},"test_8":{"methods":[{"sl":14}],"name":"aGameSessionConstruct","pass":true,"statements":[{"sl":15}]},"test_81":{"methods":[{"sl":14}],"name":"calcFireballsTest","pass":true,"statements":[{"sl":15}]},"test_87":{"methods":[{"sl":14}],"name":"next","pass":true,"statements":[{"sl":15}]},"test_89":{"methods":[{"sl":14}],"name":"aStartGameTest","pass":true,"statements":[{"sl":15}]}}
+
+// JSON: { lines : [{tests : [testid1, testid2, testid3, ...]}, ...]};
+clover.srcFileLines = [[], [], [], [], [], [], [], [], [], [], [], [], [], [], [37, 89, 1, 8, 13, 55, 81, 47, 34, 20, 40, 54, 31, 87, 39], [37, 89, 1, 8, 13, 55, 81, 47, 34, 20, 40, 54, 31, 87, 39], [], [], []]
