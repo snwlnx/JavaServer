@@ -40,6 +40,9 @@ public class ResourceSystemImplTest extends Assert {
         assertNotEquals(fightResource.fireballDamage,0);
         assertNotEquals(fightResource.playerHeight,  0);
         assertNotEquals(fightResource.playerWidth,   0);
+
+	    resourceSystem.getResource(null);
+	    resourceSystem.globalInit();
     }
 
     @Test

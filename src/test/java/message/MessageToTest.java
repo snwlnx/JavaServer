@@ -2,7 +2,10 @@ package message;
 
 
 import base.*;
+import dbservice.DbServiceImpl;
+import frontend.MessageFinishGame;
 import frontend.MessageGameStep;
+import frontend.MessageHealthToFrontend;
 import game.GameServiceImpl;
 import game.GameSession;
 import game.MessageStartGameToFrontend;
@@ -17,6 +20,7 @@ import user.User;
 
 import static org.mockito.Matchers.any;
 import static org.mockito.Mockito.doNothing;
+import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.when;
 
 @RunWith(MockitoJUnitRunner.class)
@@ -54,5 +58,28 @@ public class MessageToTest extends Assert {
 		MessageGameStep messageGameStep = new MessageGameStep(null, gameService.getAddress(), userLongId);
 		//messageGameStep.exec(gameService);
 
+	}
+
+	@Test
+	public void execForAbonent() {
+		DbService dbService = mock(DbService.class);
+		when(dbService.getAddress()).thenReturn(null);
+		messageSystem.execForAbonent(dbService);
+	}
+
+	@Test
+	public void getAddressService() {
+		assertNotNull(messageSystem.getAddressService());
+
+		GameService gameService1 = new GameServiceImpl(messageSystem,resourceSystem);
+		messageSystem.getAddressService().setAddress(GameService.class, gameService1);
+
+	}
+
+	@Test
+	public void messageHealthToFront() {
+		new MessageHealthToFrontend(null, null, null, 0);
+		new MessageFinishGame(null, null, null);
+		new MessageHealthToFrontend(null, null, null, 0);
 	}
 }

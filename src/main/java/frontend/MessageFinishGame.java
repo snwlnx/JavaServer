@@ -9,7 +9,7 @@ import user.User;
 public class MessageFinishGame extends MessageToGameService {
     final private   LongId<User> usersToGameSession;
 
-    MessageFinishGame(Address from,Address to,LongId<User> usersToGameSession){
+    public MessageFinishGame(Address from,Address to,LongId<User> usersToGameSession){
         super(from,to);
         this.usersToGameSession = usersToGameSession;
 
