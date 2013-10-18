@@ -1,9 +1,7 @@
 package game;
 
 import base.*;
-import frontend.MessageFireballsToFrontend;
 import frontend.MessageHealthToFrontend;
-import frontend.MessageRefreshPositionToFrontend;
 import message.Message;
 import resource.MapResource;
 import user.User;
@@ -338,7 +336,7 @@ public class GameServiceImpl implements GameService {
         messageSystem.sendMessage(message);
     }
 
-    public void getAvailableGameSessionForUser(LongId<User> userToGameSession) {
+    public void getAvailableGameForUser(LongId<User> userToGameSession) {
         replicateAvailableGameSessionForUser(userToGameSession, gameIdToGameSession.keySet());
     }
 
@@ -353,7 +351,7 @@ public class GameServiceImpl implements GameService {
     }
 
 
-    public void refreshPosition(LongId<User> userId, int x, int y, int vX, int vY) {
+    public void updatePosition(LongId<User> userId, int x, int y, int vX, int vY) {
         LongId<GameSession> gameSessionId = this.userIdToGameSessionId.get(userId);
         if (gameSessionId != null) {
             GameSession sess = this.gameIdToGameSession.get(gameSessionId);

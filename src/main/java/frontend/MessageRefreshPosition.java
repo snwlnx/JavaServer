@@ -21,6 +21,6 @@ public class MessageRefreshPosition extends MessageToGameService
     }
 
     public void exec(GameService gameService){
-        gameService.refreshPosition(userId, x, y, vX, vY);
+        gameService.updatePosition(userId, x, y, vX, vY);
     }
 }

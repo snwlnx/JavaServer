@@ -86,7 +86,7 @@ public class GameServiceTest extends Assert {
 		assertTrue(gameService.joinToGame(victimId, gameId));
 		int posValue = 100500;
 
-		gameService.refreshPosition(victimId, posValue, posValue, posValue, posValue);
+		gameService.updatePosition(victimId, posValue, posValue, posValue, posValue);
 		Thread thr = new Thread(gameService);
 		thr.start();
 

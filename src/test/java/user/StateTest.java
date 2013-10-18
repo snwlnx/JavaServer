@@ -57,11 +57,11 @@ public class StateTest {
         when(request.getParameter((anyString()))).thenReturn("0");
         when(request.getParameter("showChats")).thenReturn("yes");
         when(request.getParameter("Exit")).thenReturn("Exit");
-<<<<<<< HEAD
+
         when(request.getMethod()).thenReturn("POST");
-=======
+
         when(request.getMethod()).thenReturn("POST");//.thenReturn("POST");
->>>>>>> a940dd2a73da0c9564b178555d7c4951a5fca2f5
+
 
         //response
         when(response.getWriter()).thenReturn(printWriter);

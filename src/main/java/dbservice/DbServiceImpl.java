@@ -1,7 +1,7 @@
 package dbservice;
 
 import base.*;
-import frontend.MessageUserIdUpdate;
+import game.MessageUserIdUpdate;
 import user.User;
 import user.UserSession;
 

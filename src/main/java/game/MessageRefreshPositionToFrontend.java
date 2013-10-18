@@ -1,17 +1,13 @@
-package frontend;
+package game;
 
 import base.Address;
 import base.Frontend;
 import base.LongId;
 import base.Player;
 import message.MessageToFrontend;
-import message.MessageToGameService;
 import user.User;
 
-import java.util.ArrayList;
 import java.util.LinkedList;
-import java.util.Map;
-import java.util.HashMap;
 
 public class MessageRefreshPositionToFrontend extends MessageToFrontend {
     final private LongId<User> userId;

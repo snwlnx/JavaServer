@@ -1,4 +1,4 @@
-package frontend;
+package game;
 
 import base.Address;
 import base.Fireball;

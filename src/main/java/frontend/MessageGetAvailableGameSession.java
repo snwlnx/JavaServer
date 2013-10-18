@@ -24,7 +24,7 @@ public class MessageGetAvailableGameSession extends MessageToGameService {
     }
 
     public  void exec(GameService gameService){
-        gameService.getAvailableGameSessionForUser(userToGameSession);
+        gameService.getAvailableGameForUser(userToGameSession);
     }
 
 

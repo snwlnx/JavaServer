@@ -341,7 +341,6 @@ public class FrontendImpl extends AbstractHandler implements Frontend {
         UserSession userSession = sessions.get(sessionId);
 
         if (userSession == null) {
-
             String userName;
             userName = request.getParameter("user_name");
             if (userName == null) {
