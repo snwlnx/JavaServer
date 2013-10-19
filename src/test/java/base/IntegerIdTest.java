@@ -20,18 +20,18 @@ public class IntegerIdTest extends Assert {
 	}
 
 	@Test
-	public void hashCodeTest() {
-		Integer testValue = new Integer(1);
-		IntegerId<Object> id1 = new IntegerId<Object>(testValue);
-
-		assertEquals(id1.hashCode(), testValue.hashCode());
-	}
-
-	@Test
 	public void toStringTest() {
 		IntegerId<Object> id2 = new IntegerId<Object>(1);
 
 		assertTrue("1".equals(id2.toString()));
 	}
+
+    @Test
+    public void hashCodeTest() {
+        Integer testValue = new Integer(1);
+        IntegerId<Object> id1 = new IntegerId<Object>(testValue);
+
+        assertEquals(id1.hashCode(), testValue.hashCode());
+    }
 
 }
