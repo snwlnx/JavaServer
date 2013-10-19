@@ -16,64 +16,64 @@ public class UserSessionTest extends Assert {
 
 	@Test
 	public void testUserName() {
-		UserSession session = new UserSession("user0");
-		assertTrue("user0".equals(session.getUserName()));
+		UserSession userSession = new UserSession("user0");
+		assertTrue("user0".equals(userSession.getUserName()));
 	}
 
-	@Test
+    @Test
+    public void playerTest() {
+        UserSession userSession = new UserSession("user2");
+        Player player = new Player();
+
+        userSession.setPlayer(player);
+        assertTrue(player == userSession.getPlayer());
+    }
+
+    @Test
 	public void setUserIdTest() {
-		UserSession session = new UserSession("user1");
-		session.setUserId(new LongId<User>(1));
-		assertNotNull(session.getLastTime());
-	}
-
-	@Test
-	public void playerTest() {
-		UserSession session = new UserSession("user2");
-		Player player = new Player();
-
-		session.setPlayer(player);
-		assertTrue(player == session.getPlayer());
+		UserSession userSession = new UserSession("user1");
+		userSession.setUserId(new LongId<User>(1));
+		assertNotNull(userSession.getLastTime());
 	}
 
 	@Test
 	public void hasStateTest() {
-		UserSession session = new UserSession("user3");
-		assertFalse(session.hasState());
-	}
-
-	@Test
-	public void gameSessionsTest() {
-		UserSession session = new UserSession("user4");
-		Set<LongId<GameSession>> set = new HashSet<LongId<GameSession>>();
-		set.add(new LongId<GameSession>(1));
-
-		session.setAvailableGameSessions(set);
-		assertEquals(session.getAvailableGameSessions(), set);
+		UserSession userSession = new UserSession("user3");
+		assertFalse(userSession.hasState());
 	}
 
 	@Test
 	public void stateTest() {
-		UserSession session = new UserSession("user5");
-		assertFalse(session.hasState());
+		UserSession userSession = new UserSession("user5");
+		assertFalse(userSession.hasState());
 
-		session.updateUserState(new StateAuthorized());
-		assertTrue(session.hasState());
+		userSession.updateUserState(new StateAuthorized());
+		assertTrue(userSession.hasState());
 	}
 
-	@Test
+    @Test
+    public void gameSessionsTest() {
+        UserSession userSession = new UserSession("user4");
+        Set<LongId<GameSession>> set = new HashSet<LongId<GameSession>>();
+        set.add(new LongId<GameSession>(1));
+
+        userSession.setAvailableGameSessions(set);
+        assertEquals(userSession.getAvailableGameSessions(), set);
+    }
+
+    @Test
 	public void enemiesFireballTest() {
-		UserSession session = new UserSession("user6");
+		UserSession userSession = new UserSession("user6");
 		LinkedList<Fireball> fireballList = new LinkedList<Fireball>();
 		fireballList.add(new Fireball(0,0,1,0));
 
 		LinkedList<Player> players = new LinkedList<Player>();
 		players.add(new Player(0,0,1,0));
 
-		session.setFireballs(fireballList);
-		session.setEnemies(players);
+		userSession.setFireballs(fireballList);
+		userSession.setEnemies(players);
 
-		assertEquals(fireballList, session.getFireballs());
-		assertEquals(players, session.getEnemies());
+		assertEquals(fireballList, userSession.getFireballs());
+		assertEquals(players, userSession.getEnemies());
 	}
 }
