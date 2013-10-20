@@ -12,12 +12,6 @@ public class UserDataSetTest extends Assert {
         userDataSet = new UserDataSet(1,"test");
     }
 
-    @Test
-    public void initTest(){
-        assertTrue(userDataSet.getId().equals(1));
-        assertTrue(userDataSet.getName().equals("test"));
-    }
-
 
         @Test
     public void getId(){
@@ -35,11 +29,6 @@ public class UserDataSetTest extends Assert {
         assertTrue(userDataSet.getName().equals("testName"));
     }
 
-    @Test
-    public void setId(){
-        userDataSet.setId(5);
-        assertTrue(userDataSet.getId().equals(5));
-    }
 
 
 
