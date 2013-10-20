@@ -10,7 +10,6 @@ public class IntegerIdTest extends Assert {
 		IntegerId<Object> id1 = new IntegerId<Object>(1);
 		IntegerId<Object> id2 = new IntegerId<Object>(2);
 		IntegerId<Object> id3 = new IntegerId<Object>(1);
-        IntegerId<Object> id4 = new IntegerId<Object>(1);
 
 		assertTrue(id1 != id2);
 		assertFalse(id1.equals(id2));
@@ -34,4 +33,13 @@ public class IntegerIdTest extends Assert {
         assertEquals(id1.hashCode(), testValue.hashCode());
     }
 
+    @Test
+    public void setTest() {
+        IntegerId<Object> id1 = new IntegerId<Object>(1);
+        IntegerId<Object> id2 = new IntegerId<Object>(2);
+        id1.set(2);
+
+        assertEquals(id1.get(), id2.get() );
+
+    }
 }

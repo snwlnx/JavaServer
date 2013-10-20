@@ -21,7 +21,7 @@ public class LongIdTest extends Assert {
 	}
 
     @Test
-    public void equalsTest() {
+     public void equalsTest() {
         LongId<Object> id1 = new LongId<Object>(2);
         LongId<Object> id2 = new LongId<Object>(1);
         LongId<Object> id3 = new LongId<Object>(2);
@@ -31,6 +31,12 @@ public class LongIdTest extends Assert {
         assertTrue(id1.equals(id3));
 
         assertFalse(id1.equals(new Object()));
+    }
+
+    @Test
+    public void getTest() {
+        LongId<Object> id = new LongId<Object>(1);
+        assertEquals(id.get(), 1);
     }
 
 
