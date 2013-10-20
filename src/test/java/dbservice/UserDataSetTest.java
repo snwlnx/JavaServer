@@ -13,6 +13,13 @@ public class UserDataSetTest extends Assert {
     }
 
     @Test
+    public void initTest(){
+        assertTrue(userDataSet.getId().equals(1));
+        assertTrue(userDataSet.getName().equals("test"));
+    }
+
+
+        @Test
     public void getId(){
         assertTrue(userDataSet.getId().get() == (new Long(1)).longValue());
     }
@@ -21,5 +28,20 @@ public class UserDataSetTest extends Assert {
     public void getName(){
         assertTrue(userDataSet.getName().equals("test"));
     }
+
+    @Test
+    public void setName(){
+        userDataSet.setName("testName");
+        assertTrue(userDataSet.getName().equals("testName"));
+    }
+
+    @Test
+    public void setId(){
+        userDataSet.setId(5);
+        assertTrue(userDataSet.getId().equals(5));
+    }
+
+
+
 
 }
